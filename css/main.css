@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff; }
 
 .color {
-  color: #FF9800; }
+  color: #cc3333; }
 
 .sub-title {
   padding: 0 0 50px; }
@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: 0; }
 
 .bg-one {
-  background: #4A4949; }
+  background: #090916; }
 
 .parallax-section {
   background-attachment: fixed !important;
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 	Navigation
 ==================================================================*/
 .navbar-inverse {
-  background-color: #2B2C30;
+  background: #090916;
   width: 100%;
   z-index: 99; }
 
@@ -246,11 +246,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: background .5s ease-in-out 0s; }
 
 .navbar-inverse .navbar-nav > li.current > a {
-  color: #FF9800;
+  color: #cccc66;
   background-color: #2f3238; }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: #FF9800; }
+  color: #cccc66; }
 
 /*=================================================================
 	About us section
@@ -383,7 +383,8 @@ h1, h2, h3, h4, h5, h6 {
 	Portfolio section
 ==================================================================*/
 #showcase {
-  padding: 75px 0; }
+  padding: 75px 0;
+  background: #090916; }
 
 .portfolio-filter {
   margin-bottom: 15px; }
@@ -402,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-filter ul li a:hover {
   top: 100%;
   opacity: 1;
-  color: #FF9800; }
+  color: #cc3333; }
 
 .og-grid .mix > a {
   display: block;
@@ -808,7 +809,7 @@ h1, h2, h3, h4, h5, h6 {
 ==================================================================*/
 #contact-us {
   padding: 70px 0 0;
-  background: #333439; }
+  background: #2a2447; }
 
 .contact-form {
   margin-bottom: 40px; }
@@ -913,7 +914,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 400ms ease-out 0s; }
 
 .social-icon > ul > li:hover a {
-  background-color: #FE9700;
+  background: #cccc66;
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
@@ -948,8 +949,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 600; }
 
 #scrollUp:hover {
-  background-color: #FF9800;
-  border: 1px solid #FF9800; }
+  background-color: #cccc66;
+  border: 1px solid #cccc66; }
 
 /*=================================================================
 	Blog Page
