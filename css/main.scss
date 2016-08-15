@@ -305,6 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #about {
     padding: 70px 0;
+
+
 }
 #skills {
     padding: 70px 0;
@@ -465,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #showcase {
     padding: 75px 0;
-    background: #090916;
+    background:#282828;
 }
 
 .portfolio-filter {
@@ -554,17 +556,16 @@ h1, h2, h3, h4, h5, h6 {
 	
 	opacity: 0;
 	filter: alpha(opacity=0);
-	
 	-webkit-transition: all 600ms ease-out 0s;	
 	   -moz-transition: all 600ms ease-out 0s;
 		 -o-transition: all 600ms ease-out 0s;
 		    transition: all 600ms ease-out 0s;
 		  
-	-webkit-transform: rotateY(180deg) scale(0.5,0.5);
-	   -moz-transform: rotateY(180deg) scale(0.5,0.5);
-		-ms-transform: rotateY(180deg) scale(0.5,0.5);
-		 -o-transform: rotateY(180deg) scale(0.5,0.5);
-			transform: rotateY(180deg) scale(0.5,0.5);	
+	// -webkit-transform: rotatex(180deg) scale(0.5,0.5);
+	//    -moz-transform: rotatex(180deg) scale(0.5,0.5);
+	// 	-ms-transform: rotatex(180deg) scale(0.5,0.5);
+	// 	 -o-transform: rotatex(180deg) scale(0.5,0.5);
+	// 		transform: rotatex(180deg) scale(0.5,0.5);	
 }
 
 .hover-mask h3 {
@@ -1020,7 +1021,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #contact-us {
     padding: 70px 0 0;
-    background: #2a2447;
+    background:url(../img/parallax/contact.jpg);
+    background-size:cover; 
 }
 
 .contact-form {
