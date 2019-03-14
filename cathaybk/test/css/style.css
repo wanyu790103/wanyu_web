@@ -34,7 +34,12 @@ main {
   color: #fff;
   font-size: 24px;
 }
-
+main.height {
+  height:1200px;
+  padding: 100px 40px;
+  color: #fff;
+  font-size: 24px;
+}
 footer {
   background-color: #fff;
   padding: 20px 40px;
