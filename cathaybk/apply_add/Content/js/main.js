@@ -107,7 +107,7 @@ $(function () {
 						"src": e.target.result,
 						"class": "thumb-image"
 					}).appendTo(image_holder);
-					$(" <div class='img_bg'><img src='../Content/images/ForCathaybk.png'> </div>").appendTo(image_holder);
+					$(" <div class='img_bg'><img src='Content/images/ForCathaybk.png'> </div>").appendTo(image_holder);
 				}
 				image_holder.fadeIn();
 				reader.readAsDataURL($(this)[0].files[0]);
