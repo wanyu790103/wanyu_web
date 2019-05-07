@@ -1,0 +1,379 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+	
+	<title>信用卡線上申請-信用卡-線上申辦-國泰世華銀行</title>
+	<meta name="keywords" content="網路辦卡,線上申辦,線上申請,線上辦卡,信用卡" />
+	<meta name="description" content="立即線上申辦國泰世華信用卡，方便快速還可享刷卡最高2%現金回饋、里程、加油 、電影等生活優惠!" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="400" />
+
+	<meta http-equiv="cleartype" content="on" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=0" />
+	<meta name="author" content="國泰世華銀行" />
+
+	<!--	Common CSS file /begin -->
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" href="./Content/js/jquery.fancyform/jquery.fancyform.css" />
+	<link rel="stylesheet" href="./Content/js/bootstrap/bootstrap-datepicker3.standalone.css" />
+	<link rel="stylesheet" href="./Content/js/fancybox-3.0/jquery.fancybox.css" />
+	<link rel="stylesheet" href="./Content/css/normalize.css" />
+	<link rel="stylesheet" href="./Content/css/layout.css" />
+	<link rel="stylesheet" href="./Content/css/main.css" />
+	<link rel="stylesheet" href="../Content/css/custom.css" />
+
+	<!-- Common CSS file /end -->
+	<!-- Page CSS file /begin -->
+	
+	
+	
+	<!-- Page CSS file /end -->
+	<script src="./Content/js/viewport.js"></script>
+	<script src="./Content/js/vendor/modernizr-2.7.1.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<header class="header clearfix">
+			<a href="javascript:void(0)" class="header__goback" onclick="window.history.back();"></a>
+			<a href="./index.html" class="header__logo"></a>
+			<div class="header__title">
+				線上補件
+			</div>
+		</header>
+		<section class="main">
+		<section>
+			<div class="wrap">
+				<div class="progressBar"></div>
+			</div>
+		</section>
+<section class="section">
+	<form action="patch_step3.html" method="get" id="form">
+		<div class="wrap">
+			<div class="form__box">
+					<div class="time__box">
+						<i class="icon iSprite30__clock"></i>
+						<span class="">為保護資料安全，請於<span id="time__count">600</span>秒內完成此步驟</span>
+					</div>
+					<div class="program__box">
+							親愛的客戶您好！<br>
+                            您可先上傳<span>補件</span>相關文件(限小於XMB的JPG或GIF檔)，或選擇「<span>確認</span>」先略過此步驟(後續再進行補件)。
+					</div>
+			</div>
+			<div class="upload">
+				<div class="upload__item">
+					<div class="upload__title">身份證正面</div>
+					<div class="upload__checked"><i class="icon finish__checked"></i></div>
+					<label for="fileIDFront" class="upload__label js-fileapi-wrapper">
+						<span class="upload__icon" data-id="uploadBtn">
+							<i class="icon iUpload__IDFront"></i>
+						</span>
+						<i class="icon iSprite20__plus"></i>
+						<span class="vam">未選擇任何檔案</span>
+						<span class="image-holder">
+						 <div class="img_bg"></div>
+						</span>
+						<input type="file" value="" hidden class="fileUpload" id="fileIDFront" />
+					</label>
+					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDFront">
+						<i class="icon iSprite30__delete"></i>
+					</a>
+				
+				</div>
+				<div class="upload__item">
+					<div class="upload__title">身份證反面</div>
+					<div class="upload__checked"><i class="icon finish__checked"></i></div>
+					<label for="fileIDBack" class="upload__label">
+						<span class="upload__icon" data-id="uploadBtn">
+							<i class="icon iUpload__IDBack"></i>
+						</span>
+						<i class="icon iSprite20__plus"></i>
+						<span class="vam">未選擇任何檔案</span>
+						<span class="image-holder"></span>
+					</label>
+					<input type="file" value="" hidden class="fileUpload" id="fileIDBack" />
+					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDBack">
+						<i class="icon iSprite30__delete"></i>
+					</a>
+				</div>
+				<div class="upload__item">
+					<div class="upload__title">財力證明</div>
+					<a href="javascript:void(0)" class="upload__info icon iInfo" data-fancybox data-src="#financialProof"></a>
+					<div class="upload__checked"><i class="icon finish__checked"></i></div>
+					<label for="fileFinancialProof" class="upload__label">
+						<span class="upload__icon" data-id="uploadBtn" >
+							<i class="icon iUpload__financialProof"></i>
+						</span>
+						<i class="icon iSprite20__plus"></i>
+						<span class="vam">未選擇任何檔案</span>
+						<span class="image-holder"></span>
+					</label>
+					<input type="file" value="" hidden class="fileUpload" id="fileFinancialProof" />
+					<a href="javascript:void(0)" class="upload__delete" data-for="fileFinancialProof">
+						<i class="icon iSprite30__delete"></i>
+					</a>
+				</div>
+				<div class="divder"></div>
+				<p class="fBold">新增其他文件</p>
+				<p>（第二份以上財力證明、附卡人身分證正反面…等資料。）</p>
+				<div class="upload__item">
+					<a href="javascript:void(0)" class="upload__addMore fGreen" data-id="addMore">
+						<i class="icon iSprite20__plus"></i>
+						<span class="vam fBold">新增文件</span>
+					</a>
+				</div>
+
+			</div>
+			<div class="actionArea">
+				<a href="javascript:void(0)" class="btn" data-id="submit">
+					<span>下一步</span>
+				</a>
+				<input type="submit" value="" hidden />
+			</div>
+			<div class="actionArea">
+				<a href="javascript:void(0)" class="link__g" onclick="window.history.back();">
+					<span>返回</span>
+				</a>
+		   </div>
+		</div>
+	</form>
+</section>
+
+		<div id="backCard_lightbox_time" class="popup">
+			<div class="popup__conainter">
+				<div class="popup__container">
+					<article>
+					<div class="time_count"></div>		
+					<p class="time_count_text">您進入此頁面已經一段時間，為保護您的資料安全，<br>
+					此申辦流程將於<span id="time__count2" class="orange_span">60秒</span>後自動停止。</p>
+							<div class="btn_all_print lightbox_contenet">
+								<a href="resault-t3.html"><span>停止申請</span></a>
+									<a href="javascript:void(0)" onclick="javascript:window.location.reload()"  class="yellow count_end" data-fancybox-close><span>繼續使用</span></a>
+							</div>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		</section>
+		<footer class="footer">
+			<div class="wrap">
+				<div class="footer__warning">
+					<div class="footer__left">
+                        <div>謹 慎 理 財</div>
+                        <div>信 用 無 價</div>
+					</div>
+					<div class="footer__right">
+						信用卡暨預借現金之各級別循環信用年利率為6.75％~15％(依本行信用評分制度定期評估，循環利率之基準日為104年9月1日)。預借現金手續費：預借現金金額乘以3％加上新臺幣150元或美元5元，其他相關費用係依本行網站公告。
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">©國泰世華商業銀行股份有限公司</div>
+		</footer>
+		<a href="javascript:void(0)" class="gotop"></a>
+	</div>
+	<!-- Common js /begin -->
+	<script src="Content/js/vendor/jquery-2.1.0.js"></script>
+	<script src="Content/js/jquery.fancyform/jquery.fancyform.js"></script>
+	<script src="Content/js/bootstrap/bootstrap-datepicker.js"></script>
+	<script src="Content/js/vendor/jquery.validate.js"></script>
+	<script src="Content/js/fancybox-3.0/jquery.fancybox.js"></script>
+	<script src="Content/js/helper.js"></script>
+	<script src="Content/js/plugins.js"></script>
+	<script src="Content/js/main.js"></script>
+	<!-- Common js /end -->
+	<!-- Page js /begin -->
+	
+	<script>
+	$(function () {
+
+		$('.progressBar').progressBar({
+			steps: ['身份驗證', '線上補件', '完成補件'],
+			active: 1 
+		});
+		// time
+		var $el = $('#time__count'),
+			time = 601;
+		var countTime = function() {
+			time--;
+			$el.text(time);
+			if (time === 60) {
+				$el = $('#time__count2');
+				$( ".btn_count_start" ).trigger( "click" );
+			} else if (time <= 0) {
+				clearInterval(interval);
+				$(".count_end").trigger( "click" );
+				 window.location.reload();
+			}
+		};
+		countTime();
+		var interval = setInterval(countTime, 1000)
+	
+		$('.upload__delete').click(function () {
+			var id = $(this).data('for');
+			$('label[for="' + id + '"]').children().fadeIn();
+			$('label[for="' + id + '"]').children('input').hide();
+			$('label[for="' + id + '"] .image-holder').empty();
+			$('label[for="' + id + '"]').closest('.upload__item').removeClass('checked');
+			document.getElementById(id).value = null;
+		});
+
+		$('[data-id="uploadBtn"]').on('click', function uploadFunc() {
+			var el = $(this);
+			el.parents().addClass('uploading'); 
+			setTimeout(function () {
+				el.off('click'); 
+				var $bar = $('<div class="uploadBar"></div').appendTo(el); 
+				var progress = 0; 
+				var myinterval = setInterval(function () { 
+					progress += usefloor(0, 10);
+					progress > 100 ? progress = 100 : progress; 
+					el.find('span').text(progress + ' %'); 
+					$bar.css('width', progress + '%'); 
+					if (progress >= 100) { 
+						$bar.fadeOut(800); 
+						el.parents().removeClass('uploading'); 
+						el.find('span').fadeOut(801); 
+						clearInterval(myinterval);
+						setTimeout(function () { 
+							el.on('click', uploadFunc); 
+							el.find('span').text('上傳').fadeIn(300); 
+							$bar.remove(); 
+						}, 800);
+						setTimeout(function () { 
+							var goback = $('.upload').offset().top;
+							// $('body, html').animate({ scrollTop: goback }, 300);
+							$('input[type="file"]').each(function () {
+								if ($(this).val()) {
+									$(this).closest('.upload__item').addClass('checked');
+								}
+							})
+						}, 1000);
+					}
+				}, 100);
+			}, 800);
+		});
+		//addMore
+		var count = 0;
+		$('[data-id="addMore"]').click(function () {
+			if (count < 4) {
+
+			var ran = Math.floor(Math.random() * 100000);
+			var otherItem = '<div class="upload__item">\
+					<div class="upload__title">其他</div>\
+					<div class="upload__checked"><i class="icon finish__checked"></i></div>\
+					<label for="fileother' + ran + '" class="upload__label">\
+						<span class="upload__icon" data-id="uploadBtn">\
+							<i class="icon iUpload__other"></i>\
+						</span>\
+						<i class="icon iSprite20__plus"></i>\
+						<span class="vam">未選擇任何檔案</span>\
+						<span class="image-holder"></span>\
+					</label>\
+					<input type="file" value="" hidden class="fileUpload" id="fileother' + ran + '" />\
+					<a href="javascript:void(0)" class="upload__delete" data-for="fileother'+ ran + '">\
+						<i class="icon iSprite30__delete"></i>\
+					</a>\
+				</div>'
+			var box = $(this).closest('.upload__item');
+			$(otherItem).insertBefore(box).hide().fadeIn();
+			count++;
+		   }
+		   $('.upload__delete').click(function () {
+                    var id = $(this).data('for');
+                    $('label[for="' + id + '"]').children().fadeIn();
+                    $('label[for="' + id + '"]').children('input').hide();
+                    $('label[for="' + id + '"] .image-holder').empty();
+                    $('label[for="' + id + '"]').closest('.upload__item').removeClass('checked');
+                    DOMFunctions.removeFile($('#' + id));
+			});
+			$('[data-id="uploadBtn"]').on('click', function uploadFunc() {
+			var el = $(this);
+			el.parents().addClass('uploading'); //把 BTN 改成 LOAING BAR TRACK
+			setTimeout(function () {
+				el.off('click'); //UNBIND CLICK EVENT
+				var $bar = $('<div class="uploadBar"></div').appendTo(el); //加入LOADING BAR
+				var progress = 0; // SET INITIAL PROGRESS PERCENTAGE
+				var myinterval = setInterval(function () { //模擬 PROGRESS PERCENTAGE START
+					progress += usefloor(0, 10);//模擬LOADING 用亂數設定每0.1秒上傳的PERCENTAGE
+					progress > 100 ? progress = 100 : progress; //模擬PERCENTAGE MAXIMUM 100%
+					el.find('span').text(progress + ' %'); //PERCENTAGE TEXT
+					$bar.css('width', progress + '%'); //PERCENTAGE BAR WIDTH
+					if (progress >= 100) { //模擬PROGRESS ENDING
+						$bar.fadeOut(800); //結束後把BAR FADE OUT
+						el.parents().removeClass('uploading'); //把LOADING BAR 改回來 BTN
+						el.find('span').fadeOut(801); //PERCENTAGE TEXT FADE OUT
+						clearInterval(myinterval);//清除模擬的INTERVAL
+						setTimeout(function () { //設定100% 後0.8秒
+							el.on('click', uploadFunc); //綁回BTN的 CLICK EVENT
+							el.find('span').text('上傳').fadeIn(300); //把BTN TEXT設回來
+							$bar.remove(); //移除LOADING BAR
+						}, 800);
+						setTimeout(function () { //改回BTN後0.2秒 把畫面滾回上傳區塊
+							var goback = $('.upload').offset().top;
+							// $('body, html').animate({ scrollTop: goback }, 300);
+							$('input[type="file"]').each(function () {
+								if ($(this).val()) {
+									$(this).closest('.upload__item').addClass('checked');//把上傳有值的INPUT加上打勾跟垃圾桶
+								}
+							})
+						}, 1000);
+					}
+				}, 100);//模擬
+			}, 800);//按下BTN 0.8秒後執行LOADING
+		});
+		});
+		//亂數用
+		function usefloor(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		};
+
+		//jquery validate
+		$("#form").validate({
+			rules: {
+				txtCusid: {
+					required: true
+				}
+			},
+			messages: {
+				txtCusid: '請輸入身分證字號',
+			},
+			errorPlacement: function (error, element) {
+				var $container = element.closest('.inputGroup__control');
+				$container.append(error);
+			},
+			onkeyup: false,
+			onclick: false,
+			submitHandler: function (form) {
+				form.submit();
+			}
+		});
+	});
+
+</script>
+
+	
+	<!-- Page js /end -->
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!--<script>
+		(function (b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+			function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+			e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+			e.src = '//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X'); ga('send', 'pageview');
+	</script>-->
+</body>
+</html>

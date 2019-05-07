@@ -1,0 +1,8 @@
+﻿input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    display: inherit !important;
+    z-index: -1;
+}
