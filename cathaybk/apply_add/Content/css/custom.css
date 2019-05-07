@@ -32,6 +32,7 @@
 a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus {
   color: #00994e;
   text-decoration: underline;
+  font-size: 20px;
 }
 
 .upload__checked {
