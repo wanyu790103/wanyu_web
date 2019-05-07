@@ -88,7 +88,6 @@
 					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDFront">
 						<i class="icon iSprite30__delete"></i>
 					</a>
-				
 				</div>
 				<div class="upload__item">
 					<div class="upload__title">身份證反面</div>
@@ -251,8 +250,6 @@
 							$bar.remove(); 
 						}, 800);
 						setTimeout(function () { 
-							var goback = $('.upload').offset().top;
-							// $('body, html').animate({ scrollTop: goback }, 300);
 							$('input[type="file"]').each(function () {
 								if ($(this).val()) {
 									$(this).closest('.upload__item').addClass('checked');
