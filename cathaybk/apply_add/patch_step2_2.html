@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="./Content/css/layout.css" />
 	<link rel="stylesheet" href="./Content/css/main.css" />
 	<link rel="stylesheet" href="./Content/css/custom.css" />
+	<link rel="stylesheet" href="./Content/css/apply.css" />
 
 	<!-- Common CSS file /end -->
 	<!-- Page CSS file /begin -->
@@ -67,60 +68,91 @@
 					</div>
 					<div class="program__box">
 							親愛的客戶您好！<br>
-                            您可先上傳<span>補件</span>相關文件(限小於XMB的JPG或GIF檔)，或選擇「<span>確認</span>」先略過此步驟(後續再進行補件)。
+							您可先上傳<span>補件</span>相關文件(限小於XMB的JPG或GIF檔)，
+							或選擇「<span>確認</span>」先略過此步驟。
+					</div>
+					<div class="form_box">
+						<p>需補件項目</p>
+						<div class="box_inline"> 
+								<div class="icon icon_item"></div>
+								尚未上傳身份證正反面影本
+								
+						</div>
+						<div class="box_inline"> 
+							<div class="icon icon_item"></div>
+							尚未上傳財力證明文件
+						</div>
 					</div>
 			</div>
 			<div class="upload">
 				<div class="upload__item">
-					<div class="upload__title">身份證正面</div>
-					<div class="upload__checked"><i class="icon finish__checked"></i></div>
+					<div class="upload__title">身份證正面 <span class="must_check">必填</span></div>
 					<label for="fileIDFront" class="upload__label js-fileapi-wrapper">
+						<div class="uploadBtn__box" data-id="uploadBtn"></div>
 						<span class="upload__icon" data-id="uploadBtn">
-							<i class="icon iUpload__IDFront"></i>
+							<i class="icon iUpload__icon"></i>
+							<span class="vam">上傳檔案</span>
 						</span>
-						<i class="icon iSprite20__plus"></i>
-						<span class="vam">未選擇任何檔案</span>
-						<span class="image-holder">
-						 <div class="img_bg"></div>
-						</span>
-						<input type="file" value="" hidden class="fileUpload" id="fileIDFront" />
+						<span class="image-holder"></span>
 					</label>
+					
+					<input type="file" value="" hidden class="fileUpload" id="fileIDFront" />
 					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDFront">
-						<i class="icon iSprite30__delete"></i>
+						<i class="icon i24__delete"></i>
 					</a>
+					<div class="upload__checked"><i class="icon finish__checked"></i>上傳成功</div>
+				
 				</div>
 				<div class="upload__item">
-					<div class="upload__title">身份證反面</div>
-					<div class="upload__checked"><i class="icon finish__checked"></i></div>
+					<div class="upload__title">身份證反面 <span class="must_check">必填</span></div>
 					<label for="fileIDBack" class="upload__label">
+						<div class="uploadBtn__box" data-id="uploadBtn"></div>
 						<span class="upload__icon" data-id="uploadBtn">
-							<i class="icon iUpload__IDBack"></i>
+							<i class="icon iUpload__icon"></i>
+							<span class="vam">上傳檔案</span>
 						</span>
-						<i class="icon iSprite20__plus"></i>
-						<span class="vam">未選擇任何檔案</span>
 						<span class="image-holder"></span>
 					</label>
 					<input type="file" value="" hidden class="fileUpload" id="fileIDBack" />
 					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDBack">
-						<i class="icon iSprite30__delete"></i>
+						<i class="icon i24__delete"></i>
 					</a>
+					<div class="upload__checked"><i class="icon finish__checked"></i>上傳成功</div>
 				</div>
-				<div class="upload__item">
-					<div class="upload__title">財力證明</div>
-					<a href="javascript:void(0)" class="upload__info icon iInfo" data-fancybox data-src="#financialProof"></a>
-					<div class="upload__checked"><i class="icon finish__checked"></i></div>
-					<label for="fileFinancialProof" class="upload__label">
-						<span class="upload__icon" data-id="uploadBtn" >
-							<i class="icon iUpload__financialProof"></i>
+				<!-- error 錯誤時 加error -->
+				<div class="upload__item error">
+					<div class="upload__title">身份證反面</div>
+					<label for="fileIDBack2" class="upload__label">
+						<div class="uploadBtn__box" data-id="uploadBtn"></div>
+						<span class="upload__icon" data-id="uploadBtn">
+							<i class="icon iUpload__icon"></i>
+							<span class="vam">重新上傳</span>
 						</span>
-						<i class="icon iSprite20__plus"></i>
-						<span class="vam">未選擇任何檔案</span>
+						<span class="image-holder"></span>
+					</label>
+					<input type="file" value="" hidden class="fileUpload" id="fileIDBack2" />
+					<a href="javascript:void(0)" class="upload__delete" data-for="fileIDBack2">
+						<i class="icon i24__delete"></i>
+					</a>
+					<div class="upload__error"><i class="icon failure__checked"></i>上傳失敗</div>
+				</div>
+				<!-- error 錯誤時 加error end -->
+				<div class="upload__item ">
+					<div class="upload__title">財力證明</div>
+					<a href="javascript:void(0)" class="upload__info icon iInfo" data-fancybox data-src="#backCard"></a>
+					<label for="fileFinancialProof" class="upload__label">
+						<div class="uploadBtn__box" data-id="uploadBtn"></div>
+						<span class="upload__icon" data-id="uploadBtn" >
+							<i class="icon iUpload__icon"></i>
+							<span class="vam">上傳檔案</span>
+						</span>
 						<span class="image-holder"></span>
 					</label>
 					<input type="file" value="" hidden class="fileUpload" id="fileFinancialProof" />
 					<a href="javascript:void(0)" class="upload__delete" data-for="fileFinancialProof">
-						<i class="icon iSprite30__delete"></i>
+						<i class="icon i24__delete"></i>
 					</a>
+					<div class="upload__checked"><i class="icon finish__checked"></i>上傳成功</div>
 				</div>
 				<div class="divder"></div>
 				<p class="fBold">新增其他文件</p>
@@ -133,6 +165,7 @@
 				</div>
 
 			</div>
+			<a class="btn_count_start" href="javascript:void(0)"  data-fancybox="" data-src="#backCard_lightbox_time" ></a>
 			<div class="actionArea">
 				<a href="javascript:void(0)" class="btn" data-id="submit">
 					<span>下一步</span>
@@ -148,21 +181,33 @@
 	</form>
 </section>
 
-		<div id="backCard_lightbox_time" class="popup">
-			<div class="popup__conainter">
-				<div class="popup__container">
-					<article>
-					<div class="time_count"></div>		
-					<p class="time_count_text">您進入此頁面已經一段時間，為保護您的資料安全，<br>
-					此申辦流程將於<span id="time__count2" class="orange_span">60秒</span>後自動停止。</p>
-							<div class="btn_all_print lightbox_contenet">
-								<a href="resault-t3.html"><span>停止申請</span></a>
-									<a href="javascript:void(0)" onclick="javascript:window.location.reload()"  class="yellow count_end" data-fancybox-close><span>繼續使用</span></a>
-							</div>
-					</article>
-				</div>
+<div id="backCard_lightbox_time" class="popup">
+	<div class="popup__conainter">
+		<div class="popup__container">
+			<article>
+			<div class="time_count"></div>		
+			<p class="time_count_text">您進入此頁面已經一段時間，為保護您的資料安全，<br>
+			  此申辦流程將於<span id="time__count2" class="orange_span">60秒</span>後自動停止。</p>
+					<div class="btn_all_print lightbox_contenet">
+						<a href="patch_step1.html"><span>停止申請</span></a>
+							<a href="javascript:void(0)" onclick="javascript:window.location.reload()"  class="yellow count_end" data-fancybox-close><span>繼續使用</span></a>
+					</div>
+			</article>
+		</div>
+	</div>
+</div>
+<div id="backCard" class="popup">
+		<div class="popup__head">
+			<div class="popup__title">財力證明</div>
+		</div>
+		<div class="popup__conainter">
+			<div class="popup__container">
+				<article>
+				  <p>財力證明財力證明財力證明財力證明財力證明財力證明財力證明財力證明</p>
+				</article>
 			</div>
 		</div>
+</div>
 
 		</section>
 		<footer class="footer">
@@ -217,7 +262,6 @@
 		};
 		countTime();
 		var interval = setInterval(countTime, 1000)
-	
 		$('.upload__delete').click(function () {
 			var id = $(this).data('for');
 			$('label[for="' + id + '"]').children().fadeIn();
@@ -226,37 +270,20 @@
 			$('label[for="' + id + '"]').closest('.upload__item').removeClass('checked');
 			document.getElementById(id).value = null;
 		});
-
 		$('[data-id="uploadBtn"]').on('click', function uploadFunc() {
 			var el = $(this);
-			el.parents().addClass('uploading'); 
 			setTimeout(function () {
 				el.off('click'); 
-				var $bar = $('<div class="uploadBar"></div').appendTo(el); 
-				var progress = 0; 
-				var myinterval = setInterval(function () { 
-					progress += usefloor(0, 10);
-					progress > 100 ? progress = 100 : progress; 
-					el.find('span').text(progress + ' %'); 
-					$bar.css('width', progress + '%'); 
-					if (progress >= 100) { 
-						$bar.fadeOut(800); 
-						el.parents().removeClass('uploading'); 
-						el.find('span').fadeOut(801); 
-						clearInterval(myinterval);
-						setTimeout(function () { 
+				var myinterval = setInterval(function () {  
+					setTimeout(function () {
 							el.on('click', uploadFunc); 
-							el.find('span').text('上傳').fadeIn(300); 
-							$bar.remove(); 
-						}, 800);
-						setTimeout(function () { 
 							$('input[type="file"]').each(function () {
 								if ($(this).val()) {
-									$(this).closest('.upload__item').addClass('checked');
+									$(this).closest('.upload__item').addClass('checked');;
 								}
 							})
 						}, 1000);
-					}
+
 				}, 100);
 			}, 800);
 		});
@@ -264,23 +291,22 @@
 		var count = 0;
 		$('[data-id="addMore"]').click(function () {
 			if (count < 4) {
-
 			var ran = Math.floor(Math.random() * 100000);
 			var otherItem = '<div class="upload__item">\
 					<div class="upload__title">其他</div>\
-					<div class="upload__checked"><i class="icon finish__checked"></i></div>\
 					<label for="fileother' + ran + '" class="upload__label">\
+						<div class="uploadBtn__box" data-id="uploadBtn"></div>\
 						<span class="upload__icon" data-id="uploadBtn">\
-							<i class="icon iUpload__other"></i>\
+							<i class="icon iUpload__icon"></i>\
+							<span class="vam">上傳檔案</span>\
 						</span>\
-						<i class="icon iSprite20__plus"></i>\
-						<span class="vam">未選擇任何檔案</span>\
 						<span class="image-holder"></span>\
 					</label>\
 					<input type="file" value="" hidden class="fileUpload" id="fileother' + ran + '" />\
 					<a href="javascript:void(0)" class="upload__delete" data-for="fileother'+ ran + '">\
-						<i class="icon iSprite30__delete"></i>\
+						<i class="icon i24__delete"></i>\
 					</a>\
+					<div class="upload__checked"><i class="icon finish__checked"></i>上傳成功</div>\
 				</div>'
 			var box = $(this).closest('.upload__item');
 			$(otherItem).insertBefore(box).hide().fadeIn();
@@ -296,65 +322,27 @@
 			});
 			$('[data-id="uploadBtn"]').on('click', function uploadFunc() {
 			var el = $(this);
-			el.parents().addClass('uploading'); //把 BTN 改成 LOAING BAR TRACK
-			setTimeout(function () {
-				el.off('click'); //UNBIND CLICK EVENT
-				var $bar = $('<div class="uploadBar"></div').appendTo(el); //加入LOADING BAR
-				var progress = 0; // SET INITIAL PROGRESS PERCENTAGE
-				var myinterval = setInterval(function () { //模擬 PROGRESS PERCENTAGE START
-					progress += usefloor(0, 10);//模擬LOADING 用亂數設定每0.1秒上傳的PERCENTAGE
-					progress > 100 ? progress = 100 : progress; //模擬PERCENTAGE MAXIMUM 100%
-					el.find('span').text(progress + ' %'); //PERCENTAGE TEXT
-					$bar.css('width', progress + '%'); //PERCENTAGE BAR WIDTH
-					if (progress >= 100) { //模擬PROGRESS ENDING
-						$bar.fadeOut(800); //結束後把BAR FADE OUT
-						el.parents().removeClass('uploading'); //把LOADING BAR 改回來 BTN
-						el.find('span').fadeOut(801); //PERCENTAGE TEXT FADE OUT
-						clearInterval(myinterval);//清除模擬的INTERVAL
-						setTimeout(function () { //設定100% 後0.8秒
-							el.on('click', uploadFunc); //綁回BTN的 CLICK EVENT
-							el.find('span').text('上傳').fadeIn(300); //把BTN TEXT設回來
-							$bar.remove(); //移除LOADING BAR
-						}, 800);
-						setTimeout(function () { //改回BTN後0.2秒 把畫面滾回上傳區塊
-							var goback = $('.upload').offset().top;
-							// $('body, html').animate({ scrollTop: goback }, 300);
-							$('input[type="file"]').each(function () {
-								if ($(this).val()) {
-									$(this).closest('.upload__item').addClass('checked');//把上傳有值的INPUT加上打勾跟垃圾桶
-								}
-							})
-						}, 1000);
-					}
-				}, 100);//模擬
-			}, 800);//按下BTN 0.8秒後執行LOADING
-		});
+				setTimeout(function () {
+					el.off('click'); 
+					var myinterval = setInterval(function () {  
+						setTimeout(function () {
+								el.on('click', uploadFunc); 
+								$('input[type="file"]').each(function () {
+									if ($(this).val()) {
+										$(this).closest('.upload__item').addClass('checked');;
+									}
+								})
+							}, 1000);
+
+					}, 100);
+				}, 800);
+			});
 		});
 		//亂數用
 		function usefloor(min, max) {
 			return Math.floor(Math.random() * (max - min + 1) + min);
 		};
 
-		//jquery validate
-		$("#form").validate({
-			rules: {
-				txtCusid: {
-					required: true
-				}
-			},
-			messages: {
-				txtCusid: '請輸入身分證字號',
-			},
-			errorPlacement: function (error, element) {
-				var $container = element.closest('.inputGroup__control');
-				$container.append(error);
-			},
-			onkeyup: false,
-			onclick: false,
-			submitHandler: function (form) {
-				form.submit();
-			}
-		});
 	});
 
 </script>

@@ -88,7 +88,7 @@ $(function () {
 		$(this).siblings('input[type="submit"]').trigger('click');
 	});
 
-	////�Ϥ��w��
+
 	function fileUpload() {
 		//Get count of selected files
 		var imgPath = $(this)[0].value;
