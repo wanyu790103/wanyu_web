@@ -2,6 +2,7 @@
 .orange_span{
     color:#ff6000; 
 }
+
 .actionArea.back__link{
     padding:0px 0 20px; 
 }
@@ -15,12 +16,18 @@
 }
 .form_box{
     margin: 0 auto;
-    p{@include font(22px,36px,#4a4a4a,600);}
+    // max-width:600px;
+    background: #fbe2e0;
+    padding:20px; 
+    p{@include font(18px,30px,#F44336,600);}
+    .box_inline{
+        @include font(16px,25px,#F44336,600);
+    }
     .icon_item:before, .icon_item:after {
+        background-position:0 -40px;
         width: 20px;
         height: 20px;
-        background-size: 20px 20px;
-        background-image: url(../images/check_icon.png);
+        background-image: url(../images/sprite--20.png);
         margin-right: 5px;
     } 
 }
@@ -89,10 +96,10 @@
         border: solid 1px #cdcdcd;
         display: inline-block;
         padding: 20px 30px;
-        width:470px;
-        max-width:48%;
+        width:100%;
         position: relative;
-        margin:0 auto;
+        margin:0 auto 10px;
+        background:#fff;
         .box__item--title{
             @include font(24px,30px,#00994e,600);
             border-bottom:1px solid #cdcdcd;
@@ -128,7 +135,10 @@
                 list-style:none;
                 margin:0;
                 padding:0;
+  
                 li{
+                    width:48%;
+                    float: left; 
                     margin:10px 0;
                     @include font(16px,26px,#111111,600);
                     .card_img img{
@@ -146,6 +156,9 @@
         .box__item--text{
             text-align:left;
             @include font(14px,20px,#000,500);
+            &.red_span{
+                color: #F44336;
+            }
         }
 
     }
@@ -400,6 +413,7 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
                     margin:0;
                     padding:0;
                     li{
+                        width:100%; 
                         margin:10px 0;
                         @include font(16px,26px,#111111,600);
                         .card_img img{
@@ -422,6 +436,10 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
     }
 }
 @media only screen and(max-width:767px){
+    .program__box{
+        font-size: 20px;
+        line-height:30px; 
+    }
     .upload__item{
         &.error{
             .upload__error{
@@ -454,7 +472,8 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
     }
     .form_box{
         max-width:100%;
-        width:100%; 
+        width:100%;
+        padding:10px;   
     }
     .complete__info--short{
         padding-top: 40px; 

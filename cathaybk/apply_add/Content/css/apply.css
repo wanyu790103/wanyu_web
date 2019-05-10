@@ -24,19 +24,28 @@
 
 .form_box {
   margin: 0 auto;
+  background: #fbe2e0;
+  padding: 20px;
 }
 .form_box p {
-  font-size: 22px;
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 600;
   font-family: "微軟正黑體";
-  color: #4a4a4a;
+  color: #F44336;
+}
+.form_box .box_inline {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 600;
+  font-family: "微軟正黑體";
+  color: #F44336;
 }
 .form_box .icon_item:before, .form_box .icon_item:after {
+  background-position: 0 -40px;
   width: 20px;
   height: 20px;
-  background-size: 20px 20px;
-  background-image: url(../images/check_icon.png);
+  background-image: url(../images/sprite--20.png);
   margin-right: 5px;
 }
 
@@ -111,10 +120,10 @@
   border: solid 1px #cdcdcd;
   display: inline-block;
   padding: 20px 30px;
-  width: 470px;
-  max-width: 48%;
+  width: 100%;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+  background: #fff;
 }
 .checkArea--2boxs .box__item .box__item--title {
   font-size: 24px;
@@ -166,6 +175,8 @@
   padding: 0;
 }
 .checkArea--2boxs .box__item .box__item--listbox ul li {
+  width: 48%;
+  float: left;
   margin: 10px 0;
   font-size: 16px;
   line-height: 26px;
@@ -186,6 +197,9 @@
   font-weight: 500;
   font-family: "微軟正黑體";
   color: #000;
+}
+.checkArea--2boxs .box__item .box__item--text.red_span {
+  color: #F44336;
 }
 
 .upload__delete {
@@ -471,6 +485,7 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
     padding: 0;
   }
   .checkArea--2boxs .box__item .box__item--listbox ul li {
+    width: 100%;
     margin: 10px 0;
     font-size: 16px;
     line-height: 26px;
@@ -494,6 +509,11 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
   }
 }
 @media only screen and (max-width: 767px) {
+  .program__box {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .upload__item.error .upload__error {
     margin: 10px 0 0 0px;
     width: 100%;
@@ -523,6 +543,7 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
   .form_box {
     max-width: 100%;
     width: 100%;
+    padding: 10px;
   }
 
   .complete__info--short {
