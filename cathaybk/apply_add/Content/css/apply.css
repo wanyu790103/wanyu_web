@@ -548,6 +548,7 @@ a.link__g, a.link__g:active, a.link__g:hover, a.link__g:visited, a.link__g:focus
 
   .complete__info--short {
     padding-top: 40px;
+    width: 100%;
   }
 
   .min--heightgray {
