@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<head>
+
+	<!-- 所有的 lab 都套用的 head 裡面已經有包含：
+		1. jquery-1.9.0.min.js, jquery-ui-1.10.0.custom.css, jquery-ui-1.10.0.custom.min.js
+		2. bootstrap.min.css, bootstrap.min.js
+		3. lab google analysitic
+		4. author copyright favicon
+		5. http://lab.25sprout.com/css/lab_site.css
+		6. google fonts
+		7. paste code pre tag with prettify
+	-->
+	<!-- - - - - - - - - - - - - - - - - -
+
+	注意 ！！
+	SOURCE HEAD 是所有 Lab 的頁面都共通的 head
+
+ - - - - - - - - - - - - - - - - - -->
+
+<!-- HTML meta 設定（必填） -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="25sprout, LLC. 新芽網路有限公司">
+<meta name="copyright" content="25sprout 2013 all rights Reserved.">
+
+<link rel="shortcut icon" href="https://lab.25sprout.com/images/favi-icon.png" >
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://lab.25sprout.com/library/jquery/jquery-1.9.0.min.js"></script>
+
+<!-- jQuery UI -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/library/jquery-ui/css/ui-lightness/jquery-ui-1.10.0.custom.css">
+<script type="text/javascript" src="https://lab.25sprout.com/library/jquery-ui/js/jquery-ui-1.10.0.custom.min.js"></script>
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/library/bootstrap/bootstrap.css">
+<script type="text/javascript" src="https://lab.25sprout.com/library/bootstrap/bootstrap.js"></script>
+
+<!-- prettify -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/library/prettify/prettify.css">
+<script type="text/javascript" src="https://lab.25sprout.com/library/prettify/prettify.js"></script>
+
+<!-- Font -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/css/font-face.css">
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+<!-- Font Awsome -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/library/font-awesome/css/font-awesome.css">
+
+<!-- Site Universal Style -->
+<link type="text/css" rel="stylesheet" href="https://lab.25sprout.com/css/lab_site.css">
+
+<!-- Google Analytics ***** 務必更新 GA Account No# *****-->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-39154623-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script> -->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		prettyPrint();
+	});
+</script>
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+
+	<!-- HTML meta 設定（必填） -->
+	<meta name="description" content="因應行動裝置普及的時代來臨，打造可以 Responsive 的 Table Layout.">
+	<meta name="keywords" content="Responsive,Table,CSS,Display." />
+	<meta name="URL" content="http://lab.25sprout.com/responsive_table/">
+	<meta name="image" content="http://lab.25sprout.com/responsive_table/images/share.jpg" />
+
+	<!--Facebook -->
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:url" content="http://lab.25sprout.com/responsive_table/" />
+	<meta property="og:type" content="Website" />
+	<meta property="og:description" content="因應行動裝置普及的時代來臨，打造可以 Responsive 的 Table Layout." />
+	<meta property="og:image" content="http://lab.25sprout.com/responsive_table/images/share.jpg" />
+
+	<!-- 網站標題 -->
+	<title>Table 也能 Responsive!</title>
+
+	<!-- Lab 共用的 CSS -->
+	<link type="text/css" rel="stylesheet" href="http://lab.25sprout.com/css/lab_site.css">
+	
+	<!-- 自己這個 site 要用的 CSS-->
+	<link type="text/css" rel="stylesheet" href="http://lab.25sprout.com/responsive_table/css/style.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//自己這個站的 js
+			$('#demo-switch li').on('click',function(){
+				$('.demo-intro div').hide();
+				$('#demo-switch li').removeClass('active');
+				$(this).addClass('active');
+				$('#demo-table').attr('class','');
+
+				var rel = $(this).attr('rel');
+				var width = $(this).attr('d-width');
+
+				$('.demo-intro').find('.'+rel+'-text').fadeIn();
+				$('.demo-area').width(width);
+
+				if(rel == 'css-table'){
+					$('#demo-table').hide();
+					$('#css-table').css('display','table');
+				} else {
+					$('#css-table').hide();
+					$('#demo-table').addClass(rel).fadeIn();
+				}
+			});
+		});
+	</script>
+
+
+</head>
+
+<body>
+
+	<!-- 上方的 header 全站統一 START -->
+
+	<div class="clear-both"></div>
+
+	<div class="content-container">
+		<!-- 內容從這裡開始 -->
+		<ul id="demo-switch">
+			<li class="active" rel="default">#01 原始的 Table</li>
+			<li rel="hide-column">#02 隱藏某些項目</li>
+			<li rel="scroll-left">#03 水平 Scroll Table</li>
+			<li rel="break-table">#04 破壞 Table 排版</li>
+			<li rel="css-table">#05 CSS 製作 DIV Table</li>
+		</ul>
+
+
+		<div class="demo-intro">
+			<div class="default-text" style="display:block;">
+				<h2>#01 原始的 Table</h2>
+				<h4>不做任何 CSS 設定，是一個 100% 寬度的 &lt;table&gt;</h4>
+				<h5 class="good"><i class="fa fa-thumbs-o-up"></i> 人人都會</h5>
+				<h5 class="bad"><i class="fa fa-thumbs-o-down"></i> 對行動裝置不太友善</h5>
+			</div>
+			<div class="hide-column-text">
+				<h2>#02 隱藏某些項目</h2>
+				<h4>於不同寬度的螢幕，隱藏一些非必要的欄位 （ &lt;th&gt; , &lt;td&gt; ）。</h4>
+				<p>
+					960px 以下：隱藏代號<br/>
+					720px 以下：隱藏門市電話、門市地圖<br/>
+					480px 以下：隱藏門市地址<br/>
+				</p>
+				<h5 class="good"><i class="fa fa-thumbs-o-up"></i> 介面寬度適中</h5>
+				<h5 class="bad"><i class="fa fa-thumbs-o-down"></i> 表格的內容必須包含可省略的欄位，否則可能會省略重要資訊</h5>
+			</div>
+			<div class="scroll-left-text">
+				<h2>#03 水平 Scroll Table</h2>
+				<h4>於 720px 以下的螢幕將 thead 換至左方，右方的 tbody tr 以水平方式排列並可 Scroll.</h4>
+				<h5 class="good"><i class="fa fa-thumbs-o-up"></i> 可以保留所有內容。</h5>
+				<h5 class="bad"><i class="fa fa-thumbs-o-down"></i> 所有的內容不能有 br 等換行的動作，否則無法使用此排版。</h5>
+			</div>
+			<div class="break-table-text">
+				<h2>#04 破壞 Table 排版</h2>
+				<h4>直接將 Thead 直接拿掉，剩下的 tbody tr td 都使用 display:block 來排版</h4>
+				<h5 class="good"><i class="fa fa-thumbs-o-up"></i> 可以保留所有內容、也很適合行動裝置觀看。</h5>
+				<h5 class="bad"><i class="fa fa-thumbs-o-down"></i> 排版會拉的很長，可能要滑很久才能看完，且thead的內容會重複很多次。</h5>
+			</div>
+			<div class="css-table-text">
+				<h2>#05 CSS 製作 DIV Table</h2>
+				<h4>拒絕使用 &lt;table&gt; 來呈現 table, 改用 CSS 搭配 DIV 呈現出 table style</h4>
+				<p>下方的 Table 其實全部都是用 DIV 拼出來的唷。</p>
+				<h5 class="good"><i class="fa fa-thumbs-o-up"></i> 您不會在網頁中看見 &lt;table&gt; Element, 全部都是 div。你可以自由的設計 RWD 狀態下的各個 DIV 樣子。</h5>
+				<h5 class="bad"><i class="fa fa-question-circle"></i> 您可以根據您的內容決定要使用哪種方式呈現你的 Layout。</h5>
+			</div>
+		</div>
+
+		<div class="demo-area">
+			<table id="demo-table">
+				<thead>
+					<tr>
+						<th class="large">代號</th>
+						<th>分行名稱</th>
+						<th>地址</th>
+						<th class="small">電話</th>
+						<th class="mobile">傳真	</th>
+						<th class="mobile">備註</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+                    </tr>
+                    <tr>
+						<td data-title="代號" class="large">01</td>
+						<td data-title="分行名稱">館前分行</td>
+						<td data-title="地址">100 台北市館前路６５號</td>
+						<td data-title="電話" class="small">(02)23125555</td>
+						<td data-title="傳真" class="mobile">(02)23316701</td>
+						<td data-title="備註" class="mobile">指定外匯分行</td>
+					</tr>
+					
+				</tbody>
+			</table>
+
+			<div id="css-table" class="css-table">
+				<div class="thead">
+					<div class="tr">
+						<div class="th">代號</div>
+						<div class="th">分行名稱</div>
+						<div class="th">地址</div>
+						<div class="th">電話</div>
+						<div class="th">傳真</div>
+						<div class="th">備註</div>
+					</div>
+				</div>
+				<div class="tbody">
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">館前分行</div>
+						<div class="td">100 台北市館前路６５號</div>
+						<div class="td">(02)23125555</div>
+						<div class="td">(02)233167018</div>
+						<div class="td">指定外匯分行</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
