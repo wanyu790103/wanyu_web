@@ -1,0 +1,132 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+fieldset, img { border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+
+ol, ul { list-style: none; }
+
+caption, th { text-align: left; }
+
+/*h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:normal;}*/
+q:before, q:after { content: ''; }
+
+abbr, acronym { border: 0; }
+
+html, body { height: 100%; }
+
+input { background: transparent; border: none; }
+
+input:focus, input:focus { outline: none !important; }
+
+body { background: #fff; font-family: '微軟正黑體'; font-size: 12px; }
+
+a { outline: none; hlbr: expression(this.onFocus=this.blur()); text-decoration: none; }
+
+.clear { clear: both; }
+
+img { vertical-align: top; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+article.wrapper .banner { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: url(../images/banner_bg.png); background-size: cover; background-repeat: no-repeat; background-position: top center; min-height: 405px; }
+article.wrapper .banner img { max-width: 100%; }
+article.wrapper .banner .banner_text { position: absolute; width: 550px; height: auto; top: 140px; left: 50px; margin-left: 0; margin-top: 0; }
+article.wrapper .banner .banner_text .b { font-size: 38px; line-height: 50px; font-weight: 600; font-family: "微軟正黑體"; color: #383838; }
+article.wrapper .banner .banner_text .b span.pink { color: #e50e83; }
+article.wrapper .banner .banner_text .time { width: 480px; height: 44px; font-size: 25px; line-height: 44px; font-weight: 500; font-family: "微軟正黑體"; color: #888686; border-radius: 5px; border: 1px solid #888686; padding: 0px 8px; margin: 15px 0; }
+article.wrapper .banner .banner_text p { font-size: 20px; line-height: 35px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+article.wrapper .text_in { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; padding: 75px 20px 0px; }
+article.wrapper .text_in .text { position: absolute; width: 450px; height: auto; top: 130px; right: 20px; margin-right: 0; margin-top: 0; }
+article.wrapper .text_in .text p { font-size: 38px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+article.wrapper .advice { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 20px; border-top: 1px solid #d1d0d0; padding: 30px 0; text-align: center; }
+article.wrapper .advice p { display: inline-block; padding-right: 30px; }
+article.wrapper .advice a { float: none; margin-top: 0; padding: 10px 40px; }
+article.wrapper .w_100p { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: #f3f0ed; min-height: 200px; border-bottom: 1px solid #d1d0d0; }
+article.wrapper .w_100p .p { width: 580px; float: left; margin-top: 60px; padding-top: 25px; font-size: 38px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+article.wrapper .w_100p .p span { color: #e72992; }
+article.wrapper .w_100p .link_p { float: left; width: 450px; left: 600px; margin-top: 75px; }
+article.wrapper .w_100p .link_p img { margin-right: 5px; }
+
+@media screen and (max-width: 1195px) { article.wrapper a.p_buttom { position: relative; width: 190px; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 25px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #e82a94; text-align: center; border-radius: 10px; margin-right: 8px; margin-top: 20px; }
+  article.wrapper a.b_buttom { position: relative; width: 190px; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 25px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #64c9d6; text-align: center; border-radius: 10px; margin-top: 20px; }
+  article.wrapper p { font-size: 20px; line-height: 40px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .banner { position: relative; width: 100%; height: 706px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: url(../images/banner.jpg); background-size: cover; background-repeat: no-repeat; background-position: top center; }
+  article.wrapper .banner img { max-width: 100%; }
+  article.wrapper .banner .banner_text { position: absolute; width: 550px; height: auto; top: 140px; left: 50px; margin-left: 0; margin-top: 0; }
+  article.wrapper .banner .banner_text .b { font-size: 38px; line-height: 50px; font-weight: 600; font-family: "微軟正黑體"; color: #383838; }
+  article.wrapper .banner .banner_text .b span.pink { color: #e50e83; }
+  article.wrapper .banner .banner_text .time { width: 480px; height: 44px; font-size: 25px; line-height: 44px; font-weight: 500; font-family: "微軟正黑體"; color: #888686; border-radius: 5px; border: 1px solid #888686; padding: 0px 8px; margin: 15px 0; }
+  article.wrapper .text_in { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; padding: 75px 20px 0px; text-align: center; }
+  article.wrapper .text_in img { max-width: 80%; }
+  article.wrapper .text_in .text { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 20px; }
+  article.wrapper .text_in .text p { font-size: 38px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .advice { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 20px; text-align: center; }
+  article.wrapper .advice p { display: inline-block; padding-right: 30px; }
+  article.wrapper .advice a { float: none; margin-top: 0; padding: 10px 40px; }
+  article.wrapper .w_100p { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: #f3f0ed; min-height: 200px; border-bottom: 1px solid #d1d0d0; text-align: center; }
+  article.wrapper .w_100p .p { width: 100%; float: left; margin-top: 60px; padding-top: 0px; font-size: 38px; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .w_100p .p span { color: #e72992; }
+  article.wrapper .w_100p .link_p { float: left; width: 100%; left: 0%; margin-left: 0; margin-top: 20px; margin-bottom: 20px; }
+  article.wrapper .w_100p .link_p img { margin-right: 5px; } }
+@media screen and (max-width: 780px) { article.wrapper a.p_buttom { position: relative; width: 40%; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 3.5vw; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #e82a94; text-align: center; border-radius: 10px; margin-right: 8px; margin-top: 20px; }
+  article.wrapper a.b_buttom { position: relative; width: 40%; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 3.5vw; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #64c9d6; text-align: center; border-radius: 10px; margin-top: 20px; }
+  article.wrapper p { font-size: 4vw; line-height: 7vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .banner { position: relative; width: 100%; height: 0; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: url(../images/banner_s.jpg) #fff; background-size: cover; background-repeat: no-repeat; background-position: bottom center; padding-bottom: 150%; }
+  article.wrapper .banner img { max-width: 100%; }
+  article.wrapper .banner .banner_text { position: absolute; width: 100%; height: auto; top: 40px; left: 0; margin-left: 0; margin-top: 0; padding: 20px 30px 0; }
+  article.wrapper .banner .banner_text .b { font-size: 6vw; line-height: 7vw; font-weight: 600; font-family: "微軟正黑體"; color: #383838; }
+  article.wrapper .banner .banner_text .b span.pink { color: #e50e83; }
+  article.wrapper .banner .banner_text .time { width: 100%; height: 8vw; font-size: 3.5vw; line-height: 7vw; font-weight: 500; font-family: "微軟正黑體"; color: #888686; border-radius: 5px; border: 1px solid #888686; padding: 0px 8px; margin: 10px 0; text-align: left; }
+  article.wrapper .text_in { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; padding: 75px 20px 0px; }
+  article.wrapper .text_in img { max-width: 50%; float: left; }
+  article.wrapper .text_in .text { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 40px; }
+  article.wrapper .text_in .text p { font-size: 6vw; line-height: 9vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; text-align: center; }
+  article.wrapper .advice { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 20px; text-align: center; }
+  article.wrapper .advice p { display: inline-block; padding-right: 0; width: 100%; }
+  article.wrapper .advice a { float: left; margin: 5px 30% 0; padding: 0; }
+  article.wrapper .w_100p { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: #f3f0ed; min-height: 200px; border-bottom: none; }
+  article.wrapper .w_100p .p { width: 100%; float: left; margin-top: 60px; padding-top: 0px; text-align: center; font-size: 6vw; line-height: 8vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .w_100p .p span { color: #e72992; }
+  article.wrapper .w_100p .link_p { float: left; width: 100%; left: 0%; margin-left: 0%; margin-top: 20px; margin-bottom: 50px; text-align: center; }
+  article.wrapper .w_100p .link_p img { margin-right: 5px; max-width: 40%; } }
+@media screen and (max-width: 640px) { article.wrapper a.p_buttom { position: relative; width: 40%; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 4.5vw; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #e82a94; text-align: center; border-radius: 10px; margin-right: 8px; margin-top: 10px; }
+  article.wrapper a.b_buttom { position: relative; width: 40%; height: 50px; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; font-size: 4.5vw; line-height: 50px; font-weight: normal; font-family: "微軟正黑體"; color: #fff; background: #64c9d6; text-align: center; border-radius: 10px; margin-top: 10px; }
+  article.wrapper p.banner_text { font-size: 4vw; line-height: 7vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .banner { position: relative; width: 100%; height: 0; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: url(../images/banner_s.jpg) #fff; background-size: cover; background-repeat: no-repeat; background-position: bottom center; padding-bottom: 190%; }
+  article.wrapper .banner img { max-width: 100%; }
+  article.wrapper .banner .banner_text { position: absolute; width: 100%; height: auto; top: 40px; left: 0; margin-left: 0; margin-top: 0; padding: 0px 12px; }
+  article.wrapper .banner .banner_text .b { font-size: 6.5vw; line-height: 9vw; font-weight: 600; font-family: "微軟正黑體"; color: #383838; }
+  article.wrapper .banner .banner_text .b span.pink { color: #e50e83; }
+  article.wrapper .banner .banner_text .time { width: 93%; height: 8vw; font-size: 4vw; line-height: 8vw; font-weight: 500; font-family: "微軟正黑體"; color: #888686; border-radius: 5px; border: 1px solid #888686; padding: 0px 8px; text-align: center; }
+  article.wrapper .banner .banner_text p { font-size: 4.2vw; line-height: 7.5vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .text_in { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; padding: 75px 20px 0px; }
+  article.wrapper .text_in img { max-width: 50%; float: left; }
+  article.wrapper .text_in .text { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 40px; }
+  article.wrapper .text_in .text p { font-size: 7vw; line-height: 10vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; text-align: center; }
+  article.wrapper .advice { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; margin-bottom: 20px; text-align: center; }
+  article.wrapper .advice p { display: inline-block; padding-right: 0; width: 100%; }
+  article.wrapper .advice a { float: left; margin: 5px 30% 0; padding: 0; }
+  article.wrapper .w_100p { position: relative; width: 100%; height: auto; float: left; left: 0; right: 0; top: 0; bottom: 0; margin: 0; background: #f3f0ed; min-height: 200px; border-bottom: none; }
+  article.wrapper .w_100p .p { width: 100%; float: left; margin-top: 60px; padding-top: 0px; text-align: center; font-size: 6vw; line-height: 8vw; font-weight: normal; font-family: "微軟正黑體"; color: #464646; }
+  article.wrapper .w_100p .p span { color: #e72992; }
+  article.wrapper .w_100p .link_p { float: left; width: 100%; left: 0%; margin-left: 0%; margin-top: 20px; margin-bottom: 50px; text-align: center; }
+  article.wrapper .w_100p .link_p img { margin-right: 5px; max-width: 40%; } }
+.backDrop { background-color: #000; display: none; filter: alpha(opacity=0); height: 100%; left: 0px; opacity: .0; position: fixed; top: 0px; width: 100%; z-index: 50; }
+
+.close { color: white; cursor: pointer; float: right; font-size: 32px; top: -70px; right: 0; position: absolute; width: 65px; height: 58px; background: url(../images/close.png) no-repeat; }
+
+.box { width: 910px; display: none; min-height: 556px; left: 50%; margin-left: -455px; opacity: 0; position: absolute; top: 25%; z-index: 51; background: #fff; border-radius: 5px; padding: 0 35px; }
+.box .tit { font-size: 30px; line-height: 80px; font-weight: 600; font-family: "微軟正黑體"; color: #363636; text-align: center; margin-bottom: 25px; }
+.box .in { font-size: 17px; line-height: 38px; font-weight: normal; font-family: "微軟正黑體"; color: #363636; }
+
+@media screen and (max-width: 910px) { .box { width: 90%; margin-left: -45%; padding: 10px 15px; }
+  .box .tit { font-size: 30px; line-height: 50px; font-weight: 600; font-family: "微軟正黑體"; color: #363636; text-align: center; margin-bottom: 0px; }
+  .box .in { font-size: 16px; line-height: 30px; font-weight: normal; font-family: "微軟正黑體"; color: #363636; } }
+
+
