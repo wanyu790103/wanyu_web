@@ -15,13 +15,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   padding: 0;
 }
 
-.div-touch {
-  width: 100%;
-  height: 150px;
-  -ms-touch-action: pan-y pinch-zoom;
-  touch-action: pan-y pinch-zoom;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
