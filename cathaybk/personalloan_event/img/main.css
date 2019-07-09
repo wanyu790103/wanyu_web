@@ -29,7 +29,7 @@ body.loading {
 header {
 	position: fixed;
 	width: 100%;
-	min-width: 1280px;
+	min-width:1280px;
 	left: 0;
 	top: 0;
 	z-index: 9999
@@ -161,8 +161,8 @@ article.footer_top {
 }
 .mainScreen .container {
 	position: relative;
-	width: 1280px;
-	padding: 0px 26px;
+	max-width:1280px;
+	padding: 0px 10px;
 	height: 100%;
 	margin: 0 auto
 }
@@ -1154,12 +1154,12 @@ article.footer_top {
 		top: 322px
 	}
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width:1025px) {
 	.sm {
 		display: none !important
 	}
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width:1024px) {
 	body {
 		background: #fff
 	}

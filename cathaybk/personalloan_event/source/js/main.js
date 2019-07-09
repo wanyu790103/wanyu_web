@@ -33,7 +33,7 @@ var Main = Main || (function(global, $) {
             loadImgSize = $('.load').length + $('img').length;
 
             var loadCssName = '.load';
-            if (window.innerWidth < 1280) {
+            if (window.innerWidth < 1024) {
                 loadImgSize += $('.sm-load').length;
                 loadCssName += ', .sm-load';
             } else {
