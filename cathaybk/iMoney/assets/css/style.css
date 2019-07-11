@@ -3162,8 +3162,8 @@ li {
 }
 
 .board-01 {
-  background-image: url(../images/bg-board_01.jpg);
-  color: #fff;
+  /* background-image: url(../images/bg-board_01.jpg);
+  color: #fff; */
 }
 .board-01 .brand {
   font-size: 20px;
