@@ -28,8 +28,7 @@
 <link id="favicon" rel="shortcut icon" href="images/icon_32.png" sizes="32x32">
 <link id="favicon" rel="shortcut icon" href="images/icon_64.png" sizes="64x64">
 <link id="favicon" rel="shortcut icon" href="images/icon_96.png" sizes="96x96">
-
-
+<link rel="stylesheet" href="css/aos.css" />
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="img/main.css?d=20181214"/>
 
@@ -114,7 +113,7 @@
               </div>
               <div class="kv">
                 <div class="content">
-                    <img class="kv_banner" src="img/kv.png" alt="" style="width: 100%;max-width:100%;">
+                    <img class="kv_banner" src="img/kv.png" alt="" data-aos="fade-up" style="width: 100%;max-width:100%;">
                   <div class="arrow1 load"></div>
                   <div class="arrow2 load"></div>
                   <div class="arrow3 load"></div>
@@ -272,7 +271,7 @@
             <div class="line"></div>
             <div class="group step2">
               <div class="pic">
-                <img src="img/step2_pic.png" />
+                <img src="img/step2_pic.png" data-aos="flip-left" />
               </div>
               <div class="info">
                 <p class="tag">步驟2</p>
@@ -296,13 +295,13 @@
                 <a id="btn_step3_02_mobile" href="https://www.cathaybk.com.tw/Cathaybk/OnlineService/CreditCard/CreditCardPatch/Upload-S1.aspx?ApplyType=CreditLoan" title="立即補件" target="_blank" class="btn2 sm">立即補件</a>
               </div>
               <div class="pic">
-                <img src="img/step3_pic.png" />
+                <img src="img/step3_pic.png" data-aos="flip-left"/>
               </div>
             </div>
             <div class="line"></div>
             <div class="group step4">
               <div class="pic">
-                <img src="img/step4_pic.png" />
+                <img src="img/step4_pic.png" data-aos="flip-left"/>
               </div>
               <div class="info">
                 <p class="tag">步驟4</p>
@@ -329,7 +328,7 @@
           </div>
         </div>
 
-        <div class="service load">
+        <div class="service load" data-aos="fade-up">
           <div class="container">
             <div class="content">
               <div class="icon"></div>
@@ -478,15 +477,18 @@
             <p class="headline">- 注意事項 -</p>
             <div class="notice">
               <p>1. 本廣告揭露之年百分率係按主管機關備查之標準計算範例予以計算<i class="arial">，</i>實際貸款條件<i class="arial">，</i>仍以銀行提供之產品為準<i class="arial">。</i>且每一客戶實際之年百分率仍視其個別貸款產品及授信條件<br class="lg" />而有所不同<i class="arial">。</i></p>
-              <p class="mb0">2.總費用年百分率：5.00%~15.40%<i class="arial">。</i><br />
+              <p class="mb0">2.總費用年百分率：分段式：5.08%~20.78%;一段式：4.92%~21.46% <i class="arial">。</i><br />
                 計算範例:
               </p>
               <p class="green">
                 貸款金額：新臺幣30萬元<i class="arial">。</i><br />
                 貸款期間：5年<br />
-                貸款利率：1.98%~18.38%<i class="arial">。</i><br />
-                各項相關費用總金額：新臺幣9,000元<i class="arial">。</i><br />
-                總費用年百分率：5.00%~15.40%
+                貸款利率<br />
+                分段式：1.98%~20%；<br />
+                一段式：3.67%~20%。<br>
+                各項相關費用總金額：新臺幣9,000元<i class="arial">。</i><br>
+                總費用年百分率：分段式：5.08%~20.78%<i class="arial">；</i><br>
+                一段式：4.92%~21.46%。
               </p>
               <p>3.於貸放後12個月內提前償還部分或全部借款時<i class="arial">，</i>須支付提前償還金額之 3% 為提前還款違約金<i class="arial">。</i></p>
               <p>4.總費用年百分率不等於貸款利率<i class="arial">。</i></p>
@@ -523,13 +525,20 @@
   </footer>
  
 
-  <script src="js/jquery.min.js" async></script>
-
+  <script src="js/jquery.min.js"></script>
   <script src="js/libs/plugins.js" async></script>
-  <script src="js/libs/createjs-2015.11.26.min.js" async></script>
+  <script src="js/libs/createjs-2015.11.26.min.js" ></script>
   <script src="js/libs/device.js" async></script>
-  <script src="js/app.js" async></script>
-  <script src="js/main-min.js?d=20181213" async></script>
+  <script src="js/app.js" ></script>
+  <script src="js/main-min.js"></script>
+  <script src="js/libs/aos.js"></script>
+
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1000
+    });
+  </script>
    
 
 
