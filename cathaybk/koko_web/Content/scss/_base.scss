@@ -1,6 +1,8 @@
 @charset "UTF-8";
 $maincolor: #7359b2;
 $seccolor: #ec008c;
+@scrollbar-height:5px;
+@scrollbar-padding:15px;
 @mixin r($wt:100%,$ht:auto){
   position:relative;
   width:$wt;

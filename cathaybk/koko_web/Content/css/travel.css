@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@scrollbar-height :5px;
+@scrollbar-padding :15px;
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
@@ -104,6 +106,21 @@ html {
   padding-right: 42px;
 }
 
+table.scroll-left ::-webkit-scrollbar {
+  height: 3px;
+  background-color: #cbc6c6;
+}
+table.scroll-left ::-webkit-scrollbar-track,
+table.scroll-left ::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+}
+table.scroll-left ::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+table.scroll-left ::-webkit-scrollbar-thumb {
+  background-color: rgba(7, 7, 7, 0.5);
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/travel/icomoon.eot?k0ifrp");
@@ -125,29 +142,49 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-group-3:before {
+.icon-tab-icon-03-r:before {
   content: "\e900";
   color: #fefefe;
 }
 
-.icon-group-10:before {
+.icon-tab-icon-04-r:before {
   content: "\e901";
   color: #fefefe;
 }
 
-.icon-tab-icon-02-r:before {
+.icon-group-3:before {
   content: "\e902";
   color: #fefefe;
 }
 
-.icon-tab-icon-03-r:before {
+.icon-group-10:before {
   content: "\e903";
   color: #fefefe;
 }
 
-.icon-tab-icon-04-r:before {
+.icon-tab-icon-02-r:before {
   content: "\e904";
   color: #fefefe;
+}
+
+.icon-koko_icon04:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.icon-koko_icon03:before {
+  content: "\e906";
+  color: #fff;
+}
+
+.icon-koko_icon02:before {
+  content: "\e907";
+  color: #fefefe;
+}
+
+.icon-koko_icon01:before {
+  content: "\e908";
+  color: #fff;
 }
 
 .b_line {
@@ -166,7 +203,7 @@ html {
 .m-tab-hd02 {
   border-top: 1px solid #ccc;
   position: relative;
-  letter-spacing: -0.34em !important;
+  letter-spacing: -0.20em !important;
   line-height: 0;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -179,6 +216,92 @@ html {
 }
 .l-content-bd.bg_style h2 {
   color: #7359b2;
+}
+
+.m-dialog-box > *.m-icon {
+  position: relative;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b68ef5), color-stop(100%, #8563dc));
+  background-image: -moz-linear-gradient(left, #b68ef5, #8563dc);
+  background-image: -webkit-linear-gradient(left, #b68ef5, #8563dc);
+  background-image: -webkit-linear-gradient(324deg, #b68ef5, #8e6be0 57%, #8563dc);
+  background-image: -o-linear-gradient(324deg, #b68ef5, #8e6be0 57%, #8563dc);
+  background-image: linear-gradient(126deg, #b68ef5, #8e6be0 57%, #8563dc);
+}
+
+.m-dialog-box .m-icon {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.trive__box {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding-bottom: 35px;
+}
+.trive__box .trive__listbox {
+  width: 23%;
+  display: inline-block;
+  padding: 0 0px;
+  margin: 0 0.5%;
+}
+.trive__box .trive__listbox .m-dialog-box {
+  background: #fff;
+  border-radius: 8px;
+  border: solid 1px #dddddd;
+  float: left;
+  position: relative;
+}
+.trive__box .trive__listbox .m-dialog-box .m-icon {
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: -25px;
+}
+.trive__box .trive__listbox .m-dialog-box .title__w {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  font-family: "微軟正黑體";
+  color: #000000;
+  text-align: center;
+  margin-top: 35px;
+}
+.trive__box .trive__listbox .m-dialog-box .box__text {
+  width: 100%;
+  padding: 10px 5px;
+  position: relative;
+  margin-top: 10px;
+  float: left;
+}
+.trive__box .trive__listbox .m-dialog-box .box__text:before {
+  content: " ";
+  width: 30px;
+  height: 30px;
+  background: url(../img/travel/check-ok.png);
+  background-size: 30px 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+.trive__box .trive__listbox .m-dialog-box .box__text .box__text_t {
+  min-height: 90px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  padding: 20px 5px 20px;
+  text-align: center;
+}
+.trive__box .trive__listbox .m-dialog-box .box__text .box__text_t p {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  font-family: "微軟正黑體";
+  color: #000000;
 }
 
 .tablecontent {
@@ -255,10 +378,11 @@ html {
   font-family: "微軟正黑體";
   color: #ffffff;
 }
-.tablecontent_style2 .tablebth_Title td {
+.tablecontent_style2 .tablebth_Title th {
+  text-align: center;
   padding: 10px 0;
 }
-.tablecontent_style2 .tablebth_Title td p.tablep img {
+.tablecontent_style2 .tablebth_Title th p.tablep img {
   vertical-align: sub;
   padding-left: 2px;
 }
@@ -288,6 +412,20 @@ html {
   color: #ec008c;
 }
 
+@media screen and (min-width: 1025px) {
+  .teach-header-image {
+    margin-top: -40px;
+  }
+
+  .b-h4:not(.is-md) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 740px) {
+  .teach-header-image {
+    margin-top: -4.55729vw;
+  }
+}
 @media screen and (min-width: 1400px) {
   .l-content-bd > *:not(.is-full):not(.is-full-md):not(.is-full-dt):not(.is-mini) {
     padding-right: 10px;
@@ -307,7 +445,36 @@ html {
     padding-left: 3vw;
   }
 }
+@media screen and (max-width: 960px) {
+  .trive__box .trive__listbox {
+    width: 47%;
+    display: inline-block;
+    padding: 0 0px;
+    margin: 0 0.5%;
+  }
+}
 @media screen and (max-width: 739px) {
+  .trive__box .trive__listbox {
+    width: 100%;
+    display: inline-block;
+    padding: 0 0px;
+    margin: 0 auto;
+  }
+  .trive__box .trive__listbox .m-dialog-box {
+    float: none;
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 40px;
+  }
+
+  .teach-header-image {
+    margin-top: 4vw;
+  }
+
+  .b_line {
+    margin-top: 0px;
+  }
+
   .l-content-bd > *:not(.is-full):not(.is-full-tm):not(.is-full-xs) {
     padding-right: calc(7.8125vw - 3px);
     padding-left: calc(7.8125vw - 3px);
@@ -370,12 +537,75 @@ html {
     display: block;
     min-height: 1.25em;
     text-align: center;
-    padding: 9.5px 5px;
+    padding: 9.5px 10px;
     border-bottom: 1px solid #cbc6c6;
   }
-  .tablecontent table.scroll-left tbody tr .tablebk td {
+
+  .tablecontent_style2 {
+    min-height: 300px;
+  }
+  .tablecontent_style2 table {
+    width: 99.9%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: table-cell;
+  }
+  .tablecontent_style2 table td {
+    text-align: center;
+  }
+  .tablecontent_style2 table.scroll-left {
+    display: block !important;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tablecontent_style2 table.scroll-left thead {
+    display: block;
+    float: left;
+  }
+  .tablecontent_style2 table.scroll-left thead tr.tablebth_Title {
+    display: block;
+  }
+  .tablecontent_style2 table.scroll-left thead th {
     padding: 10px 5px;
-    line-height: 20px;
+    display: block;
+    min-height: 70px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .tablecontent_style2 table.scroll-left thead th img {
+    display: none;
+  }
+  .tablecontent_style2 table.scroll-left thead:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .tablecontent_style2 table.scroll-left tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .tablecontent_style2 table.scroll-left tbody tr {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px -2px;
+  }
+  .tablecontent_style2 table.scroll-left tbody tr td {
+    display: block;
+    min-height: 70px;
+    text-align: center;
+    padding: 9.5px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #cbc6c6;
+  }
+  .tablecontent_style2 table.scroll-left tbody tr td img {
+    vertical-align: middle;
   }
 }
 
