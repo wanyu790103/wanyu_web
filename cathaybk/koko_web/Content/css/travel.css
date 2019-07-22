@@ -195,10 +195,10 @@ html {
   font-family: "微軟正黑體";
   color: #ffffff;
 }
-.tablecontent .tablebth_Title td {
+.tablecontent .tablebth_Title th {
   padding: 10px 0;
 }
-.tablecontent .tablebth_Title td p.tablep img {
+.tablecontent .tablebth_Title th p.tablep img {
   vertical-align: sub;
   padding-left: 2px;
 }
@@ -322,15 +322,13 @@ html {
     border-collapse: collapse;
     margin-bottom: 20px;
   }
-  .tablecontent table img {
-    vertical-align: middle;
-  }
   .tablecontent table td {
     text-align: center;
   }
   .tablecontent table.scroll-left {
     display: block !important;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
   .tablecontent table.scroll-left thead {
     display: block;
