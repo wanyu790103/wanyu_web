@@ -334,7 +334,7 @@ html {
     display: block;
     float: left;
   }
-  .tablecontent table.scroll-left thead tr {
+  .tablecontent table.scroll-left thead tr.tablebth_Title {
     display: block;
   }
   .tablecontent table.scroll-left thead th {
@@ -370,11 +370,12 @@ html {
     display: block;
     min-height: 1.25em;
     text-align: center;
-    padding: 10px 5px;
+    padding: 9.5px 5px;
     border-bottom: 1px solid #cbc6c6;
   }
   .tablecontent table.scroll-left tbody tr .tablebk td {
     padding: 10px 5px;
+    line-height: 20px;
   }
 }
 
