@@ -1,0 +1,160 @@
+.radio_line {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+}
+.radio_line.p_120 {
+  padding-left: 110px;
+  width: 100%;
+}
+.radio_line span.item {
+  font-weight: 600;
+  color: #000;
+}
+
+input[type="radio"].default:not(.fancyRadio__input) {
+  visibility: hidden;
+  position: absolute;
+  left: -99999px;
+}
+
+input[type="radio"].default:not(.fancyRadio__input) + label {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #bebebe;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type="radio"].default:not(.fancyRadio__input):checked + label {
+  background: #00994e;
+  color: #fff;
+}
+
+input[type="checkbox"].checkbox, input[type="radio"].radio {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0px;
+  display: none;
+}
+input[type="checkbox"].checkbox:focus + label:before, input[type="checkbox"].checkbox:hover + label:before, input[type="radio"].radio:focus + label:before, input[type="radio"].radio:hover + label:before {
+  border: 1px solid #cccccc;
+}
+input[type="checkbox"].checkbox:active + label:before, input[type="radio"].radio:active + label:before {
+  -webkit-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+}
+input[type="checkbox"].checkbox + label, input[type="radio"].radio + label {
+  position: relative;
+  padding: 0;
+  padding-left: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  float: left;
+  display: block;
+}
+input[type="checkbox"].checkbox + label:before, input[type="radio"].radio + label:before {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  content: '';
+  color: #cccccc;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: -9px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  border-radius: 5px;
+}
+input[type="checkbox"].checkbox + label:after, input[type="radio"].radio + label:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  content: '';
+  background: #00994f;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  -o-transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+input[type="radio"].radio:checked + label:before {
+  background-color: #fff;
+  border: 1px solid #00994f;
+}
+input[type="radio"].radio:checked + label:after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+input[type="radio"].radio + label {
+  cursor: pointer;
+}
+input[type="radio"].radio + label:before, input[type="radio"].radio + label:after {
+  border-radius: 50%;
+}
+
+input[type="checkbox"].checkbox + label {
+  cursor: pointer;
+}
+input[type="checkbox"].checkbox + label:after {
+  background: none;
+  left: 4px;
+  width: 8px;
+  height: 4px;
+  margin-top: -4px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 0 2px 2px;
+  -webkit-transform: rotate(-45deg) scale(0);
+  -ms-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  -o-transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+input[type="checkbox"].checkbox:checked + label:before {
+  -webkit-animation: borderscale 200ms ease-in;
+  animation: borderscale 200ms ease-in;
+  background: #00994f;
+  border: 1px solid #00994f;
+}
+input[type="checkbox"].checkbox:checked + label:after {
+  content: '';
+  -webkit-transform: rotate(-45deg) scale(1);
+  -ms-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  -o-transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+

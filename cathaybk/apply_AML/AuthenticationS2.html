@@ -1,0 +1,190 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>國泰世華銀行</title>
+    <meta name='description' content='線上個人資料變更' />
+	<meta name='keywords' content='線上個人資料變更' />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="400" />
+	<meta http-equiv="cleartype" content="on" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=0" />
+	<meta name="author" content="國泰世華銀行" />
+
+	<!--	Common CSS file /begin -->
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" href="./Content/js/jquery.fancyform/jquery.fancyform.css" />
+	<link rel="stylesheet" href="./Content/js/bootstrap/bootstrap-datepicker3.standalone.css" />
+	<link rel="stylesheet" href="./Content/js/fancybox-3.0/jquery.fancybox.css" />
+	<link rel="stylesheet" href="./Content/css/normalize.css" />
+	<link rel="stylesheet" href="./Content/css/layout.css" />
+	<link rel="stylesheet" href="./Content/css/main.css" />
+	<link rel="stylesheet" href="./Content/css/style.css" />
+	<link rel="stylesheet" href="./Content/css/aml.css" />
+	<!-- Common CSS file /end -->
+	<!-- Page CSS file /begin -->
+
+	<!-- Page CSS file /end -->
+	<script src="./Content/js/viewport.js"></script>
+	<script src="./Content/js/vendor/modernizr-2.7.1.min.js"></script>
+
+    <!-- CelebrusInsert code--> 
+	<!-- <script type="text/javascript" src= "https://www.cathaybk.com.tw/celebrusInsert.js"></script>-->
+	<!-- Google Tag Manager -->
+	<!--<script type="text/javascript" src="https://www.cathaybk.com.tw/cathaybk/promo/track/gtm/CUB_GTM.js"></script>-->
+
+</head>
+<body>
+
+	<!-- Google Tag Manager (noscript) -->
+    <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27PT9"  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+    <!-- End Google Tag Manager (noscript) -->
+
+	<div class="container">
+		<header class="header clearfix">
+			<a href="javascript:void(0)" class="header__goback" onclick="window.history.back();"></a>
+			<a href="./Intro.html" class="header__logo"></a>
+			<div class="header__title">
+				線上個人資料變更
+			</div>
+		</header>
+		<section class="main">
+
+			<section>
+				<div class="wrap">
+					<div class="progressBar"></div>
+				</div>
+				
+			</section>
+			<section class="section">
+					<div class="wrap">
+							<form action="WriteS3.html" method="get" id="form"> 
+                            <div class="form">
+								<div class="errorMsg messages_box">
+										<div><i class="icon iSprite30__warning"></i>簡訊動態密碼輸入錯誤，請重新輸入。</div>
+								</div>
+                                <div class="form__section">
+									<div class="inputGroup">
+											<label class="inputGroup__label" for="phoneNum">手機號碼</label>
+											<div class="inputGroup__control">
+												<input type="tel"  value="0939XXXX91" maxlength="10" name="phoneNum" id="phoneNum" disabled>
+											</div>
+									</div>
+                                    <div class="inputGroup">
+                                         <label class="inputGroup__label" for="txtCusphone">請輸入簡訊動態密碼</label>
+											<div class="inputGroup__control sms">
+												<div class="sms__precode">
+													TKDM-
+												</div>
+												<div class="sms__input">
+													<input type="text" value="" placeholder="6碼數字" name="Num" id="Num" />
+												</div>
+												<div class="sms__clock">
+													<i class="icon iSprite30__clock"></i>
+													<span id="countDown">10:00</span>
+												</div>
+												<div class="sms__actionArea">
+													<a href="javascript:void(0)" class="btn btn--rev btn--s">
+														<span>重新發送</span>
+													</a>
+												</div>
+											</div>
+                                    </div>
+                                    <div class="inputGroup">
+                                        <label class="inputGroup__label"></label>
+                                        <div class="inputGroup__control">
+                                            <p class="input_text_detailed"> 本系統已自動發送簡訊動態密碼至您的電話號碼<span class="bold">0960-XXX-X95</span>，請於<span class="orange_span"> 10分鐘 </span>內輸入簡訊動態密碼，以完成身分驗證，單日同一手機號碼最多發送三次簡訊動態密碼。 </p>
+                                        </div>
+                                    </div>
+								</div>
+								
+								<div class="collapse collapse--note">
+										<div class="collapse__title on" data-id="js-collapse">注意事項 </div>
+										<div class="collapse__content open" data-content="collapse" style="display: block;">
+											<ul class="CUBList CUBList--sequence">
+												<li data-sequence="一、">本系統將自動發送一組認證密碼至您申請信用卡/開戶留存本行之行動電話號碼，請於10分鐘內輸入驗證碼，以完成身分驗證。</li>
+												<li data-sequence="二、">本服務一天有3次試算機會，請把握機會。</li>
+											</ul>
+										</div>
+								</div>
+								<div class="actionArea">
+									<a href="javascript:void(0)" class="btn" data-id="submit">
+										<span>下一步</span>
+									</a>
+									<input type="submit" hidden />
+								</div>
+								<div class="actionArea">
+									<a href="javascript:void(0)" class="link__text" onclick="window.history.back();">
+										<span>返回</span>
+									</a>		
+								</div>
+
+							</div>
+						    </form>
+					</div>
+
+			</section>
+
+		</section>
+		<footer class="footer">
+			<div class="footer__copyright">©國泰世華商業銀行股份有限公司</div>
+		</footer>
+		<a href="javascript:void(0)" class="gotop"></a>
+	</div>
+	<!-- Common js /begin -->
+	<script src="Content/js/vendor/jquery-2.1.0.js"></script>
+	<script src="Content/js/jquery.fancyform/jquery.fancyform.js"></script>
+	<script src="Content/js/bootstrap/bootstrap-datepicker.js"></script>
+	<script src="Content/js/vendor/jquery.validate.js"></script>
+	<script src="Content/js/fancybox-3.0/jquery.fancybox.js"></script>
+	<script src="Content/js/helper.js"></script>
+	<script src="Content/js/plugins.js"></script>
+	<script src="Content/js/main.js"></script>
+	<!-- Common js /end -->
+	<!-- Page js /begin -->
+	<script>
+
+	$(function () {
+
+		$('.progressBar').progressBar({
+			steps: ['身份驗證', '填寫確認資料', '資料變更完成'],
+			active: 0
+		});
+
+
+		$("#form").validate({
+			rules: {
+				Num:{
+					required: true
+				},
+			},
+			messages: {
+				Num:"簡訊動態密碼輸入錯誤，請重新輸入。",
+			},
+			errorPlacement: function (error, element) {
+				console.log(element)
+				var $container = element.closest('.inputGroup__control');
+				$(".messages_box").show();
+			},
+			onkeyup: false,
+			onclick: false,
+			submitHandler: function (form) {
+				form.submit();
+			}
+		});
+
+
+
+	});
+</script>
+
+</body>
+</html>

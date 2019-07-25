@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+ul.right_list li {
+    list-style: none;
+    font-size: 15px;
+	line-height: 28px;
+	margin-left: 15px;
+	vertical-align : middle ;
+	
+}
+
+ul.right_list  {
+	margin-top: 8px;
+}
+
+
+.m-footer-channel .m-icon-instagram-circle{
+	font-size: 0;
+}
+i.m-icon-instagram-circle{
+	position: relative;
+}
+i.m-icon-instagram-circle:before {
+	width:45px;
+	height:45px;  
+	content: url(../../Content/img/digital/IG_BLACK.png);
+	z-index: 0;
+	transition: opacity 0.5s;
+	background:#000; 
+}
+i.m-icon-instagram-circle:after {
+	position: absolute;
+	width:45px;
+	height:45px;  
+	content: url(../../Content/img/digital/IG.png);
+	opacity:0;
+	transition: opacity 0.5s;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+.m-footer-channel a:hover i.m-icon-instagram-circle:after {
+	opacity:1; 
+}
+.m-footer-channel a:hover i.m-icon-instagram-circle:before {
+	opacity:0; 
+}	
+
+@media screen and (max-width: 1024px) and (min-width: 740px){
+	.m-footer-channel .m-icon {
+		font-size:44px;
+	}
+	.m-footer-channel .m-icon-instagram-circle{
+		font-size: 0;
+	}
+}
+
+@media screen and (max-width: 739px){
+	.m-footer-channel .m-icon {
+		font-size:44px;
+	}
+	.m-footer-channel .m-icon-instagram-circle{
+		font-size: 0;
+	}
+}

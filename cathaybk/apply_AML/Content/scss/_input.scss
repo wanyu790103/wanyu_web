@@ -1,0 +1,195 @@
+@mixin vh() {
+    border: 0;
+    // clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0px;
+    display:none; 
+  
+  }  
+  $inputHeight:16px;
+  $inputWidth:16px;
+  $inputBorderWidth:1px;
+  $inputActiveScale:8px; // optimized for even numbers
+  $maincolor:#00994f;
+.input_in{
+  width:100%;
+}  
+.input_line{
+  float:left;
+  margin:0px 0;
+  padding:6px 8px 6px 0;
+  width:25%;     
+  span.item{
+    font-weight:600;
+    color:#000;  
+  }
+}
+.input_line_space{
+  float:left;
+  margin:0px 0;
+  padding:6px 8px 6px 0;
+  width:16%;     
+  span.item{
+    font-weight:600;
+    color:#000;  
+  }
+}
+input[type="radio"].default:not(.fancyRadio__input) {
+  visibility: hidden;
+  position: absolute;
+  left: -99999px;
+}
+input[type="radio"].default:not(.fancyRadio__input) + label {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #bebebe;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+input[type="radio"].default:not(.fancyRadio__input):checked + label {
+  background: #00994e;
+  color: #fff;
+}
+input[type="checkbox"].checkbox,input[type="radio"].radio {
+  @include vh();
+  &:focus,
+  &:hover {
+        + label {
+            &:before {
+                border:1px solid #cccccc;
+            }
+        }
+    }
+  
+  &:active {
+    + label {
+            &:before {
+                transition-duration: 0;
+            }
+        }
+  }
+    + label {
+        position: relative;
+        padding:0;
+        padding-left:20px;
+        user-select: none;
+        width: 100%;
+        float:left;
+        display:block;
+        border:none;
+        background:none;
+        text-align:left;   
+        &:before {
+            box-sizing: content-box;
+            content: '';
+            color: #cccccc;
+            position: absolute;
+            top:13px;
+            left: 0;
+            width: $inputWidth;
+            height: $inputHeight;
+            margin-top: -($inputHeight/2 + $inputBorderWidth);
+            border: $inputBorderWidth solid #cccccc;
+            text-align: center;
+            border-radius: 5px;
+            background: #fff;
+        }
+        &:after {
+            box-sizing: content-box;
+            content: '';
+            background:$maincolor;
+            position: absolute;
+            top:13px;
+            left: $inputBorderWidth + $inputActiveScale/2;
+            width: $inputWidth - $inputActiveScale;
+            height: $inputHeight -$inputActiveScale;
+            margin-top: -(($inputHeight - $inputActiveScale)/2);
+            transform: scale(0);
+            transform-origin: 50%;
+            transition: transform 200ms ease-out;
+        }
+    }
+  }
+input[type="radio"].radio {
+      &:checked {
+          + label {
+            background:none;
+            color: #606060;
+              &:before {
+                  background-color: #fff;
+                  border: 1px solid $maincolor;
+              }
+              &:after {
+                  transform: scale(1);
+              }
+          }
+      }
+      + label {
+          cursor: pointer;
+          &:before,
+           &:after {
+              border-radius: 50%;
+          }
+      }
+}
+input[type="checkbox"].checkbox{
+	+ label {
+       cursor: pointer;
+			&:after {
+        background:none;
+				left: 4px;
+				width: 8px;
+				height: 4px;
+        margin-top: -4px;
+   
+				border-style: solid;
+				border-color:#fff;
+				border-width: 0 0 2px 2px;
+        transform: rotate(-45deg) scale(0);
+        transition: transform 200ms ease-out;
+			}
+	}
+	&:checked {
+		+ label {
+			&:before {
+        animation: borderscale 200ms ease-in;
+        background:$maincolor;
+        border: 1px solid $maincolor;
+			}
+			&:after {
+				content: '';
+        transform: rotate(-45deg) scale(1);
+        transition: transform 200ms ease-out;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:640px){
+    .input_line{
+        float:left;
+        margin:0px 0;
+        padding:6px 0;
+        width:50%;     
+        span.item{
+          font-weight:600;
+          color:#000;  
+        }
+    }
+    .input_line_space{
+      float:left;
+      margin:0px 0;
+      padding:6px 8px;
+      width:33%;     
+      span.item{
+        font-weight:600;
+        color:#000;  
+      }
+    }
+}
