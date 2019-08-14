@@ -28,14 +28,18 @@
     <!-- self link begin -->
     <link rel="stylesheet" href="../../Scripts/plugin/jquery.scrollbar/jquery.scrollbar.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/digital.css?css=20170811_01">
-	<link rel="stylesheet" href="../../Content/css/combo.css?css=20170811_01">
-	<link rel="stylesheet" href="../../Content/css/loan.css?css=20181001_01">
+    <link rel="stylesheet" href="../../Content/css/combo.css?css=20170811_01">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="../../Content/css/travel.css">
     <!-- self link end -->
+  
+    </style>
 </head>
 <style>
 
 </style>	
-<body>
+<body >
+    <loading-screen v-if="isLoading"></loading-screen>
     <div class="l-body jQ-body">
         <!-- ==================== l-header begin ==================== -->
         <div class="l-header">
@@ -64,153 +68,291 @@
                     <div class="common-vision">
                         <div class="common-vision-hd is-clearfix b-text-center b-flex-row-reverse-dt b-content-center-dt">
                             <div class="common-vision-title b-inline-dt is-vtop b-text-left-dt b-text-center-xs b-middle-dt">
-                                <p class="b-bold b-h3 b-text-white">KOKO Free's貸<br>我覺得可以<br><b class="b-bold b-desc">分次動用 ，0手續費 ，免綁約!</b></p>
+                                <div class="b-bold b-h3 b-text-white">KOPlay酷玩險<br>
+                                    <p class="b-bold b_line b-desc">K.O.旅行意外，說走就走Play！</p>
+                                    <p class="b-bold b-desc">投保、理賠，手機申請一氣呵成！既簡單，又方便！</p>
+                                </div>
 								
                             </div>
                             <div class="common-vision-object b-inline-dt is-vtop">
-                                <img src="../../Content/img/loan/loanmen.png" class="loanpic03">
+                                <figure class="teach-header-image">
+                                        <img src="../../Content/img/travel/banner.png" class="is-max-width">
+                                    </figure>
                             </div>
                             <i class="common-vision-bg"></i>
                         </div>
                     </div>
                 </div>
                 <div class="l-content-bd">
-                    
-                            <div class="m-dialog">
-                                <div class="m-dialog-hd jQ-owl" data-items-md="4" data-items-sm="2" data-items-xs="1" data-dots="false" data-arrow-sm="true" data-arrow-xs="true" data-start-position="1" data-events="digital.owlEvents">
-                                     <div class="m-dialog-item b-col-md-3 b-col-sm-6">
-                                        <a href="../../Views/loan/AboutFreestyle.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_transfer">
-                                            <i class="m-icon icon-freeloan01 b-text-white"></i>
-                                            <span>
-                                                <em class="b-bold b-h4">Free's貸是什麼?</em>
-                                                <p class="b-desc">每次動用一萬起，有動用到才計息!</p>
-                                            </span>
-                                        </a>
-                                    </div>
-									<div class="m-dialog-item b-col-md-3 b-col-sm-6">
-                                        <a href="../../Views/loan/WeLoveFreestyle.html" class="bannerlink m-dialog-ctrl is-active" data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_transfer">
-                                            <i class="m-icon icon-freeloan02 b-text-white"></i>
-                                            <span>
-                                                <em class="b-bold b-h4">Free's貸谁愛貸</em>
-                                                <p class="b-desc">創業夢想深埋心裡?我想給她幸福婚禮?</p>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="m-dialog-item b-col-md-3 b-col-sm-6">
-                                        <a href="../../Views/loan/TryFreestyle.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_spending">
-                                            <i class="m-icon icon-freeloan03 b-text-white"></i>
-                                            <span>
-                                                <em class="b-bold b-h4">Free's貸試算去</em>
-                                                <p class="b-desc">什麼是自由動用?來算算看有多好用!</p>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="m-dialog-item b-col-md-3 b-col-sm-6">
-                                        <a href="../../Views/loan/FreestyleQA.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_funds">
-                                            <i class="m-icon icon-freeloan04 b-text-white"></i>
-                                            <span>
-                                                <em class="b-bold b-h4">Free's貸問答區</em>
-                                                <p class="b-desc">申貸教學我們來，常用問答大公開!</p>
-                                            </span>
-                                        </a>
-                                    </div>
-                                     <div class="m-dialog-item b-col-md-3 b-col-sm-6">
-                                        <a href="../../Views/loan/FreestyleQA.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_funds">
-                                            <i class="m-icon icon-freeloan04 b-text-white"></i>
-                                            <span>
-                                                <em class="b-bold b-h4">Free's貸問答區</em>
-                                                <p class="b-desc">申貸教學我們來，常用問答大公開!</p>
-                                            </span>
-                                        </a>
-                                    </div>
+                        <div class="m-dialog">
+                                <div class="m-dialog-hd jQ-owl" data-items-md="5" data-items-sm="3" data-items-xs="1" data-dots="false" data-arrow-md="true" data-arrow-sm="true" data-arrow-xs="true" data-start-position="3" data-events="digital.owlEvents">
+                                           <div class="m-dialog-item b-col-md-3 b-col-sm-6 b-col-xs-12">
+                                                <a href="../../Views/Travel/AboutInsurance.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_transfer">
+                                                    <i class="m-icon icon-group-3 b-text-white"></i>
+                                                    <span>
+                                                            <em class="b-bold b-h4">看看我有多好</em>
+                                                            <p class="b-desc">就是要給你最萬全的保障！</p>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="m-dialog-item b-col-md-3 b-col-sm-6 b-col-xs-12">
+                                                    <a href="../../Views/Travel/TeachInsurance.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include">
+                                                        <i class="m-icon icon-tab-icon-02-r b-text-white"></i>
+                                                        <span>
+                                                            <em class="b-bold b-h4">教教你怎麼保</em>
+                                                            <p class="b-desc">讓你自主選擇，投保方案任選！</p>
+                                                        </span>
+                                                    </a>
+                                            </div>
+                                            <div class="m-dialog-item b-col-md-3 b-col-sm-6 b-col-xs-12">
+                                                <a href="../../Views/Travel/ClaimInsurance.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include" >
+                                                    <i class="m-icon icon-tab-icon-03-r b-text-white"></i>
+                                                    <span>
+                                                        <em class="b-bold b-h4">辦理賠讓我來</em>
+                                                        <p class="b-desc">提供最全面的線上理賠協助！</p>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="m-dialog-item b-col-md-5d b-col-sm-6 b-col-xs-12">
+                                                <a href="../../Views/Travel/InsuranceCount.html" class="bannerlink m-dialog-ctrl  is-active" data-active="is-active" data-include=".jQ-include" >
+                                                    <i class="m-icon icon-tab-icon-04-r b-text-white"></i>
+                                                    <span>
+                                                        <em class="b-bold b-h4">算一算起手式</em>
+                                                        <p class="b-desc">試算後你一定驚呼太划算！</p>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="m-dialog-item b-col-md-3 b-col-sm-6 b-col-xs-12">
+                                                    <a href="../../Views/Travel/InsuranceQA.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_funds">
+                                                        <i class="m-icon icon-group-10 b-text-white"></i>
+                                                        <span>
+                                                            <em class="b-bold b-h4">知道你手舉高</em>
+                                                            <p class="b-desc">所有問題，都來這裡解答！</p>
+                                                        </span>
+                                                    </a>
+                                            </div>
                                     
                               
                         </div>
-						</div>		
-                        </div>
-                           <div class="l-content-bd">
-                           <div class="combo">
-                           <header class="combo-hd b-text-center">
-							 <h2 class="b-h3 is-line b-bold"><p>誰最適合Free's貸?</p></h2>
-							   <p class="b-h4" style="margin-top: 5px;">我的資金需求不是一次發生，我想要彈性運用資金！</p>
-                            <ul class="combo-icash-info b-inline-space">
-                                <li class="b-inline-dt">
-                                    <div class="combo-icash-figure">
-                                        <figure class="b-middle">
-                                            <img src="../../Content/img/loan/loan-pictgram-04.png" alt="指定網購" class="is-max-width">
-                                        </figure>
+						</div>			
+                        <article class="combo is-full">
+                            <div class="b-text-center">
+                                <h2 class="b-h3 b-bold" style="margin-top:30px;"><p>不算不知道，算完太可靠！</p></h2>
+                            </div>
+                        </article>
+                    
+                        <div class="ls-content">
+                            <div class="inputcount">
+                                <div class="input_inputcount">
+                                    <div class="input_tit">旅遊地區</div>
+                                    <div class="control--input">
+                                            <select class="" name="">
+                                                    <option value="">請選擇</option>
+                                                    <option value="">東南亞</option>
+                                                    <option value="">日本</option>
+                                                    <option value="">歐洲</option>
+                                                    <option value="">紐澳</option>
+                                                    <option value="">泰國</option>
+                                                    <option value="">韓國</option>
+                                                    <option value="">美加</option>
+                                                    <option value="">歐洲</option>
+                                                    <option value="">其他</option>
+                                            </select>
                                     </div>
-                                    <p class="combo-icash-caption b-h4">新婚族</p>
-									<p class="b-h5 smalltitle">婚戒<br>婚紗<br>聘金</p>
-                                </li>
-                                <li class="b-inline-dt">
-                                    <div class="combo-icash-figure">
-                                        <figure class="b-middle">
-                                            <img src="../../Content/img/loan/loan-pictgram-05.png" alt="超商刷卡" class="is-max-width">
-                                        </figure>
-                                    </div>
-                                    <p class="combo-icash-caption b-h4">創業族 </p>
-									<p class="b-h5 smalltitle">聘請員工<br>備料<br>店面租金</p>
-                                </li>
-                                <li class="b-inline-dt">
-                                    <div class="combo-icash-figure">
-                                        <figure class="b-middle">
-                                            <img src="../../Content/img/loan/loan-pictgram-06.png" alt="icash 自動加值" class="is-max-width">
-                                        </figure>
-                                    </div>
-                                    <p class="combo-icash-caption b-h4">其他</p>
-									<p class="b-h5 smalltitle">有穩定收入，<br>但有時候會出現一些不定期<br> 的資金周轉需求。</p>
-                                </li>
-                            </ul>
-							
-							
-							
-							
-							</header>
-							</div>
-						   </div> 
-					
-					<article class="combo is-full">
-                         <div class="m-tab-hd02 b-text-center">
-                                    <h2 class="b-h3 is-line b-bold" style="margin-top: 30px;"><p>他們都選擇KOKO Free's貸</p></h2>
                                 </div>
-                    </article>
-					 <div class="l-content-bd">
-						 <div class="loancontent">
-						 <div class="loanpic01"><img src="../../Content/img/loan/loanpic03.jpg" class="is-max-width"><p class="combo-icash-caption b-h4">梁先生, 28歲, 傳產業, 一般職員</p><p class="b-h5 smalltitle">我不會摘星星，但我有一顆守護她的心！<br>謝謝Free's貸，讓我能在28歲看見她穿美麗白紗！</p></div>
-						 <div class="loanpic02"><img src="../../Content/img/loan/loanpic04.jpg" class="is-max-width"><p class="combo-icash-caption b-h4">黃小姐, 26歲, 建築業, 業務助理</p><p class="b-h5 smalltitle">每天坐在辦公室的我，從沒想過能提早美夢成真！<br>下班後經營我的美甲工作室，好幸福！</p></div>
-						 
-						 </div>
-						
-						 
-						 
-						
-				     </div>
-							<footer class="m-timeline-ft">
-                                                        <ul class="m-button-group b-text-center">
-                                                            <br>
-                                                            <li class="b-inline">
-                                                                <a href="../../Views/loan/ApplyForFreestyle.html" class="m-button b-desc b-bg-major b-text-white ga_click_trace" ga_cat="combo_icash" ga_event="click" ga_label="join"><b class="b-bold">我也要幸福Free's貸</b></a>
-                                                            </li>
-                                                        </ul>
-                            </footer>
-                            <footer class="digital-ft">
-                                <!--<ul class="m-button-group b-text-center">
+                                <div class="input_inputcount">
+                                    <div class="input_tit">旅遊起始日</div>
+                                    <div class="control--input">
+                                         <div class="datepicker_in">
+                                            <input type="text" id="datepicker" size="30">
+                                         </div>
+                                    </div>
+                                     <div class="other_input">
+                                        <div class="input_tit">旅遊起始時間</div>
+                                        <div class="control--input">
+                                                <!-- <select  id="select_todaty" class="s_width" name="">
+                                                        <option value=" "></option>
+                                                </select> -->
+                                                <select id="selectDay" class="s_width" type="text" v-model="user.nativeLanguage">
+                                                        <option v-for="lang in user.time" :value="lang">{{ lang }}</option>
+                                                </select>
+                                                <!-- <select id="selectDay" class="s_width">
+                                                        <option>00:00</option>
+                                                </select> -->
+                                        </div>
+                                     </div> 
+                                </div>
+                                <div class="input_inputcount_day">
+                                    <div class="input_tit">旅遊天數</div>
+                                    <div class="control--input">
+                                            <input class="travel_day" type="text" value="" maxlength="3" placeholder="">
+                                    </div>
+                                     <span>天</span>
+                                </div>
+                                <div class="back_choose">
+                                    <div class="input_inputcount">
+                                        <div class="input_tit">旅遊平安險方案選擇</div>
+                                        <div class="inputGroup__control">
+                                            <div class="fancyRadio">
+                                                <input type="radio" value="" id="travelChoose" name="travelChoose_N" class="fancyRadio__input" checked />
+                                                <label for="travelChoose" class="fancyRadio__label" >
+                                                    300萬
+                                                </label>
+                                                <input type="radio" value="" id="travelChoose2" name="travelChoose_N" class="fancyRadio__input" />
+                                                <label for="travelChoose2" class="fancyRadio__label">
+                                                    500萬
+                                                </label>
+                                            </div>
+                                            <div class="fancyRadio__content" data-for="travelChoose">
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">意外事故身故失能</div>
+                                                    <div class="IN_control--input">
+                                                            <span>300</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">海外突發傷病</div>
+                                                    <div class="IN_control--input">
+                                                            <span>30</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">傷害醫療實支實付</div>
+                                                    <div class="IN_control--input">
+                                                            <span>30</span>萬
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="fancyRadio__content" data-for="travelChoose2">
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">意外事故身故失能</div>
+                                                    <div class="IN_control--input">
+                                                            <span>500</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">海外突發傷病</div>
+                                                    <div class="IN_control--input">
+                                                            <span>50</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">傷害醫療實支實付</div>
+                                                    <div class="IN_control--input">
+                                                            <span>50</span>萬
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                                <div class="backW_choose">
+                                    <div class="input_inputcount">
+                                        <div class="input_tit">班機延誤理賠方案選擇</div>
+                                        <div class="inputGroup__control">
+                                            <div class="fancyRadio">
+                                                <input type="radio"  id="airplaneChoose" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="0" class="fancyRadio__input"/>
+                                                <label for="airplaneChoose" class="fancyRadio__label"  >
+                                                    固定式
+                                                </label>
+                                                <input type="radio" id="airplaneChoose2" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="1"  class="fancyRadio__input" checked/>
+                                                <label for="airplaneChoose2" class="fancyRadio__label" >
+                                                    級距式
+                                                </label>
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                        
+                                      
+                                    </div>
+                                    <div>value: {{airplaneChoose_N}}</div>
+                                </div>    
+                                <div class="backW_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit">是否升級早鳥不便險方案</div>
+                                            <div class="inputGroup__control">
+                                                <div class="fancyRadio">
+                                                    <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input" checked />
+                                                    <label for="InconvenientChoose" class="fancyRadio__label" >
+                                                        是
+                                                    </label>
+                                                    <input type="radio" id="InconvenientChoose2" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="1" class="fancyRadio__input" />
+                                                    <label for="InconvenientChoose2" class="fancyRadio__label">
+                                                        否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>value: {{InconvenientChoose_N}}</div>
+                                </div>
+                                <div class="backW_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit">班機延誤理賠金額 </div>
+                                        </div>
+                                      <div class="line_box">
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        3hr
+                                                </div>
+                                                <div class="moment_money4000">4,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        6hr
+                                                </div>
+                                                <div class="moment_money8000">8,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        9hr
+                                                </div>
+                                                <div class="moment_money12000">12,000元</div>
+                                                <div class="airplane"></div>
+                                        </div>
+                                        <div class="line_box">
+                                                <div class="moment_money"></div> 
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        4hr
+                                                </div>
+                                                <div class="moment_moneyone">5,000元</div>
+                                                
+                                                <div class="airplane"></div>
+                                        </div>
+                                </div>
+                                <div class="back_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit">加價購特殊活動取消慰問</div>
+                                            <div class="inputGroup__control">
+                                                <div class="fancyRadio">
+                                                    <input type="radio" value="" id="priceChoose" name="priceChoose_N" class="fancyRadio__input" checked />
+                                                    <label for="priceChoose" class="fancyRadio__label" >
+                                                        是
+                                                    </label>
+                                                    <input type="radio" value="" id="priceChoose2" name="priceChoose_N" class="fancyRadio__input" />
+                                                    <label for="priceChoose2" class="fancyRadio__label">
+                                                        否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- ***** -->
+
+                        
+                        <!-- <footer class="m-timeline-ft">
+                                <ul class="m-button-group b-text-center">
                                     <li class="b-inline">
-                                        <small class="digiral-desc b-block-dt b-desc b-flex-column-reverse-xs"><em>懶人族記帳福音呀！</em></small>
-                                        <a href="../../Views/Teach/Account.html" class="m-button b-desc b-bg-major b-text-white ga_click_trace" ga_cat="transfer" ga_event="click" ga_label="teach"><b class="b-bold">如何輕鬆記帳</b></a>
+                                        <a href="#" class="m-button b-desc b-bg-gray-d-p20 b-text-white ga_click_trace"><b class="b-bold">試算去</b></a>
                                     </li>
-                                </ul>-->
-                                <div class="m-aphorism b-text-center">
-                                    <div class="m-aphorism-hd">
-                                        <p class="b-h4">謹慎理財 信用無價</p>
-                                    </div>
-                                    <div class="m-aphorism-bd">
-                                        <p class="b-text-gray-47">信用卡暨預借現金之各級別循環信用年利率為 6.75% ~ 15% ( 依本行信用評分制度定期評估，循環利息之基準日為104年9月1日 )<br>預借現金手續費：預借現金金額乘以 3% 加上新臺幣 150 元或美元 5 元，其他相關費用係依本行網站公告</p>
-                                    </div>
-                                </div>
-                            </footer>
-                        </div>
+                                    <li class="b-inline">
+                                        <a href="#" class="m-button b-desc b-bg-major b-text-white ga_click_trace"><b class="b-bold">投保去</b></a>
+                                    </li>
+                                </ul>
+                        </footer> -->
+                </div>
+                <!-- ****** -->
+					
                     </div>
                 </div>
             </main>
@@ -253,6 +395,17 @@
 								 <li><a href="../../Views/loan/ApplyForFreestyle.html" class="b-text-gray-88">Free's貸我要申貸</a></li> 
                             </ul>
                         </li>
+                       
+                        <li class="m-sitemap-item">
+                                <p><a href="#">KOPlay酷玩險</a></p>
+                                <ul>
+                                     <li><a href="#" class="b-text-gray-88">看看我有多好</a></li>
+                                     <li><a href="#" class="b-text-gray-88">教教你怎麼保</a></li>
+                                     <li><a href="#" class="b-text-gray-88">辦理賠讓我來</a></li>
+                                     <li><a href="#" class="b-text-gray-88">算一算起手式</a></li>
+                                     <li><a href="#" class="b-text-gray-88">知道你手舉高</a></li> 
+                                </ul>
+                            </li>
                         <li class="m-sitemap-item">
                             <p><a href="../../Views/Digital/Transfer.html">關於帳戶</a></p>
                             <ul>
@@ -314,8 +467,10 @@
                         <small class="m-footer-copyright">Copyright © Cathay United Bank.<span class="b-hide-tm">　建議使用 Google Chrome、Firefox 或 IE 10 以上版本，以獲得最佳瀏覽體驗</span></small>
                     </div>
                     <ul class="m-footer-channel">
-						<li>
-                            <a href="https://www.facebook.com/kokobycub/" class="ga_click_trace" ga_cat="footer" ga_event="click" ga_label="fb" target="_blank"><i class="m-icon m-icon-facebook-circle" data-hover-color="facebook"></i></a>
+                        <li>
+                            <a href="https://www.instagram.com/kokobk2019/" class="ga_click_trace" ga_cat="footer" ga_event="click" ga_label="ig" target="_blank">
+                                <i class="m-icon m-icon-instagram-circle" data-hover-color="instagram"></i>
+                            </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/kokobycub/" class="ga_click_trace" ga_cat="footer" ga_event="click" ga_label="fb" target="_blank"><i class="m-icon m-icon-facebook-circle" data-hover-color="facebook"></i></a>
@@ -411,7 +566,33 @@
                              
                         </ul>
                     </div>
-                </li> 
+                </li>
+                <li class="jQ-navList">
+                        <a href="#" class="m-nav-item jQ-navItem ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="KOKO_PL">
+                            <em>KOPlay酷玩險</em>
+                            <i class="m-icon m-icon-arrow-bottom"></i>
+                        </a>
+                         <div class="m-nav-sublink jQ-sublink">
+                            <ul class="b-text-center-md">
+                                <li class="jQ-navList">
+                                    <a href="#" class="m-nav-item ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="transfer"><em>看看我有多好</em></a>
+                                </li>
+                                <li class="jQ-navList">
+                                    <a href="#" class="m-nav-item ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="transfer"><em>教教你怎麼保</em></a>
+                                </li>
+                                <li class="jQ-navList">
+                                    <a href="#" class="m-nav-item ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="spending"><em>辦理賠讓我來!</em></a>
+                                </li>
+                                <li class="jQ-navList">
+                                    <a href="#" class="m-nav-item ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="funds"><em>算一算起手式</em></a>
+                                </li>
+                                <li class="jQ-navList">
+                                    <a href="#" class="m-nav-item ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="funds"><em>知道你手舉高</em></a>
+                                </li>
+                                 
+                            </ul>
+                        </div>
+                    </li>  
                 <li class="jQ-navList">
                     <a href="../../Views/Digital/Transfer.html" class="m-nav-item jQ-navItem ga_click_trace" ga_cat="Nav" ga_event="click" ga_label="KOKO_ODA">
                         <em>關於帳戶</em>
@@ -539,9 +720,12 @@
         </div>
     </div>
     <!-- ==================== not support end ==================== -->
+
+ 
     <script type="text/javascript" src="../../Scripts/js/ga.min.js?js=20170805_01" id="gaScript" data-id=""></script>
     <!--[if gt IE 9]><!-->
     <!-- common script ft begin -->
+    <script src='https://cdn.jsdelivr.net/vue/1.0.21/vue.min.js'></script>
     <script type="text/javascript" src="../../Scripts/plugin/jquery/jquery.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/plugin/owl.carousel/owl.carousel.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/plugin/jquery.scrollbar/jquery.scrollbar.min.js?js=20170805_01"></script>
@@ -552,8 +736,16 @@
     <script type="text/javascript" src="../../Scripts/js/combo.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/js/digital.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/js/loan.js?js=20170805_01"></script>
+    <script type="text/javascript" src="../../Scripts/js/index.js"></script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="../../Scripts/js/travel.js"></script>
+    
     <!-- self script end -->
     <!--<![endif]-->
-    
+
 </body>
 </html>

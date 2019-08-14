@@ -1,5 +1,20 @@
 
 $(function () {
+	$('.owl-carouselphone').owlCarousel({
+		margin:10,
+		nav:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:3
+			}
+		}
+	})
 	$('[data-id="js-collapse"]').on('click', function () {
 			var $this = $(this);
 			var $container = $(this).closest('.collapse');

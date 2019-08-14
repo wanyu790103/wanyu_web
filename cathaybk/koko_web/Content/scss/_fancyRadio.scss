@@ -1,0 +1,86 @@
+.fancyRadio {
+    position: relative;
+    display: table;
+    width: 140px;
+    text-align: right;
+    float:right;
+    table-layout: fixed;
+    border: 1px solid #9773e5;
+    border-radius:8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index:1; 
+    transition: border-radius 0.2s;
+
+  }
+  .fancyRadio.open {
+    // border-radius: 3px 3px 0 0;
+  }
+  .fancyRadio__input {
+    display: none;
+  }
+  .fancyRadio__input:checked + label {
+    background: #9773e5;
+    color: #fff;
+  
+  }
+  .fancyRadio__label {
+    display: table-cell;
+    cursor: pointer;
+    text-align: center;
+    padding:5px 0;
+    color: #111111;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    font-size:16px; 
+  }
+  .fancyRadio__label:last-child {
+    border-right: 0;
+  }
+  .fancyRadio__content {
+    padding:40px 0 0;
+    display: none;
+  }
+  .fancyRadio--img .fancyRadio__label {
+    padding: 5px 0;
+    height: 30px;
+    text-align: center;
+  }
+  .fancyRadio--img .fancyRadio__label img {
+    height: 100%;
+  }
+  .fancyRadio__notice {
+    line-height: 1.6;
+  }
+  .fancyRadio--disabled {
+    cursor: default;
+    background-color: #c1c1c1;
+  }
+  .fancyRadio--validate > div {
+    display: table-cell;
+  }
+  .fancyRadio--validate .fancyRadio__label {
+    display: block;
+  }
+  .fancyRadio--validate .fancyRadio__input {
+    display: initial;
+    position: absolute;
+    left: -99999px;
+    text-indent: -99999px;
+    visibility: hidden;
+  }
+  
+  input[type="radio"]:not(.fancyRadio__input) {
+    visibility: hidden;
+    position: absolute;
+    left: -99999px;
+  }
+  input[type="radio"]:not(.fancyRadio__input) + label {
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #bebebe;
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+  }

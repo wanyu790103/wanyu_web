@@ -1,8 +1,12 @@
 @charset "UTF-8";
+$maincolor_b: #000;
 $maincolor: #7359b2;
 $seccolor: #ec008c;
-@scrollbar-height:5px;
-@scrollbar-padding:15px;
+$border-color:#ccc;
+$tab-hover-bg:#e5e5e5;
+$tab-head-color:#999;
+$accorion-header-bg:#fff;
+$accorion-header-bg-active :#e5e5e5;
 @mixin r($wt:100%,$ht:auto){
   position:relative;
   width:$wt;

@@ -1,0 +1,54 @@
+.fancyRadio {
+  position: relative;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-radius 0.2s;
+  -o-transition: border-radius 0.2s;
+  transition: border-radius 0.2s;
+}
+
+.fancyRadio.open {
+  border-radius: 3px 3px 0 0;
+}
+
+.fancyRadio__input {
+  display: none;
+}
+
+.fancyRadio__input:checked + label {
+  background: #00994e;
+  color: #fff;
+}
+
+.fancyRadio__label {
+  display: table-cell;
+  cursor: pointer;
+  text-align: center;
+  padding: 9px 0;
+  color: #111111;
+  background: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.fancyRadio__label:last-child {
+  border-right: 0;
+}
+
+.fancyRadio__content {
+  padding: 20px;
+  background: #e6e6e6;
+  display: none;
+  border-radius: 0 0 3px 3px;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+
