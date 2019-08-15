@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../../Content/css/digital.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/combo.css?css=20170811_01">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-select/dist/vue-select.css">
 	<link rel="stylesheet" href="../../Content/css/travel.css">
     <!-- self link end -->
   
@@ -142,7 +143,7 @@
                         </article>
                     
                         <div class="ls-content">
-                            <div class="inputcount">
+                            <div id="inputcount" class="inputcount">
                                 <div class="input_inputcount">
                                     <div class="input_tit">旅遊地區</div>
                                     <div class="control--input">
@@ -173,12 +174,9 @@
                                                 <!-- <select  id="select_todaty" class="s_width" name="">
                                                         <option value=" "></option>
                                                 </select> -->
-                                                <select id="selectDay" class="s_width" type="text" v-model="user.nativeLanguage">
-                                                        <option v-for="lang in user.time" :value="lang">{{ lang }}</option>
+                                                <select id="selectDay" class="s_width" type="text" v-model="selectTime">
+                                                        <option v-for="item in time" :value="item">{{ item }}</option>
                                                 </select>
-                                                <!-- <select id="selectDay" class="s_width">
-                                                        <option>00:00</option>
-                                                </select> -->
                                         </div>
                                      </div> 
                                 </div>
@@ -257,7 +255,7 @@
                                                 <label for="airplaneChoose" class="fancyRadio__label"  >
                                                     固定式
                                                 </label>
-                                                <input type="radio" id="airplaneChoose2" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="1"  class="fancyRadio__input" checked/>
+                                                <input type="radio" id="airplaneChoose2" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="1"  class="fancyRadio__input"/>
                                                 <label for="airplaneChoose2" class="fancyRadio__label" >
                                                     級距式
                                                 </label>
@@ -275,11 +273,11 @@
                                             <div class="input_tit">是否升級早鳥不便險方案</div>
                                             <div class="inputGroup__control">
                                                 <div class="fancyRadio">
-                                                    <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input" checked />
+                                                    <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input"/>
                                                     <label for="InconvenientChoose" class="fancyRadio__label" >
                                                         是
                                                     </label>
-                                                    <input type="radio" id="InconvenientChoose2" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="1" class="fancyRadio__input" />
+                                                    <input type="radio" id="InconvenientChoose2" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="1" class="fancyRadio__input"/>
                                                     <label for="InconvenientChoose2" class="fancyRadio__label">
                                                         否
                                                     </label>

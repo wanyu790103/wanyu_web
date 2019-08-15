@@ -1,5 +1,5 @@
-var status = moment().add(3,'hours').format('HH:00');;
-console.log(status);
+// var status = moment().add(3,'hours').format('HH:00');;
+// console.log(status);
 
 
 
@@ -16,16 +16,7 @@ console.log(status);
 
 $(".tab_content").hide();
 $(".tab_content:first").show();
-$(function() {
-  $("#datepicker").datepicker({
-      showOtherMonths : true,
-      hideIfNoPrevNext : true,
-      dateFormat:'yy-mm-dd',
-      timeFormat: "HH:mm",
-      minDate : "0d",
-      maxDate : "+180d"
-  });
-});
+
 
 	//fancyradio
 	var fancyradio = {
@@ -153,17 +144,81 @@ Vue.component('loading-screen', {
   template: '<div id="loading">Loading...</div>'
 })
 var app = new Vue({
-  el: document.body,
+  el: '#inputcount',
   data: {
     user: {
       isLoading: true,
-      time: ['01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','24:00']
+    },
+    originTime: ['01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','24:00'],
+    time: [],
+    selectTime: '',
+    selectDate: '',
+    afterHours: 3,
+    airplaneChoose_N: '0',
+    InconvenientChoose_N: '0',
+  },
+  created() {
+    this.init();
+    this.handeAirplaneChoose();
+  },
+  methods: {
+    init() {
+      $("#datepicker").datepicker({
+        showOtherMonths : true,
+        hideIfNoPrevNext : true,
+        dateFormat:'yy-mm-dd',
+        timeFormat: "HH:mm",
+        minDate : "0d",
+        maxDate : "+180d",
+        onSelect: this.handleDatepickerSelect,
+      });
+      setTimeout(() => {
+        this.isLoading = false
+      }, 3000);
+    },
+    handleDatepickerSelect(date, option) {
+      this.selectDate = date;
+      var today = new Date();
+      var today_month = today.getMonth();
+      var today_day = today.getDate();
+      var today_hour = today.getHours();
+      // console.log(today_month, today_day, today_hour);
+      
+      var select_month = option.currentMonth;
+      var select_day = Number(option.currentDay);
+      // console.log(select_month, select_day);
+      
+      var isToday = select_month === today_month && select_day === today_day;
+      if (isToday) {
+        var target_index = today_hour + this.afterHours - 1;
+        this.time = this.originTime.slice(target_index, this.originTime.length);
+      } else {
+        this.time = this.originTime;
+      }
+    },
+    handeAirplaneChoose() {
+      if (this.airplaneChoose_N === '0') {
+        console.log('airplaneChoose_N');
+      }
     }
   },
-  mounted () {
-    setTimeout(() => {
-      this.isLoading = false
-    }, 3000)
-  }
-  
+  watch: {
+    selectTime(e) {
+      console.log(this.selectTime);
+    },
+    airplaneChoose_N(e) {
+      console.log(this.airplaneChoose_N);
+      this.handeAirplaneChoose();
+    },
+    InconvenientChoose_N(e) {
+      console.log(this.InconvenientChoose_N);
+    },
+  },
 })
+
+// if you want give data to sombody
+// setTimeout(function() {
+//   console.log('give me time');
+//   console.log(app.selectTime);
+//   console.log(app.selectDate);
+// }, 5000);
