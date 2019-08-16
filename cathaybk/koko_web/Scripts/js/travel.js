@@ -182,12 +182,8 @@ var app = new Vue({
       }
     },
     handeAirplaneChoose() {
-      if (this.airplaneChoose_N === '0' || this.InconvenientChoose_N === '0') {
-       
-        // data: {
-        //   isShowingf_y: true;
-        // }
-        console.log('airplaneChoose_N');
+      if (this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0') {
+        this.isShowing = true;
       }
     }
   },
