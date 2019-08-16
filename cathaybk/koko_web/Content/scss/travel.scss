@@ -3,6 +3,7 @@
 @import "_owl.scss";
 @import "_fancyRadio.scss";
 @import "_boxarrow.scss";
+@import "_datepicker.scss";
 #loading{
   background-color: #63ab97;
   color: white;
@@ -190,6 +191,10 @@ table.scroll-left{
          margin: 5px 40px;
          padding: 20px 0px 10px;
          min-height:30px;
+        //  display:none; 
+         &.item_f_y{
+          //  display:block; 
+         }
          .moment_money{
           display:inline-block;
           min-width:300px;    
@@ -273,7 +278,8 @@ table.scroll-left{
             position: absolute;
             right:5px;
             top:50%;
-            margin-top:-15px;    
+            margin-top:-15px;
+            z-index:3;    
           }
          }
 

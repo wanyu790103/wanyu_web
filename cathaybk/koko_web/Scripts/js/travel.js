@@ -1,18 +1,3 @@
-// var status = moment().add(3,'hours').format('HH:00');;
-// console.log(status);
-
-
-
-
-// var select1 = document.getElementById("selectDay");
-// var options = ["01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"];
-// for(var i = 0; i < options.length; i++) {
-//     var opt = options[i];
-//     var el = document.createElement("option");
-//     el.textContent = opt;
-//     el.value = opt;
-//     select1.appendChild(el);
-// }
 
 $(".tab_content").hide();
 $(".tab_content:first").show();
@@ -140,9 +125,7 @@ $(function () {
   })
 });
 // vue
-Vue.component('loading-screen', {
-  template: '<div id="loading">Loading...</div>'
-})
+
 var app = new Vue({
   el: '#inputcount',
   data: {
@@ -170,11 +153,13 @@ var app = new Vue({
         timeFormat: "HH:mm",
         minDate : "0d",
         maxDate : "+180d",
+        autoclose: true, 
+        todayHighlight: true,
         onSelect: this.handleDatepickerSelect,
       });
-      setTimeout(() => {
-        this.isLoading = false
-      }, 3000);
+      // $("#datepicker").on("changeDate", function(event) {
+ 
+      // });
     },
     handleDatepickerSelect(date, option) {
       this.selectDate = date;
@@ -197,7 +182,11 @@ var app = new Vue({
       }
     },
     handeAirplaneChoose() {
-      if (this.airplaneChoose_N === '0') {
+      if (this.airplaneChoose_N === '0' || this.InconvenientChoose_N === '0') {
+       
+        // data: {
+        //   isShowingf_y: true;
+        // }
         console.log('airplaneChoose_N');
       }
     }
@@ -216,9 +205,10 @@ var app = new Vue({
   },
 })
 
-// if you want give data to sombody
+
 // setTimeout(function() {
 //   console.log('give me time');
 //   console.log(app.selectTime);
 //   console.log(app.selectDate);
+
 // }, 5000);

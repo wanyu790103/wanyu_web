@@ -29,8 +29,6 @@
     <link rel="stylesheet" href="../../Scripts/plugin/jquery.scrollbar/jquery.scrollbar.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/digital.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/combo.css?css=20170811_01">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://unpkg.com/vue-select/dist/vue-select.css">
 	<link rel="stylesheet" href="../../Content/css/travel.css">
     <!-- self link end -->
   
@@ -40,7 +38,7 @@
 
 </style>	
 <body >
-    <loading-screen v-if="isLoading"></loading-screen>
+  
     <div class="l-body jQ-body">
         <!-- ==================== l-header begin ==================== -->
         <div class="l-header">
@@ -165,15 +163,12 @@
                                     <div class="input_tit">旅遊起始日</div>
                                     <div class="control--input">
                                          <div class="datepicker_in">
-                                            <input type="text" id="datepicker" size="30">
+                                            <input type="text" id="datepicker" data-date-format="yy-mm-dd"  value =" " placeholder="旅遊起始日">
                                          </div>
                                     </div>
                                      <div class="other_input">
                                         <div class="input_tit">旅遊起始時間</div>
                                         <div class="control--input">
-                                                <!-- <select  id="select_todaty" class="s_width" name="">
-                                                        <option value=" "></option>
-                                                </select> -->
                                                 <select id="selectDay" class="s_width" type="text" v-model="selectTime">
                                                         <option v-for="item in time" :value="item">{{ item }}</option>
                                                 </select>
@@ -290,7 +285,7 @@
                                         <div class="input_inputcount">
                                             <div class="input_tit">班機延誤理賠金額 </div>
                                         </div>
-                                      <div class="line_box">
+                                      <div class="line_box" v-show="isShowing">
                                                 <div class="c-box c-box--arrow-bottom">
                                                         3hr
                                                 </div>
@@ -305,12 +300,12 @@
                                                 <div class="moment_money12000">12,000元</div>
                                                 <div class="airplane"></div>
                                         </div>
-                                        <div class="line_box">
+                                        <div class="line_box item_f_y" v-show="isShowingf_y" >
                                                 <div class="moment_money"></div> 
                                                 <div class="c-box c-box--arrow-bottom">
                                                         4hr
                                                 </div>
-                                                <div class="moment_moneyone">5,000元</div>
+                                                <div class="moment_moneyone">10,000元</div>
                                                 
                                                 <div class="airplane"></div>
                                         </div>
@@ -736,8 +731,6 @@
     <script type="text/javascript" src="../../Scripts/js/loan.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/js/index.js"></script>
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <script type="text/javascript" src="../../Scripts/js/travel.js"></script>
