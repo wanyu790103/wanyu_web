@@ -960,9 +960,9 @@ table.scroll-left{
     float: left;
   }
   @media screen and (min-width:1500px){
-    .owl-item.active{
-      width: 284px!important;
-    }
+    // .owl-item.active{
+    //   width: 284px!important;
+    // }
     .l-content-bd>:not(.is-full):not(.is-full-md):not(.is-full-dt):not(.is-mini) {
       padding-right: 50px;
       padding-left: 50px;
