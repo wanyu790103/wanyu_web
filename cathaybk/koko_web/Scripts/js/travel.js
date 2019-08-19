@@ -128,6 +128,7 @@ $(function () {
 
 var app = new Vue({
   el: '#inputcount',
+  template: '#inputcount_t',
   data: {
     user: {
       isLoading: true,
@@ -139,10 +140,19 @@ var app = new Vue({
     afterHours: 3,
     airplaneChoose_N: '0',
     InconvenientChoose_N: '0',
+    isShowing: true,
+  },
+  computed: {
+    isShowing() {
+      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0';
+    },
+    isShowing2() {
+      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '1';
+    },
   },
   created() {
     this.init();
-    this.handeAirplaneChoose();
+    // this.handeAirplaneChoose();
   },
   methods: {
     init() {
@@ -181,27 +191,30 @@ var app = new Vue({
         this.time = this.originTime;
       }
     },
-    handeAirplaneChoose() {
-      if (this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0') {
-        // this.isShowing = true;
-      }else{
-        // this.isShowing = false;
-        // this.isShowing2 = true;
-        console.log(22);
-      }
-    }
+    // handeAirplaneChoose() {
+    //   console.log(typeof this.airplaneChoose_N);
+    //   console.log(typeof this.InconvenientChoose_N);
+    //   console.log(this.isShowing2);
+    //   if (this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0') {
+    //     // this.isShowing = true;
+    //     this.isShowing2 = false;
+    //   }else if(this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '1'){
+    //     this.isShowing = false;
+    //     this.isShowing2 = true;
+        
+    //   }
+    // }
   },
   watch: {
     selectTime(e) {
       console.log(this.selectTime);
     },
-    airplaneChoose_N(e) {
-      console.log(this.airplaneChoose_N);
-      this.handeAirplaneChoose();
-    },
-    InconvenientChoose_N(e) {
-      console.log(this.InconvenientChoose_N);
-    },
+    // airplaneChoose_N(e) {
+    //   this.handeAirplaneChoose();
+    // },
+    // InconvenientChoose_N(e) {
+    //   this.handeAirplaneChoose();
+    // },
   },
 })
 
