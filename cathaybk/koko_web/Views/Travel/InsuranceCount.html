@@ -83,9 +83,9 @@
                 </div>
                 <div class="l-content-bd">
                         <div class="m-dialog">
-                                <div class="m-dialog-hd jQ-owl" data-items-md="5" data-items-sm="3" data-items-xs="3" data-dots="false" data-arrow-sm="true" data-arrow-xs="true" data-start-position="2" data-events="digital.owlEvents">
+                                <div class="m-dialog-hd jQ-owl" data-items-md="5" data-items-sm="3" data-items-xs="1" data-dots="false" data-arrow-sm="true" data-arrow-xs="true" data-start-position="3" data-events="digital.owlEvents">
                                             <div class="m-dialog-item b-col-md-5d b-col-sm-6 b-col-xs-12">
-                                                <a href="../../Views/Travel/AboutInsurance.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_transfer">
+                                                <a href="../../Views/Travel/AboutInsurance.html" class="bannerlink m-dialog-ctrl " data-active="is-active" data-include=".jQ-include">
                                                     <i class="m-icon icon-group-3 b-text-white"></i>
                                                     <span>
                                                             <em class="b-bold b-h4">看看我有多好</em>
@@ -122,7 +122,7 @@
                                             </div>
                                            
                                             <div class="m-dialog-item b-col-md-5d b-col-sm-6 b-col-xs-12">
-                                                    <a href="../../Views/Travel/InsuranceQA.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include" ga_cat="KOKO_ODA" ga_event="click" ga_label="tab_funds">
+                                                    <a href="../../Views/Travel/InsuranceQA.html" class="bannerlink m-dialog-ctrl" data-active="is-active" data-include=".jQ-include">
                                                         <i class="m-icon icon-group-10 b-text-white"></i>
                                                         <span>
                                                             <em class="b-bold b-h4">知道你手舉高</em>
@@ -131,8 +131,8 @@
                                                     </a>
                                             </div>
                                     
-                        </div>
-                        </div>				
+                                </div>
+                        </div>					
                         <article class="combo is-full">
                             <div class="b-text-center">
                                 <h2 class="b-h3 b-bold" style="margin-top:30px;"><p>不算不知道，算完太可靠！</p></h2>
@@ -185,7 +185,7 @@
                                     </div>
                                     <div class="back_choose">
                                         <div class="input_inputcount">
-                                            <div class="input_tit">旅遊平安險方案選擇</div>
+                                            <div class="input_tit m_displayinline">旅遊平安險方案選擇</div>
                                             <div class="inputGroup__control">
                                                 <div class="fancyRadio">
                                                     <input type="radio"  id="travelChoose" name="travelChoose_N" class="fancyRadio__input" value="0" v-model="travelChoose_N"  />
@@ -245,9 +245,9 @@
                                     </div>
                                     <div class="backW_choose">
                                         <div class="input_inputcount">
-                                            <div class="input_tit">班機延誤理賠方案選擇</div>
+                                            <div class="input_tit m_displayinline m_displayblock">班機延誤理賠方案選擇</div>
                                             <div class="inputGroup__control">
-                                                <div class="fancyRadio">
+                                                <div class="fancyRadio mobileRadio">
                                                     <input type="radio"  id="airplaneChoose" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="0" class="fancyRadio__input"/>
                                                     <label for="airplaneChoose" class="fancyRadio__label"  >
                                                         固定式
@@ -263,9 +263,9 @@
                                     </div>    
                                     <div class="backW_choose">
                                             <div class="input_inputcount">
-                                                <div class="input_tit">是否升級早鳥不便險方案</div>
+                                                <div class="input_tit m_displayinline m_displayblock">是否升級早鳥不便險方案</div>
                                                 <div class="inputGroup__control">
-                                                    <div class="fancyRadio">
+                                                    <div class="fancyRadio mobileRadio">
                                                         <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input"/>
                                                         <label for="InconvenientChoose" class="fancyRadio__label" >
                                                             是
@@ -284,19 +284,21 @@
                                             </div>
                                             <div class="line_box" v-if="isShowing" >
                                                     <div class="moment_money"></div> 
+                                                    
+                                                    <div class="moment_moneyone">5,000元</div>
                                                     <div class="c-box c-box--arrow-bottom">
                                                             4hr
                                                     </div>
-                                                    <div class="moment_moneyone">5,000元</div>
                                                     
                                                     <div class="airplane"></div>
                                             </div>
                                             <div class="line_box" v-if="isShowing2" >
                                                     <div class="moment_money"></div> 
+                                                    
+                                                    <div class="moment_moneyone">10,000元</div>
                                                     <div class="c-box c-box--arrow-bottom">
                                                             4hr
                                                     </div>
-                                                    <div class="moment_moneyone">10,000元</div>
                                                     
                                                     <div class="airplane"></div>
                                             </div>
@@ -334,14 +336,14 @@
                                     </div>
                                     <div class="back_choose">
                                             <div class="input_inputcount">
-                                                <div class="input_tit">加價購特殊活動取消慰問</div>
+                                                <div class="input_tit m_displayinline m_displayblock">加價購特殊活動取消慰問</div>
                                                 <div class="inputGroup__control">
-                                                    <div class="fancyRadio">
-                                                        <input type="radio" value="" id="priceChoose" name="priceChoose_N" class="fancyRadio__input" checked />
+                                                    <div class="fancyRadio mobileRadio">
+                                                        <input type="radio" id="priceChoose" name="priceChoose_N" class="fancyRadio__input" checked />
                                                         <label for="priceChoose" class="fancyRadio__label" >
                                                             是
                                                         </label>
-                                                        <input type="radio" value="" id="priceChoose2" name="priceChoose_N" class="fancyRadio__input" />
+                                                        <input type="radio" id="priceChoose2" name="priceChoose_N" class="fancyRadio__input" />
                                                         <label for="priceChoose2" class="fancyRadio__label">
                                                             否
                                                         </label>
@@ -350,8 +352,14 @@
                                             </div>
                                     </div>
                                     
-                                    <div class="input_inputcount_day">
-                                        <p>＊實際保費以投保時試算結果為準</p>  
+                                    <div class="input_inputcount_count">
+                                        <button class="count"> 
+                                            <span>立即試算 > </span>
+                                        </button>
+                                        <div class="_text">
+                                            <div class="total_money"> 保費估計  <span class="value_money">753</span> 元 </div>
+                                            ＊實際保費以投保時試算結果為準
+                                        </div>
                                     </div>
                                 </div>
                             </script>
@@ -742,7 +750,7 @@
     <script type="text/javascript" src="../../Scripts/js/ga.min.js?js=20170805_01" id="gaScript" data-id=""></script>
     <!--[if gt IE 9]><!-->
     <!-- common script ft begin -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../../Scripts/js/vue.js"></script>
     <script type="text/javascript" src="../../Scripts/plugin/jquery/jquery.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/plugin/owl.carousel/owl.carousel.min.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/plugin/jquery.scrollbar/jquery.scrollbar.min.js?js=20170805_01"></script>
@@ -755,7 +763,7 @@
     <script type="text/javascript" src="../../Scripts/js/loan.js?js=20170805_01"></script>
     <script type="text/javascript" src="../../Scripts/js/index.js"></script>
     
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="../../Scripts/plugin/jquery-ui.js"></script>
     
     <script type="text/javascript" src="../../Scripts/js/travel.js"></script>
     

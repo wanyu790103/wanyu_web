@@ -104,8 +104,6 @@ var app = new Vue({
     travelChoose_N: '0',
     airplaneChoose_N: '0',
     InconvenientChoose_N: '0',
-    // isShowbox: true,
-    // isShowing: true,
   },
   computed: {
     isShowbox() {
@@ -153,12 +151,10 @@ var app = new Vue({
       var today_month = today.getMonth();
       var today_day = today.getDate();
       var today_hour = today.getHours();
-      // console.log(today_month, today_day, today_hour);
-      
+
       var select_month = option.currentMonth;
       var select_day = Number(option.currentDay);
-      // console.log(select_month, select_day);
-      
+  
       var isToday = select_month === today_month && select_day === today_day;
       if (isToday) {
         var target_index = today_hour + this.afterHours - 1;
@@ -167,19 +163,6 @@ var app = new Vue({
         this.time = this.originTime;
       }
     },
-    // handeAirplaneChoose() {
-    //   console.log(typeof this.airplaneChoose_N);
-    //   console.log(typeof this.InconvenientChoose_N);
-    //   console.log(this.isShowing2);
-    //   if (this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0') {
-    //     // this.isShowing = true;
-    //     this.isShowing2 = false;
-    //   }else if(this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '1'){
-    //     this.isShowing = false;
-    //     this.isShowing2 = true;
-        
-    //   }
-    // }
   },
   watch: {
     selectTime(e) {
@@ -194,9 +177,7 @@ var app = new Vue({
   },
 })
 
-
 // setTimeout(function() {
-//   console.log('give me time');
 //   console.log(app.selectTime);
 //   console.log(app.selectDate);
 

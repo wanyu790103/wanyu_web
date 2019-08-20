@@ -83,3 +83,22 @@
     text-align: center;
     cursor: pointer;
   }
+  @media screen and(max-width:640px){
+   .fancyRadio.mobileRadio{
+    width:100%;
+   }
+  }
+  @media screen and(max-width:480px){
+   .fancyRadio{
+    width:140px;
+   }
+   .fancyRadio__label{
+    font-size:3.5vw;
+   }
+
+  }
+  // @media screen and(max-width:480px){
+  //   .fancyRadio{
+  //     width:110px;
+  //    }
+  // }

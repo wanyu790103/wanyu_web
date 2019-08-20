@@ -88,3 +88,14 @@ $btncolor: #d87517;
     @include box-arrow(left, $boxbkg);  
   }
 }
+@media screen and(max-width:640px){
+  .c-box--arrow-bottom:after{
+    display:none; 
+  }
+}
+
+@media screen and(max-width:320px){
+  .c-box {
+    width:25px;
+  }
+}
