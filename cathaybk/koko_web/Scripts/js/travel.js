@@ -2,42 +2,6 @@
 $(".tab_content").hide();
 $(".tab_content:first").show();
 
-
-	//fancyradio
-	var fancyradio = {
-		init: function () {
-			$('.fancyRadio').each(function () {
-				var el = $(this);
-				var id = el.find('.fancyRadio__input:checked').attr('id');
-				var $content = $('[data-for="' + id + '"]');
-				if ($content.length) {
-					$('[data-for="' + id + '"]').show();
-					$(this).closest('.fancyRadio').addClass('open');
-				}
-			})
-		},
-		binding: function () {
-			$('.fancyRadio__label').click(function () {
-				var $container = $(this).closest('.fancyRadio');
-				var $target = $('[data-for="' + $(this).attr('for') + '"]');
-				var ISchecked = $(this).prev().prop('checked');
-				if (ISchecked) {
-					return false;
-				}
-				$container.siblings('.fancyRadio__content').slideUp(0);
-				$target.slideDown(0);
-				if ($target.length) {
-					$(this).closest('.fancyRadio').addClass('open');
-				} else {
-					$(this).closest('.fancyRadio').removeClass('open');
-				}
-			});
-		}
-  };
-  fancyradio.init();
-  fancyradio.binding();
-
-
   
 //tab mode
 
@@ -125,7 +89,6 @@ $(function () {
   })
 });
 // vue
-
 var app = new Vue({
   el: '#inputcount',
   template: '#inputcount_t',
@@ -138,20 +101,35 @@ var app = new Vue({
     selectTime: '',
     selectDate: '',
     afterHours: 3,
+    travelChoose_N: '0',
     airplaneChoose_N: '0',
     InconvenientChoose_N: '0',
+    isShowbox: true,
     isShowing: true,
   },
   computed: {
+    isShowbox() {
+      return this.travelChoose_N === '0';
+    },
+    isShowbox2() {
+      return this.travelChoose_N === '1';
+    },
     isShowing() {
-      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0';
+      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '1';
     },
     isShowing2() {
-      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '1';
+      return this.airplaneChoose_N === '0' && this.InconvenientChoose_N === '0';
+    },
+    isShowing3() {
+      return this.airplaneChoose_N === '1' && this.InconvenientChoose_N === '1';
+    },
+    isShowing4() {
+      return this.airplaneChoose_N === '1' && this.InconvenientChoose_N === '0';
     },
   },
   created() {
     this.init();
+    console.log(this.travelChoose_N);
     // this.handeAirplaneChoose();
   },
   methods: {
@@ -167,9 +145,6 @@ var app = new Vue({
         todayHighlight: true,
         onSelect: this.handleDatepickerSelect,
       });
-      // $("#datepicker").on("changeDate", function(event) {
- 
-      // });
     },
     handleDatepickerSelect(date, option) {
       this.selectDate = date;
