@@ -104,8 +104,8 @@ var app = new Vue({
     travelChoose_N: '0',
     airplaneChoose_N: '0',
     InconvenientChoose_N: '0',
-    isShowbox: true,
-    isShowing: true,
+    // isShowbox: true,
+    // isShowing: true,
   },
   computed: {
     isShowbox() {
@@ -127,8 +127,9 @@ var app = new Vue({
       return this.airplaneChoose_N === '1' && this.InconvenientChoose_N === '0';
     },
   },
-  created() {
+  mounted() {
     this.init();
+    console.log('mounted');
     console.log(this.travelChoose_N);
     // this.handeAirplaneChoose();
   },
