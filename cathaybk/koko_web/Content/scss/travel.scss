@@ -4,6 +4,9 @@
 @import "_fancyRadio.scss";
 @import "_boxarrow.scss";
 @import "_datepicker.scss";
+[v-cloak] {
+  display: none;
+}
 #loading{
   background-color: #63ab97;
   color: white;
@@ -36,7 +39,7 @@ table.scroll-left{
 .m-phone {
   margin-right: auto;
   margin-left: auto;
-  background: url(../img/travel/phone.png) no-repeat center center;
+  background: url(../../Content/img/TravelInsuranceIntro/phone.png) no-repeat center center;
   background-size: 100% auto;
   position: relative;
   box-sizing: border-box;
@@ -149,12 +152,13 @@ table.scroll-left{
     position: relative;
     width:300px;
     border: 1px solid #bebebe;
+    height:40px;
     @include font(16px,40px,#5f5f5f,500);
     cursor: pointer;
     appearance: none;
     overflow: hidden;
     z-index: 1;
-    background: #ffffff no-repeat url(../img/travel/select.png) right center;
+    background: #ffffff no-repeat url(../../Content/img/TravelInsuranceIntro/select.png) right center;
     background-size: 18px 8px;
     &.s_width{
       width:125px
@@ -165,8 +169,8 @@ table.scroll-left{
     }
   .inputcount{
     width: 906px;
+    min-height:800px; 
     margin:30px auto 0; 
-    min-height: auto;
     border-radius: 13px;
     border: solid 1px #cfcfcf;
     padding:30px 0;
@@ -229,7 +233,7 @@ table.scroll-left{
           width:25px;
           height:12px;
           background-size:25px 12px;
-          background:url(../img/travel/airplane-icon.svg);   
+          background:url(../../Content/img/TravelInsuranceIntro/airplane-icon.svg);   
         }         
        }   
     }
@@ -269,7 +273,7 @@ table.scroll-left{
             content:" ";
             width:26px;
             height:30px;
-            background:url(../img/travel/calendar.png);
+            background:url(../../Content/img/TravelInsuranceIntro/calendar.png);
             background-size:26px 30px;
             position: absolute;
             right:5px;
@@ -329,6 +333,7 @@ table.scroll-left{
        }
        input[type="text"].travel_day{
         @include font(18px,40px,#ec008c);
+        height:40px;
         text-align:center;
         max-width:80px;
         border: 1px solid #bebebe;
@@ -387,19 +392,19 @@ table.scroll-left{
         .people{
           width:68px;
           height:68px;
-          background:url(../img/travel/people-icon.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people-icon.png);
           background-size:68px 68px;
         }
         .people2{
           width:68px;
           height:68px;
-          background:url(../img/travel/people-icon2.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people-icon2.png);
           background-size:68px 68px;
         }
         .people3{
           width:68px;
           height:68px;
-          background:url(../img/travel/people-icon3.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people-icon3.png);
           background-size:68px 68px;
         }
         p{
@@ -572,20 +577,20 @@ table.scroll-left{
         .people{
           width:68px;
           height:68px;
-          background:url(../img/travel/people2-icon.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people2-icon.png);
           background-size:68px 68px;
 
         }
         .people2{
           width:68px;
           height:68px;
-          background:url(../img/travel/people2-icon2.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people2-icon2.png);
           background-size:68px 68px;
         }
         .people3{
           width:68px;
           height:68px;
-          background:url(../img/travel/people2-icon3.png);
+          background:url(../../Content/img/TravelInsuranceIntro/people2-icon3.png);
           background-size:68px 68px;
         }
         p{
@@ -705,7 +710,7 @@ table.scroll-left{
       .next{
         position: absolute;
         right:-10px;
-        background:url(../img/travel/next.png);
+        background:url(../../Content/img/TravelInsuranceIntro/next.png);
         width:13px;
         height:22px;
         top:55px;
@@ -767,7 +772,7 @@ table.scroll-left{
            content:" ";
            width:30px;
            height:30px;
-           background:url(../img/travel/check-ok.png);
+           background:url(../../Content/img/TravelInsuranceIntro/check-ok.png);
            background-size:30px 30px;
            position: absolute;
            left:50%;
@@ -1094,19 +1099,19 @@ table.scroll-left{
           .people{
             width:41px;
             height:41px;
-            background:url(../img/travel/people-icon.png);
+            background:url(../../Content/img/TravelInsuranceIntro/people-icon.png);
             background-size:41px 41px;
           }
           .people2{
             width:41px;
             height:41px;
-            background:url(../img/travel/people-icon2.png);
+            background:url(../../Content/img/TravelInsuranceIntro/people-icon2.png);
             background-size:41px 41px;
           }
           .people3{
             width:41px;
             height:41px;
-            background:url(../img/travel/people-icon3.png);
+            background:url(../../Content/img/TravelInsuranceIntro/people-icon3.png);
             background-size:41px 41px;
           }
           p{

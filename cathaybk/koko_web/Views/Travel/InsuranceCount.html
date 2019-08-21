@@ -29,7 +29,9 @@
     <link rel="stylesheet" href="../../Scripts/plugin/jquery.scrollbar/jquery.scrollbar.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/digital.css?css=20170811_01">
     <link rel="stylesheet" href="../../Content/css/combo.css?css=20170811_01">
-	<link rel="stylesheet" href="../../Content/css/travel.css">
+    <link rel="stylesheet" href="../../Content/css/travel.css">
+    
+    <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> -->
     <!-- self link end -->
     </style>
 </head>
@@ -74,7 +76,7 @@
                             </div>
                             <div class="common-vision-object b-inline-dt is-vtop">
                                 <figure class="teach-header-image">
-                                        <img src="../../Content/img/travel/banner.png" class="is-max-width">
+                                        <img src="../../Content/img/TravelInsuranceIntro/banner.png" class="is-max-width">
                                     </figure>
                             </div>
                             <i class="common-vision-bg"></i>
@@ -140,229 +142,227 @@
                         </article>
                     
                         <div class="ls-content">
-                            <div id="inputcount" class="inputcount"></div>
-                            <script type="text/x-template" id="inputcount_t">
-                                <div id="inputcount" class="inputcount">
-                                    <div class="input_inputcount">
-                                        <div class="input_tit">旅遊地區</div>
+                            <div id="inputcount" class="inputcount">
+                                <div class="input_inputcount">
+                                    <div class="input_tit">旅遊地區</div>
+                                    <div class="control--input">
+                                            <select class="" name="">
+                                                    <option value="">請選擇</option>
+                                                    <option value="">東南亞</option>
+                                                    <option value="">日本</option>
+                                                    <option value="">歐洲</option>
+                                                    <option value="">紐澳</option>
+                                                    <option value="">泰國</option>
+                                                    <option value="">韓國</option>
+                                                    <option value="">美加</option>
+                                                    <option value="">歐洲</option>
+                                                    <option value="">其他</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="input_inputcount">
+                                    <div class="input_tit">旅遊起始日</div>
+                                    <div class="control--input">
+                                            <div class="datepicker_in">
+                                            <input type="text" id="datepicker" data-date-format="yy-mm-dd"  value =" " placeholder="旅遊起始日">
+                                            </div>
+                                    </div>
+                                        <div class="other_input">
+                                        <div class="input_tit">旅遊起始時間</div>
                                         <div class="control--input">
-                                                <select class="" name="">
-                                                        <option value="">請選擇</option>
-                                                        <option value="">東南亞</option>
-                                                        <option value="">日本</option>
-                                                        <option value="">歐洲</option>
-                                                        <option value="">紐澳</option>
-                                                        <option value="">泰國</option>
-                                                        <option value="">韓國</option>
-                                                        <option value="">美加</option>
-                                                        <option value="">歐洲</option>
-                                                        <option value="">其他</option>
+                                                <select id="selectDay" class="s_width" type="text" v-model="selectTime" v-cloak>
+                                                        <option  v-for="item in time" :value="item">{{ item }}</option>
                                                 </select>
                                         </div>
+                                        </div> 
+                                </div>
+                                <div class="input_inputcount_day">
+                                    <div class="input_tit">旅遊天數</div>
+                                    <div class="control--input">
+                                            <input class="travel_day" type="text" value="" maxlength="3" placeholder="">
                                     </div>
+                                        <span>天</span>
+                                </div>
+                                <div class="back_choose">
                                     <div class="input_inputcount">
-                                        <div class="input_tit">旅遊起始日</div>
-                                        <div class="control--input">
-                                                <div class="datepicker_in">
-                                                <input type="text" id="datepicker" data-date-format="yy-mm-dd"  value =" " placeholder="旅遊起始日">
-                                                </div>
-                                        </div>
-                                            <div class="other_input">
-                                            <div class="input_tit">旅遊起始時間</div>
-                                            <div class="control--input">
-                                                    <select id="selectDay" class="s_width" type="text" v-model="selectTime">
-                                                            <option v-for="item in time" :value="item">{{ item }}</option>
-                                                    </select>
-                                            </div>
-                                            </div> 
-                                    </div>
-                                    <div class="input_inputcount_day">
-                                        <div class="input_tit">旅遊天數</div>
-                                        <div class="control--input">
-                                                <input class="travel_day" type="text" value="" maxlength="3" placeholder="">
-                                        </div>
-                                            <span>天</span>
-                                    </div>
-                                    <div class="back_choose">
-                                        <div class="input_inputcount">
-                                            <div class="input_tit m_displayinline">旅遊平安險方案選擇</div>
-                                            <div class="inputGroup__control">
-                                                <div class="fancyRadio">
-                                                    <input type="radio"  id="travelChoose" name="travelChoose_N" class="fancyRadio__input" value="0" v-model="travelChoose_N"  />
-                                                    
-                                                    <label for="travelChoose" class="fancyRadio__label" >
-                                                        300萬
-                                                    </label>
-                                                    <input type="radio"  id="travelChoose2" name="travelChoose_N" class="fancyRadio__input" value="1" v-model="travelChoose_N" />
-                                                    <label for="travelChoose2" class="fancyRadio__label">
-                                                        500萬
-                                                    </label>
-                                                </div>
-                                                <div class="fancyRadio__content" v-if="isShowbox"  >
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">意外事故身故失能</div>
-                                                        <div class="IN_control--input">
-                                                                <span>300</span>萬
-                                                        </div>
-                                                    </div>
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">海外突發傷病</div>
-                                                        <div class="IN_control--input">
-                                                                <span>30</span>萬
-                                                        </div>
-                                                    </div>
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">傷害醫療實支實付</div>
-                                                        <div class="IN_control--input">
-                                                                <span>30</span>萬
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="input_tit m_displayinline">旅遊平安險方案選擇</div>
+                                        <div class="inputGroup__control">
+                                            <div class="fancyRadio">
+                                                <input type="radio"  id="travelChoose" name="travelChoose_N" class="fancyRadio__input" value="0" v-model="travelChoose_N"  />
                                                 
-                                                <div class="fancyRadio__content"v-if="isShowbox2" >
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">意外事故身故失能</div>
-                                                        <div class="IN_control--input">
-                                                                <span>500</span>萬
-                                                        </div>
+                                                <label for="travelChoose" class="fancyRadio__label" >
+                                                    300萬
+                                                </label>
+                                                <input type="radio"  id="travelChoose2" name="travelChoose_N" class="fancyRadio__input" value="1" v-model="travelChoose_N" />
+                                                <label for="travelChoose2" class="fancyRadio__label">
+                                                    500萬
+                                                </label>
+                                            </div>
+                                            <div class="fancyRadio__content" v-if="isShowbox"  >
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">意外事故身故失能</div>
+                                                    <div class="IN_control--input">
+                                                            <span>300</span>萬
                                                     </div>
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">海外突發傷病</div>
-                                                        <div class="IN_control--input">
-                                                                <span>50</span>萬
-                                                        </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">海外突發傷病</div>
+                                                    <div class="IN_control--input">
+                                                            <span>30</span>萬
                                                     </div>
-                                                    <div class="IN_input_inputcount">
-                                                        <div class="IN_input_tit">傷害醫療實支實付</div>
-                                                        <div class="IN_control--input">
-                                                                <span>50</span>萬
-                                                        </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">傷害醫療實支實付</div>
+                                                    <div class="IN_control--input">
+                                                            <span>30</span>萬
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                        </div>
-                                    </div>
-                                    <div class="backW_choose">
-                                        <div class="input_inputcount">
-                                            <div class="input_tit m_displayinline m_displayblock">班機延誤理賠方案選擇</div>
-                                            <div class="inputGroup__control">
-                                                <div class="fancyRadio mobileRadio">
-                                                    <input type="radio"  id="airplaneChoose" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="0" class="fancyRadio__input"/>
-                                                    <label for="airplaneChoose" class="fancyRadio__label"  >
-                                                        固定式
-                                                    </label>
-                                                    <input type="radio" id="airplaneChoose2" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="1"  class="fancyRadio__input"/>
-                                                    <label for="airplaneChoose2" class="fancyRadio__label" >
-                                                        級距式
-                                                    </label>
+                                            <div class="fancyRadio__content"v-if="isShowbox2" >
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">意外事故身故失能</div>
+                                                    <div class="IN_control--input">
+                                                            <span>500</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">海外突發傷病</div>
+                                                    <div class="IN_control--input">
+                                                            <span>50</span>萬
+                                                    </div>
+                                                </div>
+                                                <div class="IN_input_inputcount">
+                                                    <div class="IN_input_tit">傷害醫療實支實付</div>
+                                                    <div class="IN_control--input">
+                                                            <span>50</span>萬
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         
-                                    </div>    
-                                    <div class="backW_choose">
-                                            <div class="input_inputcount">
-                                                <div class="input_tit m_displayinline m_displayblock">是否升級早鳥不便險方案</div>
-                                                <div class="inputGroup__control">
-                                                    <div class="fancyRadio mobileRadio">
-                                                        <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input"/>
-                                                        <label for="InconvenientChoose" class="fancyRadio__label" >
-                                                            是
-                                                        </label>
-                                                        <input type="radio" id="InconvenientChoose2" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="1" class="fancyRadio__input"/>
-                                                        <label for="InconvenientChoose2" class="fancyRadio__label">
-                                                            否
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                    <div class="backW_choose">
-                                            <div class="input_inputcount">
-                                                <div class="input_tit">班機延誤理賠金額 </div>
-                                            </div>
-                                            <div class="line_box" v-if="isShowing" >
-                                                    <div class="moment_money"></div> 
-                                                    
-                                                    <div class="moment_moneyone">5,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            4hr
-                                                    </div>
-                                                    
-                                                    <div class="airplane"></div>
-                                            </div>
-                                            <div class="line_box" v-if="isShowing2" >
-                                                    <div class="moment_money"></div> 
-                                                    
-                                                    <div class="moment_moneyone">10,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            4hr
-                                                    </div>
-                                                    
-                                                    <div class="airplane"></div>
-                                            </div>
-                                            <div class="line_box" v-if="isShowing3">
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            3hr
-                                                    </div>
-                                                    <div class="moment_money4000">4,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            6hr
-                                                    </div>
-                                                    <div class="moment_money8000">8,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            9hr
-                                                    </div>
-                                                    <div class="moment_money12000">12,000元</div>
-                                                    <div class="airplane"></div>
-                                            </div>
-                                            <div class="line_box" v-if="isShowing4">
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            3hr
-                                                    </div>
-                                                    <div class="moment_money4000">6,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            6hr
-                                                    </div>
-                                                    <div class="moment_money8000">12,000元</div>
-                                                    <div class="c-box c-box--arrow-bottom">
-                                                            9hr
-                                                    </div>
-                                                    <div class="moment_money12000">18,000元</div>
-                                                    <div class="airplane"></div>
-                                            </div>
-                                            
-                                    </div>
-                                    <div class="back_choose">
-                                            <div class="input_inputcount">
-                                                <div class="input_tit m_displayinline m_displayblock">加價購特殊活動取消慰問</div>
-                                                <div class="inputGroup__control">
-                                                    <div class="fancyRadio mobileRadio">
-                                                        <input type="radio" id="priceChoose" name="priceChoose_N" class="fancyRadio__input" checked />
-                                                        <label for="priceChoose" class="fancyRadio__label" >
-                                                            是
-                                                        </label>
-                                                        <input type="radio" id="priceChoose2" name="priceChoose_N" class="fancyRadio__input" />
-                                                        <label for="priceChoose2" class="fancyRadio__label">
-                                                            否
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                    
-                                    <div class="input_inputcount_count">
-                                        <button class="count"> 
-                                            <span>立即試算 > </span>
-                                        </button>
-                                        <div class="_text">
-                                            <div class="total_money"> 保費估計  <span class="value_money">753</span> 元 </div>
-                                            ＊實際保費以投保時試算結果為準
-                                        </div>
                                     </div>
                                 </div>
-                            </script>
+                                <div class="backW_choose">
+                                    <div class="input_inputcount">
+                                        <div class="input_tit m_displayinline m_displayblock">班機延誤理賠方案選擇</div>
+                                        <div class="inputGroup__control">
+                                            <div class="fancyRadio mobileRadio">
+                                                <input type="radio"  id="airplaneChoose" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="0" class="fancyRadio__input"/>
+                                                <label for="airplaneChoose" class="fancyRadio__label"  >
+                                                    固定式
+                                                </label>
+                                                <input type="radio" id="airplaneChoose2" name="airplaneChoose_N"  v-model="airplaneChoose_N" value="1"  class="fancyRadio__input"/>
+                                                <label for="airplaneChoose2" class="fancyRadio__label" >
+                                                    級距式
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>    
+                                <div class="backW_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit m_displayinline m_displayblock">是否升級早鳥不便險方案</div>
+                                            <div class="inputGroup__control">
+                                                <div class="fancyRadio mobileRadio">
+                                                    <input type="radio" id="InconvenientChoose" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="0" class="fancyRadio__input"/>
+                                                    <label for="InconvenientChoose" class="fancyRadio__label" >
+                                                        是
+                                                    </label>
+                                                    <input type="radio" id="InconvenientChoose2" name="InconvenientChoose_N" v-model="InconvenientChoose_N" value="1" class="fancyRadio__input"/>
+                                                    <label for="InconvenientChoose2" class="fancyRadio__label">
+                                                        否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="backW_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit">班機延誤理賠金額 </div>
+                                        </div>
+                                        <div class="line_box" v-if="isShowing" >
+                                                <div class="moment_money"></div> 
+                                                
+                                                <div class="moment_moneyone">5,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        4hr
+                                                </div>
+                                                
+                                                <div class="airplane"></div>
+                                        </div>
+                                        <div class="line_box" v-if="isShowing2" >
+                                                <div class="moment_money"></div> 
+                                                
+                                                <div class="moment_moneyone">10,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        4hr
+                                                </div>
+                                                
+                                                <div class="airplane"></div>
+                                        </div>
+                                        <div class="line_box" v-if="isShowing3">
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        3hr
+                                                </div>
+                                                <div class="moment_money4000">4,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        6hr
+                                                </div>
+                                                <div class="moment_money8000">8,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        9hr
+                                                </div>
+                                                <div class="moment_money12000">12,000元</div>
+                                                <div class="airplane"></div>
+                                        </div>
+                                        <div class="line_box" v-if="isShowing4">
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        3hr
+                                                </div>
+                                                <div class="moment_money4000">6,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        6hr
+                                                </div>
+                                                <div class="moment_money8000">12,000元</div>
+                                                <div class="c-box c-box--arrow-bottom">
+                                                        9hr
+                                                </div>
+                                                <div class="moment_money12000">18,000元</div>
+                                                <div class="airplane"></div>
+                                        </div>
+                                        
+                                </div>
+                                <div class="back_choose">
+                                        <div class="input_inputcount">
+                                            <div class="input_tit m_displayinline m_displayblock">加價購特殊活動取消慰問</div>
+                                            <div class="inputGroup__control">
+                                                <div class="fancyRadio mobileRadio">
+                                                    <input type="radio" id="priceChoose" name="priceChoose_N" class="fancyRadio__input" checked />
+                                                    <label for="priceChoose" class="fancyRadio__label" >
+                                                        是
+                                                    </label>
+                                                    <input type="radio" id="priceChoose2" name="priceChoose_N" class="fancyRadio__input" />
+                                                    <label for="priceChoose2" class="fancyRadio__label">
+                                                        否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="input_inputcount_count">
+                                    <button class="count"> 
+                                        <span>立即試算 > </span>
+                                    </button>
+                                    <img id="Loading" height="40" src="../../Content/img/TravelInsuranceIntro/Loading.gif">
+                                    <div class="_text">
+                                        <div class="total_money"> 保費估計  <span class="value_money">753</span> 元 </div>
+                                        ＊實際保費以投保時試算結果為準
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                         <!-- ***** -->
@@ -765,7 +765,8 @@
     
     <script src="../../Scripts/plugin/jquery-ui.js"></script>
     
-    <script type="text/javascript" src="../../Scripts/js/travel.js"></script>
+    <!-- <script type="text/javascript" src="../../Scripts/js/travel.js"></script> -->
+    <script type="text/javascript" src="../../Scripts/js/travel_count.js"></script>
     
     <!-- self script end -->
     <!--<![endif]-->
