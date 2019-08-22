@@ -33,7 +33,13 @@ input[type=text].travel_local{
       padding: 0 15px;
       text-decoration:underline; 
     }
+
   }
+  .notice{
+    margin-top:30px;
+    @include font(20px,30px,#929292); 
+  }
+ 
 }
 #loading{
   background-color: #63ab97;
@@ -1954,6 +1960,10 @@ table.scroll-left{
           padding: 0 15px;
           text-decoration:underline; 
         }
+      }
+      .notice{
+        margin-top:30px;
+        @include font(15px,30px,#929292); 
       }
     }
 
