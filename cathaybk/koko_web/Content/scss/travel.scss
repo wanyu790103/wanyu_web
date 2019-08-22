@@ -18,6 +18,23 @@ input[type=text].travel_local{
   border: 1px solid #bebebe;
   border-radius: 5px;
 }
+.detail_list{
+  width: 906px;
+  text-align: center;
+  margin: 0 auto;
+  .detail_list_box{
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+    margin: 30px 0 ;
+    a{
+      @include font(15px,30px,#929292); 
+      padding: 0 15px;
+      text-decoration:underline; 
+    }
+  }
+}
 #loading{
   background-color: #63ab97;
   color: white;
@@ -1921,8 +1938,24 @@ table.scroll-left{
     }
   }
 
-  @media screen and(max-width:640px){
-
+  @media screen and(max-width:960px){
+    .detail_list{
+      width:100%;
+      text-align: center;
+      margin: 0 auto;
+      .detail_list_box{
+        width: 100%;
+        float: left;
+        position: relative;
+        display: block;
+        margin: 30px 0 ;
+        a{
+          @include font(14px,30px,#929292); 
+          padding: 0 15px;
+          text-decoration:underline; 
+        }
+      }
+    }
 
 
   }
