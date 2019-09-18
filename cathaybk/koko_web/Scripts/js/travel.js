@@ -43,6 +43,40 @@ $(".tab_content:first").show();
   
    });
 
+
+// sticky on scroll
+function sticky() {
+
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 30) {
+
+      $('#follow-pane').addClass('change-bottom');
+    } else {
+      $('#follow-pane').removeClass('change-bottom');
+    }
+  });
+
+  $(window).height(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 30) {
+      $('#follow-pane').addClass('change-bottom');
+    } else {
+      $('#follow-pane').removeClass('change-bottom');
+    }
+  });
+  $('.page-control').inViewport(function(px){
+    if(px >0){
+      $('#follow-pane').addClass('reset-fixed animated fadeIn');
+    }
+    else{
+      $('#follow-pane').removeClass('reset-fixed animated fadeIn');
+    }
+  });
+
+}
+
+
 $(function () {
 	$('.owl-carouselphone').owlCarousel({
 		margin:10,

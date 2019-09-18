@@ -1,5 +1,6 @@
 @import "_base.scss";
 @import "_font.scss";
+@import "_follow-pane.scss";
 @import "_owl.scss";
 @import "_fancyRadio.scss";
 @import "_boxarrow.scss";
@@ -7,11 +8,13 @@
 [v-cloak] {
   display: none;
 }
+
 input[type=text]::-ms-clear {
   display: none;
 }
 footer{
   float: left;
+  width:100%; 
 }
 input[type=text].travel_local{
   @include font(18px,40px,#ec008c);

@@ -1,0 +1,44 @@
+.owl-carouselphone {
+  width: 100%;
+  text-align: center;
+}
+.owl-carouselphone .item .title {
+  font-size: 16px;
+  color: #575252;
+  line-height: 30px;
+}
+.owl-carouselphone .item .title span {
+  color: #8d6ae0;
+  font-weight: 600;
+}
+.owl-carouselphone .owl-nav.disabled {
+  display: none;
+}
+
+@media screen and (max-width: 739px) {
+  .owl-carouselphone .owl-dots {
+    display: block;
+    text-align: center;
+  }
+  .owl-carouselphone .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #d8d8d8;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+  }
+  .owl-carouselphone .owl-dot {
+    display: inline-block;
+    zoom: 1;
+  }
+  .owl-carouselphone .owl-dot.active span {
+    background: #9874e5;
+  }
+}
+
+
