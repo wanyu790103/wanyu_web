@@ -51,7 +51,7 @@
     background:#f1f1f1; 
     color: #a7a7a7;
 }
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:1500px){
     .banner{
         .CUBbannerNew__img{
             .banner_title{
@@ -94,13 +94,14 @@
                 background-repeat: no-repeat;
                 background-position: top right;
                 height: 130px;
-                width: 40%;
+                width:50%;
                 background-size: cover;
             }
             .banner_title{
                 position: absolute;
-                left:10%;
-                top:20%;
+                left:5%;
+                top:50%;
+                margin-top:-15px; 
                 color:#fff;
                 font-size:18px; 
                 p{display:none;}

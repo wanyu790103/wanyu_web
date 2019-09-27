@@ -764,6 +764,7 @@ a.btn_box{
         font-size:14px; 
         text-align: center;
         color:#4a4a4a;
+        padding:0; 
         .title_g{ font-size:16px;color:#00a94f; }
         a.green_on{ 
           text-decoration:underline;
@@ -1454,7 +1455,7 @@ a.btn_box{
       float:none;
       max-width:500px;
       margin: 0 auto;
-      padding:30px 0; 
+      padding:10px 0; 
       list-style: none;
       position:relative;
       border-bottom: solid 1px #d8d8d8; 
@@ -1465,7 +1466,7 @@ a.btn_box{
         font-weight:600; 
         margin-bottom:10px;
         margin-top:10px;
-        min-height:60px;
+        min-height:auto;
         text-align: left;
         &.f_top{  padding:10px 0 0 100px;}  
         span.step{color:#9d9d9d;font-size:16px;width:50px;}
@@ -1492,7 +1493,7 @@ a.btn_box{
 .iwrite__pen:before, .iwrite__doc:before, .iPrint__bank:before, .iwrite__pen:after, .iwrite__doc:after, .iPrint__bank:after {
     width:80px;
     height:80px;
-    background-image: url(../images/iwrite_S.png);
+    // background-image: url(../images/iwrite_S.png);
     background-position-x: 0;
     background-size: 80px;
 }
@@ -1544,9 +1545,9 @@ a.btn_box{
         font-size:5vw;
         color:#4a4a4a;
         font-weight:600; 
-        margin-bottom:10px;
+        margin-bottom:0px;
         margin-top:10px;
-        min-height:60px;
+        min-height:auto;
         text-align: left;
         &.f_top{  padding:10px 0 0 100px;}  
         span.step{color:#9d9d9d;font-size:18px;width:50px;}
@@ -1556,6 +1557,7 @@ a.btn_box{
         font-size:4.5vw; 
         text-align:left;
         color:#4a4a4a;
+        padding:0; 
         .title_g{ font-size:16px;color:#00a94f; }
         a.green_on{ 
           text-decoration:underline;

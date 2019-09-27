@@ -407,6 +407,9 @@
   }
 }
 @media only screen and (max-width: 767px){
+    .complete{
+      margin:20px auto 0;
+    }
     .completeIcon{
       padding:10px 0; 
     }
@@ -554,6 +557,7 @@
       }   
     }
   }
+
   .banner__img{
     position: relative;
     background: url(../images/kv_mobile.jpg);
