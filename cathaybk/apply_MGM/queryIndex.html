@@ -99,8 +99,9 @@
                                             <label class="inputGroup__label">專屬網址</label>
                                             <div class="inputGroup__control">
                                                     <div  id="copyURL" class="textarea" contenteditable="true" placeholder="http://">https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4</div>
+                                                  
                                                     <div class="URLbox">
-                                                            <button title="複製網址" alt="複製網址"  class="copy_link pcblock" data-fancybox="" data-src="#Personal_content" onclick="copyToClipboard('#copyURL')"></button>
+                                                            <button title="複製網址" alt="複製網址"  class="copy_link pcblock" data-fancybox="" data-src="#copy_url" data-clipboard-target="#copyURL"></button>
                                                             <a title="line" alt="line"  target="_block" class="line_link" href="http://line.naver.jp/R/msg/text/?https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4"></a>
                                                             <a title="facebook" alt="facebook"  target="_block" class="fb_link" target="_block" href="https://www.facebook.com/sharer/sharer.php?u=https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4"></a>
                                                     </div>
@@ -140,7 +141,8 @@
                                     </div>
 
                                     
-                            </div>   
+                            </div>
+ 
                         </div>
                         <div class="collapse collapse--note">
                                 <div class="collapse__title on" data-id="js-collapse">注意事項 </div>
@@ -155,7 +157,7 @@
 
 			</section>
 
-            <div id="Personal_content" class="popup">
+            <div id="copy_url" class="popup">
 				<div class="popup__head">
 					<div class="popup__title">複製網址</div>
 				</div>
@@ -216,10 +218,13 @@
 	<script src="Content/js/helper.js"></script>
     <script src="Content/js/plugins.js"></script>
     <script src="Content/js/alpha.js"></script>
+    <script src="Content/js/clipboard.min.js"></script>
 	<script src="Content/js/main.js"></script>
 	<!-- Common js /end -->
 	<!-- Page js /begin -->
-
-
+    
+    <script>
+        new ClipboardJS("[data-clipboard-target]");
+      </script>
 </body>
 </html>
