@@ -76,20 +76,17 @@
 								<div class="inputGroup">
 										<label class="inputGroup__label" for="IDNum">身分證字號</label>
 										<div class="inputGroup__control">
-											<input type="tel"  maxlength="10" name="IDNum" id="IDNum" placeholder="請輸入身分證字號" >
+											<input type="text"  maxlength="10" name="IDNum" id="IDNum" placeholder="請輸入身分證字號" >
 										</div>
 								</div>
 								<div class="inputGroup">
 									<label class="inputGroup__label" for="BIRTHNum">出生日期</label>
 									<div class="inputGroup__control">
-										<input type="text"  name="BIRTHNum"  maxlength="10" id="BIRTHNum" placeholder="請輸入出生日期(例如：1967/10/10）" >
+										<input type="text" class="input-element"  name="BIRTHNum"  maxlength="10" id="BIRTHNum" placeholder="請輸入出生日期(例如：1967/10/10）" >
 									</div>
 								</div>
 								<div class="inputGroup">
 										<label class="inputGroup__label" for="CODENum">驗證碼</label>
-										<!-- <div class="inputGroup__control">
-											<input type="text"  name="CODENum"  maxlength="4" id="CODENum" placeholder="請輸入驗證碼" >
-										</div> -->
 										<div class="inputGroup__control inputGroup__control--captcha">
 												<div class="tableDiv">
 													<div>
@@ -100,7 +97,7 @@
 													</div>
 													<div class="sms__actionArea_box">
 														<a href="javascript:void(0)" class="btn btn--rev btn--s">
-															<span> 重新發送 </span>
+															<span> 更新驗證碼 </span>
 														</a>
 													</div>
 		
@@ -147,7 +144,7 @@
 
 							</div>
 							<div class="wrap_button">
-								<div class="actionArea--2btns">
+								<div class="actionArea--2btns pc_btn">
 									<a href="javascript:void(0)" class="btn" data-id="submit">
 										<span>登入</span>
 									</a>
@@ -226,6 +223,8 @@
 	<script src="Content/js/helper.js"></script>
 	<script src="Content/js/plugins.js"></script>
 	<script src="Content/js/alpha.js"></script>
+	<script src="Content/js/cleave.min.js"></script>
+    <script src="Content/jscleave-phone.i18n.js"></script>   
 	<script src="Content/js/main.js"></script>
 	<!-- Common js /end -->
 	<!-- Page js /begin -->

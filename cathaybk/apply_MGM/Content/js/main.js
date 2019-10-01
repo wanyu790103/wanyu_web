@@ -7,7 +7,9 @@ function copyToClipboard(element) {
 	document.execCommand("copy");
 	$temp.remove();
   }
-  
+
+
+
 var isTouch = function () {
 	return 'ontouchstart' in window        // works on most browsers 
 		|| navigator.maxTouchPoints;       // works on IE10/11 and Surface
@@ -43,6 +45,8 @@ $(function () {
 		base: 'class',
 		trigger: 'parent'
 	});
+
+	
 	$('[data-id="telLink"]').click(function () {
 		if (isTouch()) {
 			location.href = $(this).data('href');
@@ -69,6 +73,11 @@ $(function () {
 			var $container = $(this).closest('.collapse');
 			$(this).next('[data-content="collapse"]').show().addClass('open');
 		}
+	});
+	var cleave = new Cleave('.input-element', {
+		date: true,
+		delimiter: '/',
+		datePattern: ['Y', 'm', 'd']
 	});
 	//fancyradio
 	var fancyradio = {

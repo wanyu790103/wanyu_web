@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-    <g fill="none" fill-rule="evenodd">
-        <path fill="#FAFAFA" d="M-1144-724H296V754h-1440z"/>
-        <g transform="translate(.53 .353)">
-            <circle cx="17.647" cy="17.647" r="16.471" fill="#FFA81A"/>
-            <path stroke="#FFF" stroke-width="1.765" d="M22.353 13.7v12.182c0 1.3-1.054 2.353-2.353 2.353h-8.235a2.353 2.353 0 0 1-2.353-2.353v-12.94c0-1.3 1.053-2.354 2.353-2.354h7.353l3.235 3.111z"/>
-            <path stroke="#FFF" stroke-width="1.765" d="M14.118 9.917V9.58c0-1.392 1.053-2.521 2.353-2.521h7.058c1.3 0 2.353 1.129 2.353 2.52v12.606c0 1.392-1.053 2.52-2.353 2.52"/>
-            <path stroke="#FFF" stroke-width="1.176" d="M22.353 13.682H20c-.65 0-1.176-.527-1.176-1.177v-1.917"/>
-            <path stroke="#FFF" stroke-width="1.765" d="M12.353 17.059h6.85M12.353 20.588h6.85M12.353 24.118h6.85"/>
-        </g>
+    <g fill="none" fill-rule="evenodd" transform="translate(.53 .353)">
+        <circle cx="17.647" cy="17.647" r="16.471" fill="#FFA81A"/>
+        <path stroke="#FFF" stroke-width="1.765" d="M22.353 13.7v12.182c0 1.3-1.054 2.353-2.353 2.353h-8.235a2.353 2.353 0 0 1-2.353-2.353v-12.94c0-1.3 1.053-2.354 2.353-2.354h7.353l3.235 3.111z"/>
+        <path stroke="#FFF" stroke-width="1.765" d="M14.118 9.917V9.58c0-1.392 1.053-2.521 2.353-2.521h7.058c1.3 0 2.353 1.129 2.353 2.52v12.606c0 1.392-1.053 2.52-2.353 2.52"/>
+        <path stroke="#FFF" stroke-width="1.176" d="M22.353 13.682H20c-.65 0-1.176-.527-1.176-1.177v-1.917"/>
+        <path stroke="#FFF" stroke-width="1.765" d="M12.353 17.059h6.85M12.353 20.588h6.85M12.353 24.118h6.85"/>
     </g>
 </svg>

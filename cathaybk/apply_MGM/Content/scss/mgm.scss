@@ -20,8 +20,9 @@
 .complete{
     margin:50px auto; 
 }
+
 .CUB__box{
-    margin:25px 0 20px; 
+    margin:0px 0 10px; 
     .CUB_title{
         @include font(20px,30px,#00994e,600);
         padding:20px 0;  
@@ -51,21 +52,25 @@
          .copy_link{
              width:35px;
              height:35px;
-             background:url(../images/icon_copy.svg);
+             background:url(../images/copy@2x.png);
              background-size:35px 35px;
-             border:0;     
+             border:0; 
+             display: inline-block;
+             &.mobileblock{
+              display:none; 
+            }     
          }
          .line_link{
             width:35px;
             height:35px;
-            background:url(../images/icon_line.svg);
+            background:url(../images/line@2x.png);
             background-size:35px 35px;
             display: inline-block;    
         }
         .fb_link{
             width:35px;
             height:35px;
-            background:url(../images/icon_fb.svg);
+            background:url(../images/fb@2x.png);
             background-size:35px 35px;
             display: inline-block;    
         }
@@ -407,6 +412,12 @@
   }
 }
 @media only screen and (max-width: 767px){
+    .pcblock{
+      display:none; 
+    }
+    .pc_btn{
+      display:none; 
+    }
     .complete{
       margin:20px auto 0;
     }
@@ -435,6 +446,24 @@
             max-width:60%;
         }
     }
+    .URLbox{
+       .copy_link{
+           width:35px;
+           height:35px;
+           background:url(../images/copy@2x.png);
+           background-size:35px 35px;
+           border:0; 
+           display: inline-block;
+           &.pcblock{
+            display:none; 
+          } 
+           &.mobileblock{
+            display:inline-block; 
+          }     
+       }
+
+
+  }
 }
   .agreement .accordionForm__title{
     padding-left:10px; 
