@@ -15,7 +15,7 @@
   @include font(16px,30px,#4a4a4a,600); 
 }
 .completeIcon{
-   padding:40px 0; 
+   padding:20px 0; 
 }
 .complete{
     margin:50px auto; 
@@ -30,16 +30,16 @@
     .img_card{
         margin:0 0px 30px 250px;
         img{
-            max-width:80%;
+            max-width:40%;
         }
     }
     .textarea {
-        height:65px;
+        height:60px;
         width:100%;
         padding:6px;
         border: 1px solid #bebebe; 
         resize: vertical;
-        overflow: auto;
+        overflow:hidden;
     }
     .textarea:empty:before {
         content: attr(placeholder);
@@ -55,10 +55,7 @@
              background:url(../images/copy@2x.png);
              background-size:35px 35px;
              border:0; 
-             display: inline-block;
-             &.mobileblock{
-              display:none; 
-            }     
+             display: inline-block;    
          }
          .line_link{
             width:35px;
@@ -443,7 +440,7 @@
         margin:0 auto 30px;
         text-align:center; 
         img{
-            max-width:60%;
+            max-width:40%;
         }
     }
     .URLbox{
@@ -453,13 +450,7 @@
            background:url(../images/copy@2x.png);
            background-size:35px 35px;
            border:0; 
-           display: inline-block;
-           &.pcblock{
-            display:none; 
-          } 
-           &.mobileblock{
-            display:inline-block; 
-          }     
+           display: inline-block;    
        }
 
 
