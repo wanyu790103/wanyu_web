@@ -61,7 +61,6 @@
 			<div class="header__title">
                     信用卡推薦活動查詢
             </div>
-           
             <a href="#" class="m_icon"></a>
 		</header>
 		<section class="main">
@@ -80,69 +79,126 @@
                                     <div class="inputGroup">
                                             <label class="inputGroup__label">活動名稱</label>
                                             <div class="inputGroup__control">
-                                                    <select>
-                                                        <option>請選擇活動名稱</option>
-                                                        <option>001</option>
-                                                        <option>002</option>
+                                                    <select id="IDtab_item" class="tab_item">
+                                                        <option value="3">請選擇活動名稱</option>
+                                                        <option rel="tab1" value="1">001</option>
+                                                        <option rel="tab2" value="2">002</option>
                                                     </select>
                                             </div>
                                     </div>
                             </div>
-                            <div class="CUB__box">
-                                    <div class="CUB_title">
-                                            您的專屬AM卡推薦網址
-                                    </div>
-                                    <div class="img_card">
-                                        <img src="./Content/images/card/card.png" alt="">
-                                    </div>
-                                    <div class="inputGroup focuse__box">
-                                            <label class="inputGroup__label">專屬網址</label>
-                                            <div class="inputGroup__control">
-                                                    <div  id="copyURL" class="textarea" contenteditable="true" placeholder="http://">https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4</div>
-                                                  
-                                                    <div class="URLbox">
-                                                            <button title="複製網址" alt="複製網址"  class="copy_link pcblock" data-fancybox="" data-src="#copy_url" data-clipboard-target="#copyURL"></button>
-                                                            <a title="line" alt="line"  target="_block" class="line_link" href="share/line_share.html"></a>
-                                                            <a title="facebook" alt="facebook"  target="_block" class="fb_link" target="_block" href="https://www.facebook.com/sharer/sharer.php?u=https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4"></a>
-                                                    </div>
+                            <div id="tab1" class="tab_select">
+                                <div  class="CUB__box">
+                                        <div class="CUB_title">
+                                                您的專屬AM卡推薦網址
+                                        </div>
+                                        <div class="img_card">
+                                            <img src="./Content/images/card/card.png" alt="">
+                                        </div>
+                                        <div class="inputGroup focuse__box">
+                                                <label class="inputGroup__label">專屬網址</label>
+                                                <div class="inputGroup__control">
+                                                        <div  id="copyURL" class="textarea" contenteditable="true" placeholder="http://">https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4</div>
                                                     
-                                            </div>
-                                    </div>
-                                    
-                            </div>
-                            
-                            <div class="CUB__box">
-                                    <div class="CUB_title">
-                                            您的推薦狀況
-                                    </div>
-                                    <div class="table_recommend">
-                                            <table>
-                                                <tr>
-                                                    <th>推薦好友</th>
-                                                    <th>成功申辦卡片</th>
-                                                    <th>達成活動條件</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>周○祺</td>
-                                                    <td><img src="./Content/images/check.svg" alt=""></td>
-                                                    <td><img src="./Content/images/check.svg" alt=""></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>郭○蒨</td>
-                                                    <td><img src="./Content/images/check.svg" alt=""></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>呂○丞</td>
-                                                    <td><img src="./Content/images/check.svg" alt=""></td>
-                                                    <td></td>
-                                                </tr>
-                                            </table>
-                                    </div>
+                                                        <div class="URLbox">
+                                                                <button title="複製網址" alt="複製網址"  class="copy_link pcblock" data-fancybox="" data-src="#copy_url" data-clipboard-target="#copyURL"></button>
+                                                                <a title="line" alt="line"  target="_block" class="line_link" href="share/line_share.html"></a>
+                                                                <a title="facebook" alt="facebook"  target="_block" class="fb_link" target="_block" href="share/line_fb.html"></a>
+                                                        </div>
+                                                        
+                                                </div>
+                                        </div>
+                                        
+                                </div>
+                                
+                                <div  class="CUB__box">
+                                        <div class="CUB_title">
+                                                您的推薦狀況
+                                        </div>
+                                        <div class="table_recommend">
+                                                <table>
+                                                    <tr>
+                                                        <th>推薦好友</th>
+                                                        <th>成功申辦卡片</th>
+                                                        <th>達成活動條件</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>周○祺</td>
+                                                        <td><img src="./Content/images/check.svg" alt=""></td>
+                                                        <td><img src="./Content/images/check.svg" alt=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>郭○蒨</td>
+                                                        <td><img src="./Content/images/check.svg" alt=""></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>呂○丞</td>
+                                                        <td><img src="./Content/images/check.svg" alt=""></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                        </div>
 
-                                    
+                                        
+                                </div>
                             </div>
- 
+                            <div id="tab2" class="tab_select">
+                                    <div class="CUB__box">
+                                            <div class="CUB_title">
+                                                    您的專屬AM卡推薦網址2222
+                                            </div>
+                                            <div class="img_card">
+                                                <img src="./Content/images/card/card.png" alt="">
+                                            </div>
+                                            <div class="inputGroup focuse__box">
+                                                    <label class="inputGroup__label">專屬網址</label>
+                                                    <div class="inputGroup__control">
+                                                            <div  id="copyURL" class="textarea" contenteditable="true" placeholder="http://">https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4</div>
+                                                        
+                                                            <div class="URLbox">
+                                                                    <button title="複製網址" alt="複製網址"  class="copy_link pcblock" data-fancybox="" data-src="#copy_url" data-clipboard-target="#copyURL"></button>
+                                                                    <a title="line" alt="line"  target="_block" class="line_link" href="share/line_share.html"></a>
+                                                                    <a title="facebook" alt="facebook"  target="_block" class="fb_link" target="_block" href="https://www.facebook.com/sharer/sharer.php?u=https://www.cathaybk.com.tw/cathaybk/onlineservice/CreditCard/CreditCardApply/cardgrade-s2.aspx?CardMain=4"></a>
+                                                            </div>
+                                                            
+                                                    </div>
+                                            </div>
+                                            
+                                    </div>
+                                    
+                                    <div class="CUB__box">
+                                            <div class="CUB_title">
+                                                    您的推薦狀況
+                                            </div>
+                                            <div class="table_recommend">
+                                                    <table>
+                                                        <tr>
+                                                            <th>推薦好友</th>
+                                                            <th>成功申辦卡片</th>
+                                                            <th>達成活動條件</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>周○祺</td>
+                                                            <td><img src="./Content/images/check.svg" alt=""></td>
+                                                            <td><img src="./Content/images/check.svg" alt=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>郭○蒨</td>
+                                                            <td><img src="./Content/images/check.svg" alt=""></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>呂○丞</td>
+                                                            <td><img src="./Content/images/check.svg" alt=""></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </table>
+                                            </div>
+    
+                                            
+                                    </div>
+                            </div>
                         </div>
                         <div class="collapse collapse--note">
                                 <div class="collapse__title on" data-id="js-collapse">注意事項 </div>
