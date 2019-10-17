@@ -12,7 +12,7 @@
 .close{
   cursor: pointer;
   float:right;
-  top:-65px;
+  top:-62px;
   right:0;
   position: absolute;
   width:60px;
@@ -66,8 +66,10 @@
         padding: 30px 20px;
         .in{
           overflow: scroll;
-          height: 500px;
+          height:450px;
           padding: 0 20px;
+          font-size:14px;
+          line-height:25px ;
         }
     }
 }
