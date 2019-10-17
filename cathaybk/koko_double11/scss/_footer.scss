@@ -2,7 +2,6 @@
     margin-top:10px;
     width: 100%;
     float: left;
-    z-index:5;
 }
 .wrap {
     max-width: 960px;
@@ -42,7 +41,7 @@
     }
 }
 @media only screen and (max-width: 767px){
-    footer{
+    .footer{
         z-index:10;
         background: #fff;;
     }

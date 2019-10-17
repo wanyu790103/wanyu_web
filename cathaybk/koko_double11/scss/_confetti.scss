@@ -9,7 +9,7 @@ $duration:1500;
   @return $randomNum;
 }
 .surprise-egg {
-  display: flex;
+  display:block;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -17,7 +17,6 @@ $duration:1500;
   margin:0 2%;
   height:600px;
   overflow: hidden;
-  z-index:4;
 }
 .confetti-piece {
   position: absolute;
