@@ -43,7 +43,7 @@
       &:after{
         content: " ";
         width: 5px;
-        height: 30px;
+        height:28px;
         position: absolute;
         left: 0;
         top: 12px;
@@ -65,9 +65,9 @@
         margin-left: -45%;
         padding: 30px 20px;
         .in{
-          overflow: scroll;
+          overflow-y: scroll;
           height:450px;
-          padding: 0 25px;
+          padding: 0 30px;
           font-size:14px;
           line-height:25px ;
         }

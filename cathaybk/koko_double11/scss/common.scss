@@ -641,34 +641,7 @@ input[type="text"] {
         }
       }
 }
-@media screen and (max-width: 640px) {
-  header{
-    height:80px;
-  }
-  header .headerContent a .logo{
-    position: relative;
-    float: left;
-  }
-  header .headerContent .logo {
-    position: absolute;
-    width:92px;
-    height:50px;
-    background-image: url(../images/logo.png);
-    left: 0;
-    margin-left: 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    z-index: 11;
-}
-header .headerContent{
-  height:80px;
-  
-}
 
-
-
-}
 .List_winner_lightbox{
   position:absolute;
   width:820px;
