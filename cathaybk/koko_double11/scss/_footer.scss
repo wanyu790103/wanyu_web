@@ -47,7 +47,12 @@
         position: relative;
         width:100%;
         float: left;
+        margin-top:0px;
     
+    }
+    .footer__warning{
+        display: block;
+        width: 100%;
     }
     .footer .wrap {
         padding:0px 10px;
@@ -62,6 +67,7 @@
         margin-bottom: 10px;
         font-size: 16px;
         letter-spacing: 0;
+        padding-top:10px;
     }
     .footer .footer__right {
         display: block;
