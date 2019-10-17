@@ -79,3 +79,10 @@ $duration:1500;
     transform: translateY(500px);
   }
 }
+
+@media screen and (max-width:640px) {
+  .surprise-egg {
+    height:500px;
+  }
+
+}

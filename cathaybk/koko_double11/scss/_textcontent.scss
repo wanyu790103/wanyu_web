@@ -34,7 +34,7 @@
     background:#fff;
     border-bottom:1px solid #ccc;
     h2{
-        @include font(30px,50px,rgb(88, 84, 84),600);
+        @include font(30px,50px,#000,600);
     }
     p{
         @include font(18px,20px,#7752bd,600);
@@ -48,10 +48,11 @@
 @media screen and (max-width:760px) {
     .textcontent{
         margin-top:-100px ;
-        padding:0 20px 10px;
+        padding:0 20px 30px 20px;
         .box__text{
             width:100%;
             display:block;
+            text-align:center;
         }
         .box__img{
            width:100%;
@@ -60,9 +61,22 @@
            background-size:171px 141px ;
            display:block;
            float: left;
-           background-position:top center;
+           background-position:45%;
+           margin-bottom:40px;
            
         }
     }
-
+    
+    .textactive{
+        h2{
+            @include font(25px,50px,#000,600);
+        }
+        p{
+            @include font(18px,20px,#7752bd,600);
+        }
+        .box__text{
+            margin-bottom:20px;
+        }
+    
+    }
 }

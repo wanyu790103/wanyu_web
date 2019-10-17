@@ -69,6 +69,7 @@
       $(".backDrop").animate({"opacity": "1"}, 500);
       $(".box").animate({"opacity": "1.0"}, 500);
       $(".backDrop, .box").css("display", "block");
+      $(".surprise-egg").css("display", "none");
     });
     
     
@@ -79,6 +80,7 @@
     function closeBox(){
       $(".backDrop, .box").animate({"opacity": "0"}, 500, function(){
       $(".backDrop, .box").css("display", "none");
+      $(".surprise-egg").css("display", "block");
       });
     }
   
