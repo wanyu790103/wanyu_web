@@ -64,5 +64,9 @@
         left: 50%;
         margin-left: -45%;
         padding: 30px 20px;
+        .in{
+          overflow: scroll;
+          height: 500px;
+        }
     }
 }
