@@ -1,0 +1,91 @@
+
+@import "_base.scss";
+header {
+  position: relative;
+  width: 100%;
+  height: 77px;
+  float: left;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  .headerContent {
+    position: relative;
+    width: 100%;
+    height: 77px;
+    float: left;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background: #fff;
+    z-index: 25;
+    .logo {
+
+        width: 100px;
+        height: 54px;
+        position: absolute;
+        top: 12px;
+        background-image: url(../images/logo.png);
+        background-repeat: no-repeat;
+        background-size: 100px 54px;
+        background-position: center center;
+        z-index: 11;
+    }
+    .main-nav {
+        margin-left: auto;
+        float: right;
+        margin-top:20px;
+        a{
+            width: 100px;
+            text-align:center;
+            margin-right:10px;
+            color:#fff;
+            line-height:30px;
+            font-size:16px;
+            &:hover{
+                opacity:0.85;
+            }
+         }
+        .btn-box {
+            display: inline-block;
+            cursor: pointer;
+            &.green{
+                border-radius: 15px;
+                background-image: linear-gradient(to right, #00be42, #90e227 100%);
+            }
+            &.pink{
+                border-radius: 15px;
+                background-image: linear-gradient(to right, #e50082, #ff0099 100%);
+            }
+            &:after{
+                content:">";
+                font-size:13px;
+                color:#fff;
+                margin-left: 5px;
+
+            }
+        }
+      }
+  }
+}
+
+header .headerContent:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 39px;
+  bottom: -39px;
+  left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  background-image: url(../images/hearder_shadow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+header .headerContent .s_logo.w_2box{
+    width:210px; 
+}

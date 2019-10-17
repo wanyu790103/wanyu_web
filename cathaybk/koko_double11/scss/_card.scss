@@ -1,0 +1,88 @@
+.card-item {
+    width:300px;
+    min-height:300px;
+    vertical-align: top ;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+.card-item>[class*=" b-col-"] {
+    width: 100% !important;
+}
+.m-dialog-item{
+    padding-right: 10px;
+    padding-left: 10px;
+    .m-icon{
+        z-index:10;
+        width: 100%;
+        padding:20px;
+        border-radius:10px;
+        background:#fff;
+    }
+    img{
+        z-index:10;
+        max-width:100%;
+    }
+    p{
+      color:#000;
+    }
+}
+.m-dialog-ctrl {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border:2px solid #792ac6;
+    background:#fff;
+    border-radius:10px;
+}
+.m-dialog-ctrl.is-active:before {
+    bottom: -10px;
+    width: 18px;
+    height: 18px;
+}
+.m-dialog-ctrl.is-active>*:not(.m-icon):before {
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 2px;
+}
+.m-dialog-ctrl>*:not(.m-icon):before {
+    content: "";
+    background: #FFF;
+    position: absolute;
+    z-index: 3;
+}
+.m-dialog-ctrl.is-active:after {
+    bottom: -9px;
+    width: 30px;
+    height: 30px;
+}
+.m-dialog-ctrl.is-active:after {
+    z-index: 1;
+    background:#792ac6;
+}
+.m-dialog-ctrl.is-active:before, .m-dialog-ctrl.is-active:after {
+    content: "";
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+@media screen and (max-width:760px) {
+    .card-item{
+        width:47%;
+        height:auto;
+        min-height:200px;
+    }
+    .m-dialog-item .m-icon{
+        padding:5px;
+    }
+    .m-dialog-item {
+        padding-right:0px;
+        padding-left:0px;
+    }
+    .m-dialog-item p{
+        font-size:12px;
+    }
+}
