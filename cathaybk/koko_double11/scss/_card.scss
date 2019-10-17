@@ -58,16 +58,16 @@
     width: 30px;
     height: 30px;
 }
-.m-dialog-ctrl.is-active:after {
-    z-index: 1;
-    background:#792ac6;
-}
-.m-dialog-ctrl.is-active:before, .m-dialog-ctrl.is-active:after {
-    content: "";
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%) rotate(-45deg);
-}
+// .m-dialog-ctrl.is-active:after {
+//     z-index: 1;
+//     background:#792ac6;
+// }
+// .m-dialog-ctrl.is-active:before, .m-dialog-ctrl.is-active:after {
+//     content: "";
+//     left: 50%;
+//     position: absolute;
+//     transform: translateX(-50%) rotate(-45deg);
+// }
 
 @media screen and (max-width:760px) {
     .card-item{

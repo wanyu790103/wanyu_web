@@ -42,6 +42,10 @@
     }
 }
 @media only screen and (max-width: 767px){
+    footer{
+        z-index:10;
+        background: #fff;;
+    }
     .footer .wrap {
         padding: 30px 10px;
     }

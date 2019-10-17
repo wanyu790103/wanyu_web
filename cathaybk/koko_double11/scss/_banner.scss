@@ -66,9 +66,9 @@ article.wrapper .banner {
     @include font(15px,50px,#fff,600);
     position: absolute;
     text-align:center;
-    width:60px;
+    width:80px;
     left:50%;
-    margin-left:-30px;
+    margin-left:-40px;
     bottom:50px;
     z-index:10;
     cursor: pointer;
@@ -131,9 +131,9 @@ article.wrapper .banner {
       @include font(15px,50px,#fff,600);
       position: absolute;
       text-align:center;
-      width:60px;
+      width:80px;
       left:50%;
-      margin-left:-30px;
+      margin-left:-40px;
       bottom:100px;
       z-index:10;
       cursor: pointer;
