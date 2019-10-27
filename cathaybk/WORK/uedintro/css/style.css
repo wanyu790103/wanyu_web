@@ -16,6 +16,10 @@ body {
   background-color: #ecf0f9;
   background-attachment: fixed; }
 
+a {
+  outline: none;
+  text-decoration: none; }
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;

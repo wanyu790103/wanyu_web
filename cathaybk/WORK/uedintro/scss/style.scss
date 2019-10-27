@@ -32,7 +32,10 @@ body {
   background-color: $primary-light;
   background-attachment: fixed;
 }
-
+a {
+  outline: none;
+  text-decoration: none;
+}
 .content {
   display: flex;
   margin: 0 auto;
