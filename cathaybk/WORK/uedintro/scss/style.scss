@@ -1,9 +1,10 @@
 $primary: #51be77;
-$scond:hsl(222,80%,50%);
+$scond:rgb(96, 106, 131);
 $primary-light: hsl(222,50%,95%);
-$secondary: hsl(350,80%,50%);
-$red: hsl(10,80%,50%);
-$orange: hsl(50,80%,50%);
+$colorone:#c1c3c5;
+$colortwo:#2a408e;
+$colorthree:#161616;
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -18,7 +19,7 @@ html {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 300;
-  color: #333;
+  color:#161616;
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -82,8 +83,8 @@ a {
   position: relative;
   @include mobile (800px) {
     width: calc(50% - 2rem);
-    height:200px;
-    min-height:200px;
+    height:400px;
+    min-height:400px;
   }
   @include mobile (640px) {
     width: calc(50% - 2rem);
@@ -140,11 +141,12 @@ a {
 }
 
 .back {
-  background: #ccc;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   transform: rotateY(-180deg);
   padding: 0 10px;
   p{
     font-size:20px; 
+    color:$colorthree;
     &.titName{
       font-weight:600; 
     }
@@ -159,31 +161,12 @@ a {
     }
  }
 
-
-  .button {
-    background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
-    &:before {
-      box-shadow: 0 0 10px 10px rgba($primary, 0.25);
-    background-color: rgba($primary, 0.25);
-    }
-  }
   
   .card:hover & {
     transform: rotateY(0deg);
   }
   
-  .card:nth-child(even) & {
-    transform: rotateY(180deg);
-    
-    .button {
-    background: linear-gradient(135deg, adjust-hue($secondary, -20deg), $secondary);
-    
-    &:before {
-      box-shadow: 0 0 10px 10px rgba($secondary, 0.25);
-    background-color: rgba($secondary, 0.25);
-    }
-  }
-  }
+  
   
   .card:nth-child(even):hover & {
     transform: rotateY(0deg);
