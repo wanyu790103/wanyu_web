@@ -1,12 +1,9 @@
 $primary: #51be77;
 $scond:hsl(222,80%,50%);
 $primary-light: hsl(222,50%,95%);
-
 $secondary: hsl(350,80%,50%);
-
 $red: hsl(10,80%,50%);
 $orange: hsl(50,80%,50%);
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -44,7 +41,6 @@ a {
   flex-wrap: wrap;
   max-width: 1000px;
 }
-
 .heading {
   width: 100%;
   margin-left: 1rem;
@@ -61,7 +57,7 @@ a {
     display: block;
     content: '';
     position: absolute;
-    width: 60px;
+    width:50px;
     height: 4px;
     background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
     bottom: 0;
@@ -74,7 +70,6 @@ a {
   margin-left: 1rem;
   margin-bottom: 3rem;
 }
-
 .card {
   color: inherit;
   cursor: pointer;
@@ -96,7 +91,6 @@ a {
     min-height:200px;
   }
 }
-
 .front,
 .back {
   display: flex;
@@ -148,12 +142,24 @@ a {
 .back {
   background: #ccc;
   transform: rotateY(-180deg);
-  padding: 0 2em;
+  padding: 0 10px;
+  p{
+    font-size:20px; 
+    &.titName{
+      font-weight:600; 
+    }
+  }
   p.left_text{
     text-align: left;
+    font-size:14px;
     line-height: 20px;
     margin: 0;
+    &.detail{
+      font-size:12px;
+    }
  }
+
+
   .button {
     background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
     &:before {
