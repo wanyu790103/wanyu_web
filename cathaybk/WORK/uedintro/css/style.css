@@ -77,13 +77,13 @@ a {
   @media screen and (max-width: 800px) {
     .card {
       width: calc(50% - 2rem);
-      height: 250px;
-      min-height: 250px; } }
+      height: 200px;
+      min-height: 200px; } }
   @media screen and (max-width: 640px) {
     .card {
       width: calc(50% - 2rem);
-      height: 250px;
-      min-height: 250px; } }
+      height: 200px;
+      min-height: 200px; } }
 
 .front,
 .back {

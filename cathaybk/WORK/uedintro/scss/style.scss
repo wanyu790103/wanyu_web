@@ -87,13 +87,13 @@ a {
   position: relative;
   @include mobile (800px) {
     width: calc(50% - 2rem);
-    height:250px;
-    min-height:250px;
+    height:200px;
+    min-height:200px;
   }
   @include mobile (640px) {
     width: calc(50% - 2rem);
-    height:250px;
-    min-height:250px;
+    height:200px;
+    min-height:200px;
   }
 }
 
