@@ -76,12 +76,14 @@ a {
   position: relative; }
   @media screen and (max-width: 800px) {
     .card {
-      width: calc(50% - 2rem); } }
+      width: calc(50% - 2rem);
+      height: 250px;
+      min-height: 250px; } }
   @media screen and (max-width: 640px) {
     .card {
       width: calc(50% - 2rem);
       height: 250px;
-      min-height: 250x; } }
+      min-height: 250px; } }
 
 .front,
 .back {
