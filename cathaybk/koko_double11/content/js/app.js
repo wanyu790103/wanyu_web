@@ -42,27 +42,7 @@
      });
  });
 
- var swiper = new Swiper('.swiper-container_index', {
-     nextButton: '.swiper-button-next',
-     prevButton: '.swiper-button-prev',
-     pagination: '.swiper-pagination',
-     paginationClickable: true,
-     slidesPerView: 3,
-     spaceBetween: 40,
-     simulateTouch: !1,
-     breakpoints: {
-         760: {
-             slidesPerView: 1,
-             simulateTouch: true,
-             spaceBetween: 1
-         },
-         640: {
-             slidesPerView: 1,
-             spaceBetween: 0,
-             simulateTouch: true
-         }
-     }
- });
+
 
  $(document).ready(function(){
     $(".lightBox").on("click", function(){
@@ -72,14 +52,26 @@
       $(".surprise-egg").css("display", "none");
     });
     
-    
+    $(".active2item").on("click", function(){
+        $(".backDrop").animate({"opacity": "1"}, 500);
+        $(".active2box").animate({"opacity": "1.0"}, 500);
+        $(".backDrop, .active2box").css("display", "block");
+        $(".surprise-egg").css("display", "none");
+    });
+    $(".activeitem").on("click", function(){
+        $(".backDrop").animate({"opacity": "1"}, 500);
+        $(".activebox").animate({"opacity": "1.0"}, 500);
+        $(".backDrop, .activebox").css("display", "block");
+        $(".surprise-egg").css("display", "none");
+    });
+
     $(".close, .backDrop").on("click", function(){
       closeBox();
     });
   
     function closeBox(){
-      $(".backDrop, .box").animate({"opacity": "0"}, 500, function(){
-      $(".backDrop, .box").css("display", "none");
+      $(".backDrop, .box,.active2box, .activebox").animate({"opacity": "0"}, 500, function(){
+      $(".backDrop, .box, .active2box, .activebox").css("display", "none");
       $(".surprise-egg").css("display", "block");
       });
     }

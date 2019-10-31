@@ -260,7 +260,16 @@
 @function count_point_t($aa) {
   @return ($aa / 2088) * 100%;
 }
-
+@mixin mobile ($size:760px) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin mobileS ($size:640px) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
 @mixin vh() {
     border: 0;
     // clip: rect(0 0 0 0);

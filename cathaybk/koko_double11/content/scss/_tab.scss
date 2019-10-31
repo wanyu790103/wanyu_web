@@ -1,0 +1,161 @@
+.mainScreen {
+  position: relative;
+  width: 1130px;
+  margin: auto;
+}
+.textScreen{
+  position: relative;
+  width:650px;
+  margin:0 auto;
+}
+.tab-slider--nav {
+  width: 100%;
+  height:auto;
+  float: left;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.tab-slider--tabs {
+  display:inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-align:center;
+}
+.tab-slider--tabs:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom:-10px;
+  left:25%;
+  margin-left:-15px;
+  border-style: solid;
+  border-width: 15px 14px 0 14px;
+  border-color: #792ac6 transparent transparent transparent;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.tab-slider--tabs.slide:after {
+  left:75%;
+}
+.tab-slider--trigger {
+  width: 50%;
+  max-width:226px;
+  margin:0 10px;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  background:#fff;
+  border:3px solid #792ac6;
+  border-radius:10px;
+  padding:10px;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+  opacity:0.35;
+  @include mobile(640px){
+    width:48%;
+    margin:0;
+  }  
+  .m-icon{
+      p{
+       font-size:14px;
+       color:#000000;  
+        @include mobile(640px){
+            font-size:12px;  
+        }  
+      }
+      img{
+          max-width:100%;
+      }
+  }
+  &.active {
+    color: #792ac6;
+    opacity:1;
+  }
+}
+
+
+.tab-slider--body {
+  float:left;
+  width:100%;
+  height:auto;
+  background: url(../../img/prize-bk@2x.jpg) #955ad0;
+  background-repeat: repeat-x;
+  .mainScreen{
+    width: 640px;
+    @include mobile(640px){
+        width:100%;
+    }  
+  }
+  .active__text {
+    position: relative;
+    width:100%;
+    height: auto;
+    float: left;
+    margin: 0;
+    padding:20px 0;
+    .item_list{
+        width: calc(50% - 3rem);
+        min-height:300px;
+        display:inline-block;
+        position:relative;
+        height:auto;
+        margin:10px;
+        background:#fff;
+        border:solid 5px #792ac6;
+        border-radius:10px;
+       @include mobile(640px){
+        width:80%;
+        margin:10px 10%;
+        min-height:250px;
+       } 
+        .item_tit{
+            background:#792ac6;
+            @include font(26px,30px,#f4d73a,600);
+            text-align:left;
+            padding:10px 10px ;
+            p{
+                font-size:12px;
+                color: #fff;
+            }
+        }
+        .item_text{
+            padding:10px;
+            text-align:left;
+            @include font(15px,25px,#010101,600);
+        }
+        .item_bottomBox{
+            position:absolute;
+            bottom:-5px;
+            width:100%;
+            p{
+                display:inline-flex;
+                font-size:16px;
+                margin-top:50px;
+            }
+            img{
+                display:inline-flex;
+            }
+        }
+
+    }
+    p.text{
+        @include font(14px,20px,#fff);
+        margin-bottom:20px;
+        @include mobile(640px){
+           padding:0 20px;
+           font-size:12px;
+        }  
+    }
+    a{
+    
+      color:#fff;
+    }
+  }
+
+}

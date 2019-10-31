@@ -23,12 +23,11 @@
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
   <meta property="og:site_name" content="愛瘋雙11 一起koko慶週年" />
-  <script type="text/javascript" src="lib/swiper.min.js"> </script>
-  <link href="css/animate.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/common.css" />
+  <script type="text/javascript" src="./content/lib/swiper.min.js"> </script>
+  <link href="./content/css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="./content/css/common.css" />
 </head>
 <body>
-
   <header>
     <div class="headerContent">
       <div class="mainScreen">
@@ -37,12 +36,21 @@
         </a>
         <div class="main-nav">
           <a class="b-bold-tm pink" href="https://www.kokobank.com/BANK/Home/Apply">立即申辦</a>
+          <a class="b-bold-tm green" target="_block" href="https://www.cathaybk.com.tw/cathaybk/personal/credit-card/discount/event/online-shopping/201911/koko201911/">立即登錄</a>
         </div>
       </div>
     </div>
   </header>
   <article class="wrapper">
       <div class="surprise-egg">
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
@@ -64,19 +72,21 @@
       
       <div class="mainScreen">
           <div class="banner_text">
-             <img src="images/banner_text.png" alt="">  
+             <img src="./img/banner_text.png" alt="">
+             <p class="text">單筆消費NT$11,111享NT$1,666現金回饋(需登錄)</p> 
+             <p>刷KOKO COMBO icash聯名卡或KOKO簽帳金融卡，於指定網購平台單筆消費滿NT$11,111元並登錄成功<br>，即可享NT1,666元現金回饋。(本活動限一次付清，每戶限回饋乙次）</p> 
+             <img class="announce" src="./img/title_announce.png" alt="">
+
           </div>
           <div class="mobilecenter"></div>
-          <div class="notice lightBox">注意事項</div> 
+          <div class="notice lightBox">注意事項+</div> 
           <a  href="#textactive" class="down"   data-aos="zoom-in" data-aos-delay="100" data-aos-mirror="true"></a> 
       </div>
     </section>
     <div class="textcontent">
         <div class="textScreen">
             
-             <div class="box__img">
-                    
-             </div>
+             <div class="box__img"> </div>
              <div class="box__text" >
                 <h1>雙11新戶早鳥任務</h1>
                 <p>2019.10.17-2019.11.11期間成功申辦KOKO COMBO icash聯名卡或KOKO簽帳金融卡之新戶，並符合＊活動一(詳見注意事項說明)x之活動資格，即可再獲得$500元新戶任務回饋</p>
@@ -87,36 +97,137 @@
         <div class="textScreen">
              <div class="box__text">
                 <h2>11月刷KOKO滿額再抽11支iPhone11</h2>
-                <p>活動即將開始敬請期待！</p>
              </div>
 
-            <div class="card-item active">
-                <div class="m-dialog-item">
-                    <a href="#" class="bannerlink m-dialog-ctrl is-active">
-                        
-                        <div class="m-icon">
-                            <p>KOKO簽帳金融卡</p>
-                            <img src="./images/card-01.png" alt="">
-                           
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div class="m-dialog-item">
-                    <a href="#" class="bannerlink m-dialog-ctrl is-active">
-                       
-                        <div class="m-icon">
-                            <p>KOKO COMBO icash聯名卡</p>
-                            <img src="./images/card-02.png" alt="">
-                           
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
         </div>
+        <div class="tab-slider--nav">
+          <div class="mainScreen">
+            <ul class="tab-slider--tabs">
+              <li class="tab-slider--trigger active" rel="tab1">
+                  <div class="m-icon">
+                    
+                      <p>KOKO COMBO icash聯名卡</p>
+                      <img src="./img/card-02.png" alt="">
+                     
+                  </div>
+              </li>
+              <li class="tab-slider--trigger" rel="tab2">
+                  <div class="m-icon">
+                      <p>KOKO簽帳金融卡</p>
+                      <img src="./img/card-01.png" alt="">
+                     
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+            <div class="tab-slider--container">
+              <div id="tab1" class="tab-slider--body">
+                  <div class="mainScreen">
+                    <div class="active__text">
+                    
+                      <div class="item_list">
+                          <div class="item_tit">
+                              獎項1
+                              <p>Apple iPhone 11 Pro Max (512GB)</p> 
+                          </div>
+                          <div class="item_text">
+                              滿新台幣33,000元(含)以上即可獲得乙次 Apple iPhone 11 Pro Max (512GB) 抽獎機會。
+                          </div>
+                          <div class="item_bottomBox">
+                            <p>中獎名額3名 </p>
+                            <img src="./img/phone-01.png" alt="">
+                          </div>
+                      </div>
+                      <div class="item_list">
+                          <div class="item_tit">
+                              獎項2
+                              <p>Apple iPhone 11 Pro (512GB) </p> 
+                          </div>
+                          <div class="item_text">
+                              滿新台幣27,000元(含)以上即可獲得乙次 Apple iPhone 11 Pro (512GB) 抽獎機會。
+                          </div>
+                          <div class="item_bottomBox">
+                            <p>中獎名額3名</p>
+                            <img src="./img/phone-01.png" alt="">
+                          </div>
+                      </div>
+                      <div class="item_list">
+                          <div class="item_tit">
+                              獎項3
+                              <p>Samsung Galaxy S10+ (512GB)</p> 
+                          </div>
+                          <div class="item_text">
+                              滿新台幣21,000元(含)以上即可獲得乙次 Samsung Galaxy S10+ (512GB) 抽獎機會。
+                          </div>
+                          <div class="item_bottomBox">
+                            <p>中獎名額3名</p>
+                            <img src="./img/phone-02.png" alt="">
+                          </div>
+                      </div>
+                      <div class="item_list">
+                          <div class="item_tit">
+                              獎項4
+                              <p>Apple iPhone 11 (256GB)</p> 
+                          </div>
+                          <div class="item_text">
+                              滿新台幣15,000元(含)以上即可獲得乙次Apple iPhone11(256GB) 抽獎機會。
+                          </div>
+                          <div class="item_bottomBox">
+                            <p>中獎名額3名</p>
+                            <img src="./img/phone-03.png" alt="">
+                          </div>
+                      </div>
+                      <p class="text">
+                          刷滿新台幣33,000元(含)以上，將可獲得獎項1至獎項4各乙次抽獎機會；<BR>
+                          刷滿新台幣50,000元(含)以上，將可獲得獎項1至獎項4各貳次抽獎機會。
+
+                       </p>
+                       <a href="#" class="activeitem">活動注意事項+</a>
+                    </div>
+                   </div>
+              </div>
+              <div id="tab2" class="tab-slider--body">
+                  <div class="mainScreen"> 
+                    <div class="active__text">
+                        <div class="item_list">
+                            <div class="item_tit">
+                                獎項1
+                                <p>Apple iPhone 11 (128GB) </p> 
+                            </div>
+                            <div class="item_text">
+                                新增5筆(含)以上消費且當月累積消費金額滿新台幣$7,000元(含)以上，並於KOKO APP完成抽獎活動登錄，即可獲得各乙次抽獎機會
+                            </div>
+                            <div class="item_bottomBox">
+                              <p>中獎名額2名 </p>
+                              <img src="./img/phone-01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item_list">
+                            <div class="item_tit">
+                                獎項2
+                                <p>Apple AirPods 搭配充電盒</p> 
+                            </div>
+                            <div class="item_text">
+                                新增5筆(含)以上消費且當月累積消費金額滿新台幣$7,000元(含)以上，並於KOKO APP完成抽獎活動登錄，即可獲得各乙次抽獎機會
+                            </div>
+                            <div class="item_bottomBox">
+                              <p>中獎名額5名 </p>
+                              <img src="./img/airpods.png" alt="">
+                            </div>
+                        </div>
+                         <p class="text">
+                            新增5筆(含)以上消費且刷滿新台幣$7,000元(含)以上，將可獲得兩個獎項各乙次抽獎機會；<br>刷滿新台幣$50,000元(含)以上，將可獲得兩個獎項各貳次抽獎機會。
+                         </p>
+                         <a href="#" class="active2item">活動注意事項+</a>
+                    </div>
+                 </div>
+              </div>
+  
+            </div>
+        </div>
+        
     </div>
   </article>
 
@@ -133,8 +244,6 @@
         </div>
     </div>
 </footer>
-
-
 <div class="backDrop"></div>
 <div class="box">
   <div class="close"></div>
@@ -170,10 +279,87 @@
     </div>
 </div>
 
+<div class="activebox">
+    <div class="close"></div>
+    <p class="tit">KOKO combo icash滿額抽獎活動</p>
+    <div class="in">
+        活動期間：2019.11.01至2019.11.30<br>
+        登錄期間：2019.11.01至2019.12.28<br>
+        活動獎項：<br>
+        1. 獎項1：Apple iPhone 11 Pro Max(512GB)，中獎名額3名(價值新台幣$52,400元/台)<br>
+        2. 獎項2：Apple iPhone 11 Pro(512GB)，中獎名額3名(價值新台幣$48,400元/台)<br>
+        3. 獎項3：Samsung Galaxy S10+(512GB)，中獎名額3名(價值新台幣$39,900元/台)<br>
+        4. 獎項4：Apple iPhone 11(256GB)，中獎名額3名(價值新台幣$30,400/台)<br>
+        活動辦法：<br>
+        2019.11.01~2019.11.30期間，刷KOKO COMBO icash聯名卡累積消費滿額並於KOKO APP完成抽獎活動登錄，即可獲得各門檻乙次抽獎機會；<span class="light">累積消費金額滿新台幣$50,000元(含)以上，再各加碼乙次抽獎機會：</span><br>
+        滿新台幣$15,000元(含)以上即可獲得乙次 Apple iPhone 11 (256GB) 抽獎機會。<br>
+        滿新台幣$21,000元(含)以上即可獲得乙次 Samsung Galaxy S10+ (512GB) 抽獎機會。<br>
+        滿新台幣$27,000元(含)以上即可獲得乙次 Apple iPhone 11 Pro (512GB) 抽獎機會。<br>
+        滿新台幣$33,000元(含)以上即可獲得乙次 Apple iPhone 11 Pro Max (512GB) 抽獎機會。<br>
+        → 舉例說明：刷滿新台幣$33,000元(含)以上，將可獲得獎項1至獎項4各乙次抽獎機會；<span class="light">刷滿新台幣$50,000元(含)以上，將可獲得獎項1至獎項4各貳次抽獎機會。</span><br>
+        注意事項：
+        <ol type="1">
+            <li>參加本活動之持卡人須於2019.12.28 23:59前登錄活動始符合資格，抽獎名單將以登錄成功且同時符合活動門檻之成功交易訂單為回饋依據。 </li> 
+            <li>本活動限連結有效KOKO數位帳戶之KOKO COMBO icash聯名卡適用，每身分證字號限乙次中獎機會。本活動將從門檻較高之獎項依序抽出中獎人，持卡人符合兩個以上之抽獎門檻者，倘已抽中門檻較高之獎項，即不得再參加門檻較低獎項之抽獎；帳戶狀態為銷戶、警示、帳戶未正式啟用皆視為非有效KOKO帳戶，將喪失活動參與資格。</li>
+            <li>活動累積消費滿額之計算金額不包含：代扣基金、預借現金、保費、遠東SOGO百貨貴賓廳購買SOGO禮券、稅款、學費、代繳公用事業費用、各行政機關規費或罰鍰、燃料費、路邊停車費、部分公/民營停車場停車費(如京站、24Times停車場等)、語音繳納各項費用、透過MyBill線上繳費或其他繳費平台（含APP）繳交各項費用、超商代收費用、國壽不動產租金代收、年費、違約金、循環息、代償、利息、錢易通、通信貸款、學費分期、刷卡樂分期、帳單分期、掛失費、調閱簽單費及各項手續費(包含但不限分期、違約處理、補發帳單及其他等)等非消費款項。</li>
+            <li>本活動認定之消費金額限於2019.11.01~2019.11.30之新增消費，並於2019.12.28前商店完成請款之款項(分期付款以活動期間內消費且完成請款入帳之期數計算)。</li>
+            <li>若客戶同時持有KOKO COMBO icash聯名卡及KOKO簽帳金融卡，僅限參加「愛瘋雙11  一起KOKO慶週年- KOKO COMBO icash 聯名卡活動」。</li>
+            <li>倘活動期間內之交易於日後發生退貨、逾期不繳或因簽帳爭議而暫停付款等情形，均不列入本活動合格消費計算。</li>
+            <li>持卡人於抽獎及領獎時均須持本行有效KOKO COMBO icash聯名卡，且上一期無逾期未繳款之紀錄；若持卡人終止使用信用卡或遭本行停止使用信用卡權利、延滯繳款或其他違反本行信用卡約定條款等情事時，將喪失活動參與資格。</li>
+            <li>中獎名單將由本行以電腦隨機抽出，統一於2020.01.09公告於KOKO官網及KOKO APP，敬請關注查詢中獎名單。</li>
+            <li>中獎人收到中獎通知後，須於2020.01.16前(以郵戳為憑)填妥領獎通知書並親簽後，將紙本資料寄回台北市信義區松仁路7號20樓　KOKO活動小組收，本行將於收迄領獎通知書紙本資料後始得進行兌獎作業，並於收迄領獎通知書後約2週內通知中獎人至本行親領，2020.02.27前未能配合至本行親領獎項者，將視同放棄領獎資格。</li>
+            <li>依中華民國稅法規定，機會中獎之中獎人為中華民國境內居住之個人時，獎金金額或獎項市價超過新台幣二萬元者，應扣繳百分之十之所得稅。獎金金額或獎項市價超過新台幣一千元者，應向稅捐稽徵機關申報。中獎人應提供身分證明文件影本供本行依法辦理扣繳或申報。不願配合提供或拒絕支付稅金者，視同無條件放棄中獎權利與獎項。</li>
+            <li>中獎人不得要求將獎項讓與他人，也不得要求以其他物品替代或折換現金，本行保留更換等值商品之權利。</li>
+            <li>持卡人/中獎人不符合或違反本活動規定事項者，或有其他不正當或非合理性行為，本行有權取消其參與/領獎資格。</li>
+            <li>活動獎項以實物為準，若非產品本身瑕疵，恕無法辦理退換貨，商品瑕疵需於收受獎項兩週內通知廠商更換同品項獎項，若收到獎項後非商品瑕疵要求廠商更換，獎項廠商將酌收新台幣$200元處理費。
+            </li>
+            <li>本行與各獎項之廠商之間無合夥、經銷代理或保證關係，若因商品或服務發生之爭議，皆由合作廠商協助處理及負相關法律上責任，概與本行無涉。</li>
+            <li>活動期間內倘因不可歸責於本行之事由，本行得變更或終止本活動內容，並於本行網站公告。</li>
+     
+        </ol>
+      </div>
+</div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/animate.min.js"></script>
-  <script src="js/app.js"></script>
+<div class="active2box">
+    <div class="close"></div>
+    <p class="tit">KOKO簽帳金融卡滿額抽獎活動</p>
+    <div class="in">
+        活動期間：2019.11.01至2019.11.30<br>
+        登錄期間：2019.11.01至2019.12.28<br>
+        活動獎項：<br>
+        獎項1：Apple iPhone 11 (128GB)，中獎名額2名(價值新台幣$26,900元/台)<br>
+        獎項2：Apple AirPods 搭配充電盒，中獎名額5名(價值新台幣$5,290元/組)<br>
+        活動辦法：<br>
+        2019.11.01~2019.11.30期間，刷KOKO簽帳金融卡新增5筆(含)以上消費且當月累積消費金額滿新台幣$7,000元(含)以上，並於KOKO APP完成抽獎活動登錄，即可獲得各乙次抽獎機會；<span class="light">累積消費金額滿新台幣$50,000元(含)以上，再各加碼乙次抽獎機會。</span>  <br>
+        →舉例說明：新增5筆(含)以上消費且刷滿新台幣$7,000元(含)以上，將可獲得兩個獎項各乙次抽獎機會；<span class="light">刷滿新台幣$50,000元(含)以上，將可獲得兩個獎項各貳次抽獎機會。</span><br>
+        注意事項：<br>
+       
+        <ol type="1">
+            <li>參加本活動之持卡人須於2019.12.28 23:59前登錄活動始符合資格，活動回饋名額將以登錄成功且同時符合活動門檻之成功交易訂單為回饋依據。 </li> 
+            <li>本活動僅限連結有效KOKO數位帳戶之KOKO簽帳金融卡適用，每身分證字號限乙次中獎機會，本活動將由獎項1依序抽出中獎人，倘已抽中獎項1，即不得再參加獎項2之抽獎；帳戶狀態為銷戶、警示、帳戶未正式啟用皆視為非有效KOKO帳戶，將喪失活動參與資格。</li>
+            <li>活動計算之消費金額不包含：代扣基金、預借現金、保費、遠東SOGO百貨貴賓廳購買SOGO禮券、稅款、學費、代繳公用事業費用、各行政機關規費或罰鍰、燃料費、路邊停車費、部分公/民營停車場停車費(如京站、24Times停車場等)、語音繳納各項費用、透過MyBill線上繳費或其他繳費平台（含APP）繳交各項費用、超商代收費用、國壽不動產租金代收、年費、違約金、循環息、代償、利息、錢易通、通信貸款、學費分期、刷卡樂分期、帳單分期、掛失費、調閱簽單費及各項手續費(包含但不限分期、違約處理、補發帳單及其他等)等非消費款項。</li>
+            <li>本活動認定之消費筆數及消費金額限於2019.11.01~2019.11.30之新增消費，並於2019.12.28前商店完成請款之款項。</li>
+            <li>若客戶同時持有KOKO COMBO icash聯名卡及KOKO簽帳金融卡，僅限參加「愛瘋雙11  一起KOKO慶週年- KOKO COMBO icash 聯名卡活動」。</li>
+            <li>倘活動期間內之交易於日後發生退貨、逾期不繳或因簽帳爭議而暫停付款等情形，均不列入本活動合格消費計算。</li>
+            <li>持卡人於抽獎及領獎時均須持有本行有效KOKO簽帳金融卡，且上一期無逾期未繳款之紀錄；若持卡人終止使用金融卡或遭本行停止使用金融卡權利、延滯繳款或其他違反本行i刷金融卡約定條款等情事時，將喪失活動回饋資格。</li>
+            <li>中獎名單將由本行以電腦隨機抽出，統一於2020.01.09公告於KOKO官網及KOKO APP，敬請關注查詢中獎名單。</li>
+            <li>iPhone11(128GB)之中獎人收到中獎通知後，須於2020.01.16前 (以郵戳為憑)填妥領獎通知書並親簽後，將紙本資料寄回台北市信義區松仁路7號20樓　KOKO活動小組收，本行將於收迄領獎通知書紙本資料後始得進行兌獎作業，並於收迄領獎通知書後約2週內通知中獎人至本行親領，2020.02.27前未能配合至本行親領獎項者，將視同放棄領獎資格。</li>
+            <li>AirPods搭配充電盒之中獎人收到中獎通知後，需於2020.01.16前(以郵戳為憑)填妥領獎通知書並親簽後，將紙本資料寄回台北市信義區松仁路7號20樓　KOKO活動小組收，本行將於收迄領獎通知書紙本資料後進行兌獎作業，並於收迄領獎通知書紙後約1個月內，將活動獎項寄送至中獎人之指定地址(僅限台、澎、金、馬地區)，恕無法指定寄送時間，無法配合者將視同放棄領獎資格。</li>
+            <li>依中華民國稅法規定，機會中獎之中獎人為中華民國境內居住之個人時，獎金金額或獎項市價超過新台幣二萬元者，應扣繳百分之十之所得稅；獎金金額或獎項市價超過新台幣一千元者，應向稅捐稽徵機關申報。中獎人應提供身分證明文件影本供本行依法辦理扣繳或申報。不願配合提供或拒絕支付稅金者，視同無條件放棄中獎權利與獎項。</li>
+            <li>中獎人不得要求將獎項讓與他人，也不得要求以其他物品替代或折換現金，本行保留更換等值商品之權利。</li>
+            <li>持卡人/中獎人不符合或違反本活動規定事項者，或有其他不正當或非合理性行為，本行有權取消其參與/領獎資格。</li>
+            <li>活動獎項以實物為準，若非商品本身瑕疵，恕無法辦理退換貨，商品瑕疵需於收受獎項兩週內通知廠商更換同品項獎項，獎項廠商將酌收新台幣$200元處理費。未收到獎項者，應於活動結束後6個月內提出，逾期視為自動喪失資格，將不受理補寄。</li>
+            <li>本行與各獎項之廠商之間無合夥、經銷代理或保證關係，若因商品或服務發生之爭議，皆由合作廠商協助處理及負相關法律上責任，概與本行無涉。</li>
+            <li>活動期間內倘因不可歸責於本行之事由，本行得變更或終止本活動內容，並於本行網站公告。</li>
+        </ol>
+      </div>
+</div>
+
+
+
+  <script src="./content/js/jquery.min.js"></script>
+  <script src="./content/js/animate.min.js"></script>
+  <script src="./content/js/app.js"></script>
   <script>
    AOS.init({
     disable: function() {

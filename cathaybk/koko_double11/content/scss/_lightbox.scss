@@ -17,10 +17,10 @@
   position: absolute;
   width:60px;
   height:60px;  
-  background:url(../images/close.png) no-repeat; 
+  background:url(../../img/close.png) no-repeat; 
   background-size:60px 60px;
 }
-.box{
+.box ,.active2box ,.activebox{
   width:910px; 
   display: none;
   min-height:556px;
@@ -59,7 +59,7 @@
   }
 }
 @media screen and (max-width:910px) {
-    .box{
+  .box ,.active2box ,.activebox{
         width:90%; 
         left: 50%;
         margin-left: -45%;

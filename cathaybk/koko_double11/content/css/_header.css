@@ -43,6 +43,7 @@ abbr, acronym {
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 input {
@@ -56,7 +57,7 @@ input:focus, input:focus {
 
 body {
   background: #fff;
-  font-family: '微軟正黑體';
+  font-family: Arial, Helvetica, sans-serif, '微軟正黑體';
   font-size: 12px;
 }
 
@@ -186,34 +187,55 @@ header .headerContent {
   z-index: 25;
 }
 header .headerContent .logo {
+  width: 100px;
+  height: 54px;
   position: absolute;
-  width: 141px;
-  height: 76px;
-  top: 0;
-  left: 0;
-  margin-left: 0;
-  margin-top: 0;
-  background-image: url(../images/logo.png);
-  margin-top: 15px;
-  margin-left: 10px;
+  top: 12px;
+  background-image: url(../../img/logo.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100px 54px;
   background-position: center center;
   z-index: 11;
 }
-
-header .headerContent .s_logo {
-  position: absolute;
-  width: 135px;
-  height: 80px;
-  top: 0;
-  right: 0;
-  margin-right: 0;
-  margin-top: 0;
+header .headerContent .main-nav {
+  margin-left: auto;
+  float: right;
+  margin-top: 20px;
 }
-
-header .headerContent .s_logo img {
-  margin-top: 25px;
+header .headerContent .main-nav a {
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
+  color: #fff;
+  line-height: 30px;
+  font-size: 16px;
+}
+header .headerContent .main-nav a:hover {
+  opacity: 0.85;
+}
+header .headerContent .main-nav .b-bold-tm {
+  display: inline-block;
+  cursor: pointer;
+}
+header .headerContent .main-nav .b-bold-tm.green {
+  border-radius: 15px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00be42), to(#90e227));
+  background-image: -webkit-linear-gradient(left, #00be42, #90e227 100%);
+  background-image: -o-linear-gradient(left, #00be42, #90e227 100%);
+  background-image: linear-gradient(to right, #00be42, #90e227 100%);
+}
+header .headerContent .main-nav .b-bold-tm.pink {
+  border-radius: 15px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e50082), to(#ff0099));
+  background-image: -webkit-linear-gradient(left, #e50082, #ff0099 100%);
+  background-image: -o-linear-gradient(left, #e50082, #ff0099 100%);
+  background-image: linear-gradient(to right, #e50082, #ff0099 100%);
+}
+header .headerContent .main-nav .b-bold-tm:after {
+  content: ">";
+  font-size: 13px;
+  color: #fff;
+  margin-left: 5px;
 }
 
 header .headerContent:after {
@@ -225,9 +247,41 @@ header .headerContent:after {
   left: 0;
   margin-left: 0;
   margin-bottom: 0;
-  background-image: url(../images/hearder_shadow.png);
+  background-image: url(../../img/hearder_shadow.png);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+header .headerContent .s_logo.w_2box {
+  width: 210px;
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    height: 70px;
+  }
+
+  header .headerContent a .logo {
+    position: relative;
+    float: left;
+  }
+
+  header .headerContent .logo {
+    position: absolute;
+    width: 92px;
+    height: 50px;
+    background-image: url(../../img/logo.png);
+    left: 0;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    z-index: 11;
+  }
+
+  header .headerContent {
+    height: 70px;
+  }
 }
 
 

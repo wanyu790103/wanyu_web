@@ -23,12 +23,11 @@ header {
     background: #fff;
     z-index: 25;
     .logo {
-
         width: 100px;
         height: 54px;
         position: absolute;
         top: 12px;
-        background-image: url(../images/logo.png);
+        background-image: url(../../img/logo.png);
         background-repeat: no-repeat;
         background-size: 100px 54px;
         background-position: center center;
@@ -81,7 +80,7 @@ header .headerContent:after {
   left: 0;
   margin-left: 0;
   margin-bottom: 0;
-  background-image: url(../images/hearder_shadow.png);
+  background-image: url(../../img/hearder_shadow.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -102,7 +101,7 @@ header .headerContent .s_logo.w_2box{
       position: absolute;
       width:92px;
       height:50px;
-      background-image: url(../images/logo.png);
+      background-image: url(../../img/logo.png);
       left: 0;
       margin-left: 10px;
       background-repeat: no-repeat;
