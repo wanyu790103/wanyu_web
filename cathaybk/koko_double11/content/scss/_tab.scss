@@ -59,7 +59,9 @@
   opacity:0.35;
   @include mobile(640px){
     width:48%;
+    border:2px solid #792ac6;
     margin:0;
+    padding:10px 5px;
   }  
   .m-icon{
       p{
