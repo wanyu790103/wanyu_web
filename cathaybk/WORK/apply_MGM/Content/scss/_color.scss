@@ -1,0 +1,7 @@
+.link__text{
+  @include font(20px,30px,#00994e);
+  text-decoration:underline;
+  &:hover{
+    color:#00994e; 
+  }
+}

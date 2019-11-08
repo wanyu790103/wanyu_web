@@ -1,0 +1,54 @@
+@import "_base.scss";
+.box_lightbox{
+    display:none; 
+}
+@media only screen and (max-width: 767px){
+    .box_lightbox{
+        display:none; 
+        position:fixed;
+        background:#fff;
+        width:100%;
+        bottom:0;
+        left:0; 
+        padding:25px 25px 10px;
+        z-index: 100000;
+        overflow: hidden;
+        max-height:266px;
+        transform: translateY(0px);
+        animation-name:box_lightbox;
+        animation-duration:0.5s;
+        &.on{
+          display:block;
+        }
+      
+        @keyframes box_lightbox{
+          0%{
+            transform: translateY(266px);
+          }
+          100%{
+            transform: translateY(0px);
+          }
+        }
+        .box_lightbox__text{
+          @include font(16px,25px,#6d6d6d,600);
+        }   
+      }
+      p.i_step{
+        @include font(16px,25px,#59ad3d,600);
+        margin:0;
+        text-align:left;  
+      }
+      .box_lightbox_bg{
+        display:none; 
+        position:fixed; 
+        opacity:0; 
+        background:#6d6d6d;
+        width: 100%;
+        height: 100%;
+        z-index:99999;
+        top: 0;
+        &.on{
+           display:block; 
+        }
+      }
+}

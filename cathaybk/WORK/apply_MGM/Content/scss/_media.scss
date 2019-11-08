@@ -1,0 +1,12 @@
+//rwd
+@mixin rwd-max-width($rwdWidth) {
+    @media all and (max-width: $rwdWidth) {
+    @content;
+    }
+}
+
+@mixin rwd-min-width($rwdWidth) {
+    @media all and (min-width: $rwdWidth) {
+    @content;
+    }
+}
